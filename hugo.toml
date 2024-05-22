@@ -5,10 +5,14 @@ languageCode = 'zh-CN'
 title = 'mukimasta'
 theme = 'book'
 
+
 enableGitInfo = true
 
 [params]
+    BookTheme = 'light'
     BookRepo = 'https://github.com/mukimasta/mukimasta.github.io'
     BookCommitPath = 'commit'
     BookDateFormat = '06/01/02'
     BookSearch = true
+    BookComments = true
+    # BookMenuBundle = '/menu'
