@@ -3,7 +3,7 @@
 baseURL = 'https://mukimasta.github.io/'
 languageCode = 'zh-CN'
 title = 'mukimasta'
-theme = 'hugo-book'
+theme = 'book'
 
 enableGitInfo = true
 
