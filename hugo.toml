@@ -8,4 +8,7 @@ theme = 'hugo-book'
 enableGitInfo = true
 
 [params]
-    BookLogo = 'logo.png'
+    BookRepo = 'https://github.com/mukimasta/mukimasta.github.io'
+    BookCommitPath = 'commit'
+    BookDateFormat = '06/01/02'
+    BookSearch = true
