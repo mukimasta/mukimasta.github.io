@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="zh-CN" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
-<meta name="color-scheme" content="light dark"><meta property="og:url" content="http://localhost:1313/posts/">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://mukimasta.github.io/posts/">
   <meta property="og:site_name" content="mukimasta">
-  <meta property="og:title" content="Blog">
+  <meta property="og:title" content="Posts">
   <meta property="og:locale" content="zh-CN">
   <meta property="og:type" content="website">
-<title>Blog | mukimasta</title>
+<title>Posts | mukimasta</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" >
-<link rel="canonical" href="http://localhost:1313/posts/">
+<link rel="canonical" href="https://mukimasta.github.io/posts/">
 <link rel="stylesheet" href="/book.min.309b7ed028807cdb68d8d61e26d609f48369c098dbf5e4d8c0dcf4cdf49feafc.css" integrity="sha256-MJt&#43;0CiAfNto2NYeJtYJ9INpwJjb9eTYwNz0zfSf6vw=" crossorigin="anonymous">
   <script defer src="/fuse.min.js"></script>
-  <script defer src="/en.search.min.ec11585773fafd4103dbee41f62b37126cd4a3aed1e70593af8ffb1648058ca9.js" integrity="sha256-7BFYV3P6/UED2&#43;5B9is3EmzUo67R5wWTr4/7FkgFjKk=" crossorigin="anonymous"></script>
+  <script defer src="/en.search.min.7ab0adde931c197811fe945bd7e9bf76f84a482a77f7f83d2a6e7a3600362c0a.js" integrity="sha256-erCt3pMcGXgR/pRb1&#43;m/dvhKSCp39/g9Km56NgA2LAo=" crossorigin="anonymous"></script>
 
   
 
-<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml" title="mukimasta" />
+<link rel="alternate" type="application/rss+xml" href="https://mukimasta.github.io/posts/index.xml" title="mukimasta" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -64,25 +64,19 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-
-
-
-
-
-
-
-
-
   
-<ul>
-  
-  <li>
-    <a href="/posts/"  >
-        Blog
-      </a>
-  </li>
-  
-</ul>
+  <ul>
+    
+  </ul>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -109,7 +103,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Blog</strong>
+  <strong>Posts</strong>
 
   <label for="toc-control">
     
@@ -130,16 +124,6 @@ https://github.com/alex-shpak/hugo-book
       <strong>Categories</strong>
       <ul>
       
-        <li class="flex justify-between">
-          <a href="/categories/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/golang/">Golang</a>
-          <span>2</span>
-        </li>
-      
       </ul>
     </li>
     
@@ -148,36 +132,6 @@ https://github.com/alex-shpak/hugo-book
     <li class="book-section-flat">
       <strong>Tags</strong>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/go/">Go</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/golang/">Golang</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/hugo/">Hugo</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/templates/">Templates</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/themes/">Themes</a>
-          <span>1</span>
-        </li>
       
       </ul>
     </li>
@@ -197,11 +151,9 @@ https://github.com/alex-shpak/hugo-book
   
   <article class="markdown book-post">
     <h2>
-      <a href="/posts/creating-a-new-theme/">Creating a New Theme</a>
+      <a href="/posts/creating-a-new-theme/">2024年2月5号 凌晨1:00</a>
     </h2>
     
-  <h5>14/09/28</h5>
-
 
 
   
@@ -218,108 +170,6 @@ We&rsquo;ll start with creating a new site with a very basic template.
     </p>
   </article>
   
-  <article class="markdown book-post">
-    <h2>
-      <a href="/posts/migrate-from-jekyll/">Migrating from Jekyll</a>
-    </h2>
-    
-  <h5>14/03/10</h5>
-
-
-
-  
-
-  
-
-
-
-
-    <p>Move static content to static # Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &lt;root&gt;/ ▾ images/ logo.png should become
-▾ &lt;root&gt;/ ▾ static/ ▾ images/ logo.png Additionally, you&rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.
-        <a href="/posts/migrate-from-jekyll/">...</a>
-      
-    </p>
-  </article>
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="/posts/goisforlovers/">(Hu)go Template Primer</a>
-    </h2>
-    
-  <h5>14/04/02</h5>
-
-
-
-  
-  <div>
-    
-      <a href="/categories/development/">Development</a>, 
-      <a href="/categories/golang/">Golang</a>
-  </div>
-  
-
-  
-  <div>
-    
-      <a href="/tags/go/">Go</a>, 
-      <a href="/tags/golang/">Golang</a>, 
-      <a href="/tags/templates/">Templates</a>, 
-      <a href="/tags/themes/">Themes</a>, 
-      <a href="/tags/development/">Development</a>
-  </div>
-  
-
-
-
-
-    <p>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
-This document is a brief primer on using Go templates.
-        <a href="/posts/goisforlovers/">...</a>
-      
-    </p>
-  </article>
-  
-  <article class="markdown book-post">
-    <h2>
-      <a href="/posts/hugoisforlovers/">Getting Started with Hugo</a>
-    </h2>
-    
-  <h5>14/04/02</h5>
-
-
-
-  
-  <div>
-    
-      <a href="/categories/development/">Development</a>, 
-      <a href="/categories/golang/">Golang</a>
-  </div>
-  
-
-  
-  <div>
-    
-      <a href="/tags/go/">Go</a>, 
-      <a href="/tags/golang/">Golang</a>, 
-      <a href="/tags/hugo/">Hugo</a>, 
-      <a href="/tags/development/">Development</a>
-  </div>
-  
-
-
-
-
-    <p>Step 1. Install Hugo # Go to Hugo releases and download the appropriate version for your OS and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at Install Hugo
-Step 2. Build the Docs # Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
-        <a href="/posts/hugoisforlovers/">...</a>
-      
-    </p>
-  </article>
-  
 
   
  
@@ -329,12 +179,6 @@ Follow the following steps:
         
   <div class="flex flex-wrap justify-between">
 
-
-  <div><a class="flex align-center" href="https://github.com/mukimasta/mukimasta.github.io/commit/ce97b3f00d08843750017e366530935425c43176" title='Last modified by Happymukie | 24/05/22' target="_blank" rel="noopener">
-      <img src="/svg/calendar.svg" class="book-icon" alt="" />
-      <span>24/05/22</span>
-    </a>
-  </div>
 
 
 
@@ -369,16 +213,6 @@ Follow the following steps:
       <strong>Categories</strong>
       <ul>
       
-        <li class="flex justify-between">
-          <a href="/categories/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/categories/golang/">Golang</a>
-          <span>2</span>
-        </li>
-      
       </ul>
     </li>
     
@@ -387,36 +221,6 @@ Follow the following steps:
     <li class="book-section-flat">
       <strong>Tags</strong>
       <ul>
-      
-        <li class="flex justify-between">
-          <a href="/tags/development/">Development</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/go/">Go</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/golang/">Golang</a>
-          <span>2</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/hugo/">Hugo</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/templates/">Templates</a>
-          <span>1</span>
-        </li>
-      
-        <li class="flex justify-between">
-          <a href="/tags/themes/">Themes</a>
-          <span>1</span>
-        </li>
       
       </ul>
     </li>
