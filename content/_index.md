@@ -42,7 +42,7 @@ I am enthusiastic about **music**.
 
 [MuPiano - FPGA Chord Instrument Demonstration_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1HUrkYvEdF/?vd_source=e79bf225a8bb612b579cccc690a00e4c)
 
-This is my final project for the FPGA course. I designed a electronic chord instrument on FPGA, so that I can play music on a computer keyboard. The inspiration is from an e-music product called Liberlive guitar. I wrote almost all codes for my design. I love my design and hope to improve this product in the future.
+This is my final project for the FPGA course. I designed an electronic chord instrument on FPGA, so that I can play music on a computer keyboard. The inspiration is from an e-music product called Liberlive guitar. I wrote almost all codes for my design. I love my design and hope to improve this product in the future.
 
 
 ---
