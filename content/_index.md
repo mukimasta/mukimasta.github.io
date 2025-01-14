@@ -1,19 +1,71 @@
 ---
 title: Home
 type: docs
+
 ---
 
-# Home
+# Hanlin Xue  Portfolio
 
-这里是Mukii的个人网站。
- \
- \
- \
- \
- \
- \
-{{< hint info >}}
 
-test
+  
+---
+### **About Me**
 
-{{< /hint >}}
+I'm Hanlin Xue (薛翰林).
+
+I'm a senior student at Xidian University in China, majoring in Electronic Information Engineering.
+
+I am enthusiastic about **music**.
+
+**My music experience:**
+- 15 years piano experience (2010-2025)
+- 3 years in high school symphony orchestra as a cellist (2018-2021)
+- 2 years in university symphony orchestra as the principal cellist (2021-2023)
+- Compose several classical music pieces
+- Currently self-studying popular harmony
+- Skilled Instruments: Piano, Cello, Ukulele
+
+**My engineering experience:**
+- Major: Electronic Information Engineering (Bachelor of Engineering, expected in June, 2025)
+  - fields: electronics, Artificial Intelligence, embedded system, robotics, information theory, signal processing
+  - projects: AI for wireless signal processing, robotic arm control, FPGA design, etc.
+- GPA: 3.8/4.0, Average Score: 89.0/100
+- Awarded National Scholarship, Ministry of Education – National Highest Scholarship (Top 1%)
+
+
+---
+
+
+### **★★★Product Design – Electronic Music** (2025)
+
+{{< figure src="fig1.jpg" width=400px >}}
+
+[MuPiano - FPGA Chord Instrument Demonstration_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1HUrkYvEdF/?vd_source=e79bf225a8bb612b579cccc690a00e4c)
+
+
+
+
+---
+
+### **★★★Classical Music Composition – String Quartet** (2023)
+
+{{< figure src="fig2.jpg" width=400px >}}
+
+[[Original] String Quartet Composition & Northwest Life Vlog -- Mu String Quartet M.002_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1k14y1U7LQ/?vd_source=e79bf225a8bb612b579cccc690a00e4c)
+
+
+### **Music Performance – Piano** (2022)
+
+{{< figure src="fig3.jpg" width=400px >}}
+
+[[TwoSetViolin Music Club] Dvorak - Romance_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1se4y1J7tC/?vd_source=e79bf225a8bb612b579cccc690a00e4c)
+
+
+### **Improvisation – Harmony** (2025)
+
+{{< figure src="fig4.jpg" width=400px >}}
+
+[Try to improvise complex chords_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV13Q6ZYREbX/?share_source=copy_web&vd_source=0edda432fe3f38c8199f97f028227236&t=22)
+
+
+[sheet](https://github.com/mukimasta/mukimasta.github.io/blob/main/content/sheet.pdf)
