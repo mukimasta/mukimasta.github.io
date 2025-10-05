@@ -1,5 +1,9 @@
 .flex {
   display: flex;
+
+  &.gap {
+    gap: $padding-16;
+  }
 }
 
 .flex-auto {
@@ -48,6 +52,10 @@
 
 .text-right {
   text-align: right;
+}
+
+.text-small {
+  font-size: .875em;
 }
 
 .hidden {
