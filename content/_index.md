@@ -15,7 +15,7 @@ I'm a master student at University of Washington in Seattle, majoring in Electri
 
 [LinkedIn](https://www.linkedin.com/in/hanlinxue) | [GitHub](https://github.com/mukimasta)
 
-[Hanlin Xue Resume](https://mukimasta.github.io/assets/resume.pdf)
+[Hanlin Xue Resume](https://github.com/mukimasta/mukimasta.github.io/blob/main/assets/resume.pdf)
 
 ---
 
