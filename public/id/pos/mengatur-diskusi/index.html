@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="id-ID" dir="ltr">
+<head><script src="/hugo-brewm/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=hugo-brewm/livereload" data-no-instant defer></script>
+    <!-- head.html --><!-- meta.html -->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menambahkan Diskusi | Contoh</title>
+<meta name="author" content="Author Name">
+<meta name="description" content="Cara menambahkan diskusi postingan di tema Hugo Brewm" >
+<link rel="canonical" href="http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/hugo-brewm/en/post/configure-discussion/" title="English">
+
+
+    
+    <!-- twitterCard -->
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Menambahkan Diskusi | Contoh" />
+    <meta name="twitter:description" content="Cara menambahkan diskusi postingan di tema Hugo Brewm" />
+        <meta name="twitter:image" content="https://repository-images.githubusercontent.com/923527728/46a32a19-69ac-45b3-91a4-c4d299fb234b" />
+    
+    <!-- openGraph -->
+    <meta property="og:title" content="Menambahkan Diskusi | Contoh" />
+    <meta property="og:description" content="Cara menambahkan diskusi postingan di tema Hugo Brewm" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/" />
+        <meta property="og:image" content="https://repository-images.githubusercontent.com/923527728/46a32a19-69ac-45b3-91a4-c4d299fb234b" />
+    <meta property="og:site_name" content="Contoh" />
+    <!-- js.html -->
+
+
+    <script src="http://localhost:1313/hugo-brewm/js/hugo-brewm.min.js" defer></script><!-- css.html -->
+
+
+    <link rel="stylesheet" href="http://localhost:1313/hugo-brewm/css/hugo-brewm.min.css">
+
+
+
+    
+    <!-- css/inline.html -->
+    <style>
+         
+        body {max-width: 786px; margin: auto; padding: 2rem;}
+        img {max-width: 86vw;}
+    </style>
+    
+</head>
+<body>
+    <!-- header.html -->
+<header class="pagewidth">
+    <div id="background-header" class="background" aria-hidden="true"></div>
+    
+    <nav aria-label="Lewati Navigasi">
+        <a id="to-content" href="#content" aria-label="Langsung ke Konten Utama">
+            <span>Langsung ke Konten Utama</span>
+            <kbd class="key" aria-hidden="true" data-key="c"></kbd>
+            <span class="screening" aria-hidden="true"></span>
+        </a>
+    </nav>
+    
+    <!-- logo.html -->
+    <div id="logo">
+        <a href="http://localhost:1313/hugo-brewm/id/" aria-label="Contoh" aria-description="Beranda"><svg id="logotype" xmlns="http://www.w3.org/2000/svg" version="1.1" width="168pt" aria-label="Contoh">
+                        <text id="logotype__text" y="19.5pt" x="0">Contoh</text>
+                    </svg>
+        </a>
+        <hr class="hide"/>
+    </div>
+    
+    <details class="presentation" id="top-nav">
+        <summary class="on-deck">
+            <span class="t">Navigasi</span>
+            <span class="menu-icon" role="presentation"></span>
+        </summary>
+        <nav tabindex="-1" aria-label="Navigasi Atas">
+            <!-- menu.html -->
+    <details id="has-main-menu" class="presentation" open>
+        <summary  class="hide"  aria-label="Menu Utama">
+            <span>Menu Utama</span>
+        </summary>
+            
+            <nav id="main-menu" aria-label="Menu Utama">
+                <ul class="l1   has-childfree " role="presentation" tabindex="-1" >
+                    
+    
+        <li role="presentation" class="lfill textssc">
+    <a   class=on-deck href=https://github.com/foxihd/hugo-brewm rel=external noopener noreferrer nofollow target=_blank>
+        
+            <span>
+                Github</span>
+    </a>
+        </li>
+        <li role="presentation" class="textssc">
+    <a   class=on-deck href=#>
+        
+            <span>
+                Tentang</span>
+    </a>
+        </li>
+        <li role="presentation" class="rfill textssc">
+    <a   class=on-deck href=#>
+        
+            <span>
+                Galeri</span>
+    </a>
+        </li>
+                </ul>
+            </nav>
+    </details>
+            <!-- search.html -->
+<details id="has-search" class="presentation js-details" name="on-deck">
+    <summary class="on-deck srm" accesskey="q" aria-labelledby="search-label" aria-keyshortcuts="q">
+        <span id="search-label" class="t srt">Cari</span>
+    </summary>
+    
+        <!-- pagefind.html -->
+    <div id="search" class="on-hull">
+        <div role="presentation" class="screening js-cgpn"></div>
+    </div>
+    <script src="http://localhost:1313/hugo-brewm/pagefind/pagefind-ui.js" type="text/javascript"></script>
+    <script>
+        let pageFindInitialized = false;
+        const initPageFind = function(event) {
+            if (!pageFindInitialized) {
+                new PagefindUI({
+                    element: "#search",
+                    showImages: false,
+                    translations: {
+                        placeholder: "Cari"
+                    }
+                });
+                
+                const pFInput = document.querySelector('.pagefind-ui__search-input');
+                if (pFInput) {
+                    pFInput.setAttribute('aria-label', pFInput.getAttribute('placeholder'));
+                    pFInput.setAttribute('name', pFInput.getAttribute('placeholder'));
+                }
+                pageFindInitialized = true;
+                document.removeEventListener('DOMContentLoaded', initPageFind);
+            }
+        };
+        document.addEventListener('DOMContentLoaded', initPageFind);
+    </script>
+        <noscript id="has-search-fallback" class="on-hull">
+                
+    <!-- duckduckgo.html -->
+    <form id="duckduckgo" class="form on-plank"
+        name="[i18n] seach" action="//duckduckgo.com/"
+        role="search" aria-label="Cari">
+        <input type="hidden" value="localhost:1313" name="sites"></input>
+        <input type="hidden" value="1" name="kh"></input>
+        <input type="hidden" value="1" name="kn"></input>
+        <input type="hidden" value="1" name="kac"></input>
+        <input class="ldots form__input" type="search" placeholder="Cari" name="q" role="searchbox"></input>
+        <button class="form__button" type="submit" aria-label="Cari">
+            <img src="https://duckduckgo.com/assets/logo_header.v109.svg" alt="Cari" role="presentation" aria-hidden="true">
+        </button>
+    </form>
+    <div role="presentation" class="screening js-cgpn"></div>
+        </noscript>
+    
+</details>
+
+            <!-- menu.html -->
+            <!-- i18n.html -->
+        <details id="has-i18n" class="presentation js-details srm" name="on-deck">
+                <summary class="anchor on-deck"
+                    aria-label="Pilihan Bahasa"
+                    aria-description="Bahasa sekarang adalah Bahasa Indonesia">
+                    <span class="emoji">🇮🇩&nbsp;</span>
+                    <span class="iso639">ID </span>
+                    <span class="languangeName">Bahasa Indonesia</span>
+                </summary>
+
+            <!-- on hull -->
+            <nav id="i18n-menu" aria-label="Pilihan Bahasa">
+                <ul class="on-plank">
+                        <li>
+                            <a href="http://localhost:1313/hugo-brewm/en/" aria-label="Change language to English">
+                                <span class="emoji">🇬🇧&nbsp;</span>
+                                <span class="languangeName">English</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:1313/hugo-brewm/es-mx/" aria-label="Change language to Español (México)">
+                                <span class="emoji">🇲🇽&nbsp;</span>
+                                <span class="languangeName">Español (México)</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:1313/hugo-brewm/fr/" aria-label="Change language to French">
+                                <span class="emoji">🇫🇷&nbsp;</span>
+                                <span class="languangeName">French</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://localhost:1313/hugo-brewm/hi/" aria-label="Change language to हिन्दी">
+                                <span class="emoji">🇮🇳&nbsp;</span>
+                                <span class="languangeName">हिन्दी</span>
+                            </a>
+                        </li>
+                </ul>
+                <div class="screening js-cgpn" role="presentation" aria-hidden="true"></div>
+            </nav>
+        </details>
+
+        </nav>
+        <div id="top-nav-screen" class="screening js-cpn" role="presentation" aria-hidden="true"></div>
+        <hr class="hide"/>
+    </details>
+</header>
+    
+    <!-- [main] baseof.html -->
+    <main id="page"class="post"
+        >
+        <!-- main/header.html -->
+        <header class="pagewidth">
+                    <menu id="menu" class="srm"
+                        data-i18n-back="Kembali"
+                        data-i18n-print="Cetak"
+                        data-i18n-copy="Salin Tautan"
+                        data-i18n-copying="Menyalin...">
+                            <li>
+                                <a id="navigatorShare" href="#mastodon" role="button" aria-label="Bagikan">
+                                    <span class="t srt" role="tooltip">Bagikan</span>
+                                </a>
+                            </li>
+                    </menu>
+            <!-- nav.html -->
+<details class="presentation" aria-expanded="true" id="has-breadcrumb" open>
+    <summary id="breadcrumb" tabindex="-1">
+        <span>Jejak Navigasi</span>
+    </summary>
+        <nav aria-labelledby="breadcrumb">
+            <ul role="presentation" class="breadcrumb ">
+                    <!-- breadcrumb.html -->
+        <li id="is-translated">
+            
+    <!-- l10n.html -->
+    <details id="has-l10n" class="presentation">
+        <summary aria-label="Pilihan Bahasa" aria-description="Bahasa sekarang adalah Bahasa Indonesia">
+            <span>ID</span>
+        </summary>
+        <nav aria-label="Pilihan Bahasa">
+            <ul class="on-plank" role="presentation">
+                <li>
+                    <a href="http://localhost:1313/hugo-brewm/en/post/configure-discussion/" aria-label="Ganti Bahasa ke English" aria-description="Configure Discussion">
+                        <span class="emoji">🇬🇧&nbsp;</span>
+                        <span>Configure Discussion</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </details>
+        </li>
+        <li>
+            <a href="http://localhost:1313/hugo-brewm/id/pos/" aria-current="true">Pos
+            </a>
+        </li>
+    <li>
+        <a href="" aria-current="page" tabindex="-1">Menambahkan Diskusi
+        </a>
+    </li>
+            </ul>
+        </nav>
+</details>
+            <hr class="hide"/>
+        </header>
+        <div id="top" role="presentation">
+            
+        </div>
+        
+    <article id="main-article" class="pagewidth rm"
+        role="document" aria-labelledby="title"
+            data-pagefind-body>
+        <header aria-labelledby="title">
+            <!-- title.html -->
+        <h1 id="title"
+                data-pagefind-meta="title"
+            data-bionRead-safe
+            >Menambahkan Diskusi</h1>
+            <div id="doc-author" class="textsw"><span>Author Name</span>
+            </div>
+            <!-- timestamp.html-->
+        <div id="timestamp">
+            <span>Diterbitkan pada</span>
+            <time datetime="2025-01-26T00:00:00&#43;00:00">26 Januari 2025</time>,
+            <span>diubah pada</span>
+            <time datetime="2025-02-03T00:00:00&#43;00:00">3 Februari 2025</time>.
+        </div>
+        </header>
+        <!-- audio.html -->
+        <section id="content" class="content " aria-labelledby="title" data-bionRead-safe>
+                <h2 id="mengatur-komentar-giscus">Mengatur Komentar Giscus</h2>
+<p>Untuk mengaktifkan komentar Giscus di situs Hugo Anda, ikuti langkah-langkah berikut:</p>
+<ol>
+<li>Pertama, pasang <a href="https://github.com/apps/giscus" target="_blank" rel="external noopener noreferrer nofollow">Aplikasi GitHub Giscus</a> di repositori Anda</li>
+<li>Tambahkan parameter berikut ke <code>config.toml</code> Anda:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">giscus</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">repo</span> <span class="p">=</span> <span class="s2">&#34;username/repository&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">repoID</span> <span class="p">=</span> <span class="s2">&#34;R_kgDxxxxxxxx&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">category</span> <span class="p">=</span> <span class="s2">&#34;Announcements&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">categoryID</span> <span class="p">=</span> <span class="s2">&#34;DIC_kwDxxxxxxxxxxxxxxxx&#34;</span>
+</span></span></code></pre></div><p>Ganti kata-kunci berikut:</p>
+<ul>
+<li><code>repo</code>: Nama pengguna dan repositori GitHub Anda</li>
+<li><code>repoID</code>: ID repositori Anda (dapatkan dari situs Giscus)</li>
+<li><code>category</code>: Nama kategori diskusi</li>
+<li><code>categoryID</code>: ID kategori diskusi (dapatkan dari situs Giscus)</li>
+</ul>
+<p>Anda bisa mendapatkan kata-kunci tersebut dengan mengunjungi <a href="https://giscus.app" target="_blank" rel="external noopener noreferrer nofollow">Giscus.app</a> dan mengatur preferensi Anda.</p>
+<p>Parameter berikut juga dapat dikonfigurasi secara opsional:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl">    <span class="nx">mapping</span> <span class="p">=</span> <span class="s2">&#34;pathname&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">strict</span> <span class="p">=</span> <span class="s2">&#34;0&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">reactionsEnabled</span> <span class="p">=</span> <span class="s2">&#34;1&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">emitMetadata</span> <span class="p">=</span> <span class="s2">&#34;0&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">inputPosition</span> <span class="p">=</span> <span class="s2">&#34;bottom&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">theme</span> <span class="p">=</span> <span class="s2">&#34;preferred_color_scheme&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">loading</span> <span class="p">=</span> <span class="s2">&#34;lazy&#34;</span>
+</span></span></code></pre></div><ol start="3">
+<li>Secara default, komentar Giscus akan muncul di semua postingan. Untuk menonaktifkan komentar pada postingan tertentu, gunakan parameter front matter:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">comments</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">  </span><span class="c"># Nonaktifkan komentar untuk postingan ini</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span></code></pre></div><h2 id="mengatur-integrasi-media-sosial">Mengatur Integrasi Media Sosial</h2>
+<p>Tema ini mendukung penyematan komentar dari Bluesky atau Mastodon atau kedua platform sosial tersebut.
+Ketika Anda menyertakan tautan ke postingan Bluesky atau Mastodon di front matter, Giscus akan diganti secara otomatis.</p>
+<h3 id="menautkan-diskusi-dengan-postingan-mastodon">Menautkan diskusi dengan postingan Mastodon</h3>
+<p>Tautkan URL postingan Bluesky ke front matter menggunakan parameter <code>toot</code>, <code>mstd</code>, atau <code>mastodon</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">toot</span><span class="p">:</span><span class="w"> </span><span class="l">https://example.com/@example/12345678901234567890</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span></code></pre></div><h3 id="menautkan-diskusi-dengan-postingan-bluesky">Menautkan diskusi dengan postingan Bluesky</h3>
+<p>Tautkan URL postingan Mastodon ke front matter menggunakan parameter <code>skeet</code>, <code>bsky</code> atau <code>bluesky</code>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">skeet</span><span class="p">:</span><span class="w"> </span><span class="l">https://bsky.app/profile/example.com/post/12345678901234</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span></code></pre></div><p>Catatan: Anda mungkin perlu memperkirakan permalink artikel pada pratinjau lokal sebelum membagikan ke platform Fediverse untuk mendapatkan tautan postingan, atau Anda mungkin perlu menjalankan operasi CI/CD dua kali.</p>
+
+        </section>
+            <footer>
+                
+            </footer>
+    </article>
+        <div id="exclude" role="presentation">
+            <!-- excluded last block frome some RSS reader and browser reader mode -->
+            
+    <hr class="hide" style="margin: 1in 0;">
+    <div id="contentinfo" class="pagewidth" role="contentinfo" data-pagefind-ignore="all">
+                <!-- related.html -->
+                <!-- colophon.html -->
+    <div id="colophon" style="display: none;" aria-live="polite">
+        <strong class="section-title">Kolofon</strong>
+        <div>
+            <div id="qr" role="img" aria-label="QR code"></div>
+            <div class="verbose">
+                <div class="has-aria-label-top" aria-label="Menambahkan Diskusi"><span>http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/</span></div>
+                <div><span>Halaman ini dibuat pada: </span><time datetime="2026-01-10T16:04:00-08:00">2026-01-10 16:04</time></div>
+                <div><span>Halaman ini diakses pada: </span><time id="time-stamp"></time></div><div><span>Didukung oleh </span><a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <a href="https://github.com/gohugoio/hugo/releases/tag/v0.151.0" aria-label="Hugo 0.151.0" target="_blank" rel="noopener">v0.151.0</a> & <a href="https://github.com/foxihd/hugo-brewm" target="_blank" rel="noopener">hugo-brewm</a>.</div>
+            </div>
+        </div>
+    </div>
+                <!-- history.html -->
+        <div id="has-timeline" >
+            <strong class="section-title">Riwayat Redaksi</strong>
+            <ol aria-label="Riwayat Redaksi">
+                <li>
+                    <time datetime="2025-01-26T00:00:00&#43;00:00">26 Januari 2025</time>
+                    <span>(Diterbitkan)</span>
+                </li>
+                <li>
+                    <time datetime="2025-02-03T00:00:00&#43;00:00">3 Februari 2025</time>
+                    <span>(Diubah)</span>
+                </li>
+            </ol>
+            <p>Beberapa informasi mungkin berubah, kami menjaga redaksi tetap sejalan dengan perkembangan.</p>
+        </div>
+            
+            <!-- nav.html -->
+<details class="presentation" aria-expanded="true" id="has-share" open>
+    <summary id="share" tabindex="-1">
+        <span>Bagikan</span>
+    </summary>
+        <nav aria-labelledby="share">
+            <ul role="presentation" class="share srm">
+                    <!-- share.html -->
+    <li id="has-mastodon">
+        <!-- mastodon.html -->
+    <form class="form" id="mastodon" action="//sharetomastodon.github.io/" target="_blank" rel="noopener noreferrer">
+        <input id="mastodonTitle" type="hidden" name="title" value="Menambahkan Diskusi">
+        <input id="mastodonPermalink" type="hidden" name="url" value="http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/">
+        <input id="mastodonText" type="hidden" name="text" value="Menambahkan Diskusi http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/" disabled>
+        <input id="mastodonInstance" type="url" class="ldots form__input" placeholder="Enter Mastodon instance (https://www.example.com)" aria-label="Mastodon instance URL">
+        <button class="form__button" type="submit" aria-label="Bagikan di Mastodon">
+            <i class="icon mastodon sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Bagikan di Mastodon</span>
+        </button>
+    </form>
+    </li>
+    <li>
+        <a href="mailto:?subject=Menambahkan%20Diskusi&body=http%3a%2f%2flocalhost%3a1313%2fhugo-brewm%2fid%2fpos%2fmengatur-diskusi%2f" role="button" aria-label="Bagikan di Surel">
+            <i class="email sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Bagikan di Surel</span>
+        </a>
+    </li>
+    <li>
+        <a href="whatsapp://send?text=Menambahkan%20Diskusi%20http%3a%2f%2flocalhost%3a1313%2fhugo-brewm%2fid%2fpos%2fmengatur-diskusi%2f" role="button" aria-label="Bagikan di Whatsapp">
+            <i class="whatsapp sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Bagikan di Whatsapp</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://telegram.me/share/url?text=Menambahkan%20Diskusi&amp;url=http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/" role="button"
+            aria-label="Bagikan di Telegram Di tab baru">
+            <i class="telegram sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Bagikan di Telegram</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://bsky.app/intent/compose?text=Menambahkan%20Diskusi&amp;url=http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/" role="button"
+            aria-label="Bagikan di Bluesky Di tab baru">
+            <i class="bluesky sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Bagikan di Bluesky</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/" role="button"
+            aria-label="Bagikan di Facebook Di tab baru">
+            <i class="facebook sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Bagikan di Facebook</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://news.ycombinator.com/submitlink?u=http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/&amp;t=Menambahkan%20Diskusi" role="button"
+            aria-label="Bagikan di Hackernews Di tab baru">
+            <i class="hackernews sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Bagikan di Hackernews</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/&amp;title=Menambahkan%20Diskusi&amp;summary=Menambahkan%20Diskusi&amp;source=http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/" role="button"
+            aria-label="Bagikan di Linkedin Di tab baru">
+            <i class="linkedin sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Bagikan di Linkedin</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://pinterest.com/pin/create/button/?url=http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/&amp;media=http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/&amp;description=Menambahkan%20Diskusi" role="button"
+            aria-label="Bagikan di Pinterest Di tab baru">
+            <i class="pinterest sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Bagikan di Pinterest</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://reddit.com/submit/?url=http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/&amp;resubmit=true&amp;title=Menambahkan%20Diskusi" role="button"
+            aria-label="Bagikan di Reddit Di tab baru">
+            <i class="reddit sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Bagikan di Reddit</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Menambahkan%20Diskusi&amp;caption=Menambahkan%20Diskusi&amp;content=http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/&amp;canonicalUrl=http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/" role="button"
+            aria-label="Bagikan di Tumblr Di tab baru">
+            <i class="tumblr sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Bagikan di Tumblr</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://threads.net/intent/post?text=Menambahkan%20Diskusi&amp;url=http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/" role="button"
+            aria-label="Bagikan di Threads Di tab baru">
+            <i class="threads sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Bagikan di Threads</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet/?text=Menambahkan%20Diskusi&amp;url=http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/" role="button"
+            aria-label="Bagikan di Twitter Di tab baru">
+            <i class="twitter sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Bagikan di Twitter</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.xing.com/app/user?op=share;url=http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/;title=Menambahkan%20Diskusi" role="button"
+            aria-label="Bagikan di Xing Di tab baru">
+            <i class="xing sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Bagikan di Xing</span>
+        </a>
+    </li>
+            </ul>
+        </nav>
+</details>
+    </div>
+    
+        
+        <!-- main/footer.html -->
+    <hr class="hide">
+    <footer id="main-footer">
+            <div id="unified-footer"><p id="license">Penyusun <i class="icon copyleft"></i> 2025</p>
+                    <!-- menu.html -->
+                        <p id="coffee-counter">Dibuat dengan ❤️ dan  18 cangkir kopi, jika tidak lebih.</p>
+            </div>
+    </footer>
+        </div>
+    </main>
+    <!-- footer.html -->
+<footer id="body-footer" class="pagewidth">
+    <div id="background-footer" class="background hide" role="presentation" aria-hidden="true"></div>
+    <div id="focusMode"></div>
+    <!-- a11y.html --><details id="has-a11y" class="presentation js-details hide" name="on-deck" aria-haspopup="true" aria-labelledby="has-a11y-summary"
+    data-i18n-accessibility="Aksesibilitas"
+    data-i18n-optimizeSR="Optimasi Pembaca Layar"
+    data-i18n-optimizeSRdesc="Optimalkan tampilan dan sumber daya untuk pengguna pembaca layar yang bernavigasi dengan perangkat pointer."
+    data-i18n-colorSettings="Pengaturan Warna"
+    data-i18n-darkMode="Mode Gelap"
+    data-i18n-light="Terang"
+    data-i18n-dark="Gelap"
+    data-i18n-contrast="Kontras"
+    data-i18n-lessContrast="Rendah"
+    data-i18n-moreContrast="Tinggi"
+    data-i18n-defaultContrast="Bawaan"
+    data-i18n-colorPalette="Palet Warna"
+    data-i18n-defaultColor="Bawaan"
+    data-i18n-deuteranopia="Deuteranopia"
+    data-i18n-protanopia="Protanopia"
+    data-i18n-tritanopia="Tritanopia"
+    data-i18n-monochrome="Monokrom"
+    data-i18n-fontSize="Ukuran Font"
+    data-i18n-baselineStretch="Jarak Baris"
+    data-i18n-OpenDyslexic="Gunakan Font OpenDyslexic"
+    data-i18n-menuControls="Kontrol Menu Aksesibilitas"
+    data-i18n-save="Simpan"
+    data-i18n-reset="Atur Ulang"
+    data-i18n-close="Tutup"
+    data-i18n-bionRead="Mode BionRead"
+    data-i18n-focusMode="Mode Fokus"
+    data-i18n-noLocalStorage="LocalStorage tidak tersedia di browser Anda. Pengaturan tidak akan disimpan.">
+</details>
+
+
+    <div id="useBionRead" class="sri"></div>
+    <!-- [top] bypass block -->
+    <nav aria-label="Lewati Navigasi">
+        <a id="to-top" class="srm" href="#top" title="Ke Atas Konten" accesskey="c" aria-keyshortcuts="c" aria-label="Ke Atas Konten">
+            <span class="t srt">Ke Atas Konten</span>
+            <kbd class="key" aria-hidden="true" data-key="c"></kbd>
+        </a>
+    </nav>
+</footer>
+    
+    <!-- [post] single.html -->
+    <div id="bionReadSnapshot" hidden></div>
+    <!-- [background] baseof.html -->
+    <div id="background-body" role="presentation" aria-hidden="true"></div>
+</body>
+</html>

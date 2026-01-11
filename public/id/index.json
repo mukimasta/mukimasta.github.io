@@ -1,0 +1,189 @@
+
+{
+    "nodes": [{
+                "id": "58a8b23987c8c7b96c7244626b33fa86",
+                "title": "Menambahkan Gambar Sampul dan Artikel Audio",
+                "permalink": "http://localhost:1313/hugo-brewm/id/pos/mengatur-sampul-dan-audio/",
+                "type": "post"
+            },{
+                "id": "1e50582226837c5ab642c650abbc9c53",
+                "title": "Mengatur Entri `Terms`",
+                "permalink": "http://localhost:1313/hugo-brewm/id/pos/mengatur-entri-terms/",
+                "type": "post"
+            },{
+                "id": "6d392b3046656b399f6121d0ce9174be",
+                "title": "Mengatur Riwayat Redaksi",
+                "permalink": "http://localhost:1313/hugo-brewm/id/pos/mengatur-riwayat-redaksi/",
+                "type": "post"
+            },{
+                "id": "6f5af79ff8a1410e611cadffaa78d0f9",
+                "title": "Menambahkan Diskusi",
+                "permalink": "http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/",
+                "type": "post"
+            },{
+                "id": "cb87ae0c0e9ddab5c159497a2c64e84a",
+                "title": "Mengatur Logo dan Aksen Warna",
+                "permalink": "http://localhost:1313/hugo-brewm/id/pos/mengatur-logo-dan-aksen-warna/",
+                "type": "post"
+            },{
+                "id": "86bcb557ac814890655c2cfc1193590a",
+                "title": "Mengatur Menu",
+                "permalink": "http://localhost:1313/hugo-brewm/id/pos/mengatur-menu/",
+                "type": "post"
+            },{
+                "id": "e5458a71a78625f08abc3e9e3d74c083",
+                "title": "Mengatur Pagefind",
+                "permalink": "http://localhost:1313/hugo-brewm/id/pos/mengatur-pagefind/",
+                "type": "post"
+            },{
+                "id": "137771d37daa937b2cc0d88e2edc144b",
+                "title": "Mengatur Slide Beranda",
+                "permalink": "http://localhost:1313/hugo-brewm/id/pos/mengatur-slide/",
+                "type": "post"
+            },{
+                "id": "c708bfd24dcefcacb2ec876a60b3be18",
+                "title": "Tes Markdown",
+                "permalink": "http://localhost:1313/hugo-brewm/id/pos/tes-markdown/",
+                "type": "post"
+            },
+                        {
+                            "id": "tags-alt",
+                            "title": "Alt",
+                            "permalink": "http://localhost:1313/hugo-brewm/id/tags/alt/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-audio",
+                            "title": "Audio",
+                            "permalink": "http://localhost:1313/hugo-brewm/id/tags/audio/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-authoring",
+                            "title": "Authoring",
+                            "permalink": "http://localhost:1313/hugo-brewm/id/tags/authoring/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-cover",
+                            "title": "Cover",
+                            "permalink": "http://localhost:1313/hugo-brewm/id/tags/cover/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-gambar",
+                            "title": "Gambar",
+                            "permalink": "http://localhost:1313/hugo-brewm/id/tags/gambar/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-konten",
+                            "title": "Konten",
+                            "permalink": "http://localhost:1313/hugo-brewm/id/tags/konten/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-media",
+                            "title": "Media",
+                            "permalink": "http://localhost:1313/hugo-brewm/id/tags/media/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-redaksi",
+                            "title": "Redaksi",
+                            "permalink": "http://localhost:1313/hugo-brewm/id/tags/redaksi/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-riwayat",
+                            "title": "Riwayat",
+                            "permalink": "http://localhost:1313/hugo-brewm/id/tags/riwayat/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-sampul",
+                            "title": "Sampul",
+                            "permalink": "http://localhost:1313/hugo-brewm/id/tags/sampul/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-taxonomy",
+                            "title": "Taxonomy",
+                            "permalink": "http://localhost:1313/hugo-brewm/id/tags/taxonomy/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-terms",
+                            "title": "Terms",
+                            "permalink": "http://localhost:1313/hugo-brewm/id/tags/terms/",
+                            "type": "tags"
+                        },
+    ],
+    "links": [
+            
+                    {
+                        "source": "58a8b23987c8c7b96c7244626b33fa86",
+                        "target": "tags-authoring",
+                    },
+                    {
+                        "source": "58a8b23987c8c7b96c7244626b33fa86",
+                        "target": "tags-konten",
+                    },
+                    {
+                        "source": "58a8b23987c8c7b96c7244626b33fa86",
+                        "target": "tags-media",
+                    },
+                    {
+                        "source": "58a8b23987c8c7b96c7244626b33fa86",
+                        "target": "tags-audio",
+                    },
+                    {
+                        "source": "58a8b23987c8c7b96c7244626b33fa86",
+                        "target": "tags-sampul",
+                    },
+                    {
+                        "source": "58a8b23987c8c7b96c7244626b33fa86",
+                        "target": "tags-gambar",
+                    },
+                    {
+                        "source": "58a8b23987c8c7b96c7244626b33fa86",
+                        "target": "tags-alt",
+                    },
+            
+                    {
+                        "source": "1e50582226837c5ab642c650abbc9c53",
+                        "target": "tags-authoring",
+                    },
+                    {
+                        "source": "1e50582226837c5ab642c650abbc9c53",
+                        "target": "tags-cover",
+                    },
+                    {
+                        "source": "1e50582226837c5ab642c650abbc9c53",
+                        "target": "tags-taxonomy",
+                    },
+                    {
+                        "source": "1e50582226837c5ab642c650abbc9c53",
+                        "target": "tags-terms",
+                    },
+            
+                    {
+                        "source": "6d392b3046656b399f6121d0ce9174be",
+                        "target": "tags-authoring",
+                    },
+                    {
+                        "source": "6d392b3046656b399f6121d0ce9174be",
+                        "target": "tags-redaksi",
+                    },
+                    {
+                        "source": "6d392b3046656b399f6121d0ce9174be",
+                        "target": "tags-riwayat",
+                    },
+            
+            
+            
+            
+            
+            
+    ],
+}

@@ -1,0 +1,255 @@
+
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/</loc>
+    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/" /><xhtml:link rel="alternate" hreflang="es-MX" href="http://localhost:1313/hugo-brewm/es-mx/" /><xhtml:link rel="alternate" hreflang="fr" href="http://localhost:1313/hugo-brewm/fr/" /><xhtml:link rel="alternate" hreflang="hi-IN" href="http://localhost:1313/hugo-brewm/hi/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/author/</loc>
+    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="http://localhost:1313/hugo-brewm/es-mx/author/" /><xhtml:link rel="alternate" hreflang="fr" href="http://localhost:1313/hugo-brewm/fr/author/" /><xhtml:link rel="alternate" hreflang="hi-IN" href="http://localhost:1313/hugo-brewm/hi/author/" /><xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/author/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/author/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/author/author-name/</loc>
+    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/categories/authoring/</loc>
+    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/authoring/</loc>
+    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/tags/authoring/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/tags/authoring/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/post/authoring-custom-taxonomy/</loc>
+    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/categories/</loc>
+    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="http://localhost:1313/hugo-brewm/es-mx/categories/" /><xhtml:link rel="alternate" hreflang="fr" href="http://localhost:1313/hugo-brewm/fr/categories/" /><xhtml:link rel="alternate" hreflang="hi-IN" href="http://localhost:1313/hugo-brewm/hi/categories/" /><xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/categories/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/categories/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/stage/evergreen/</loc>
+    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/stage/evergreen/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/stage/evergreen/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/post/</loc>
+    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+    <changefreq>always</changefreq>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/pos/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/post/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/stage/</loc>
+    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/stage/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/stage/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/</loc>
+    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/tags/" /><xhtml:link rel="alternate" hreflang="es-MX" href="http://localhost:1313/hugo-brewm/es-mx/tags/" /><xhtml:link rel="alternate" hreflang="fr" href="http://localhost:1313/hugo-brewm/fr/tags/" /><xhtml:link rel="alternate" hreflang="hi-IN" href="http://localhost:1313/hugo-brewm/hi/tags/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/tags/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/taxonomy/</loc>
+    <lastmod>2025-07-28T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/tags/taxonomy/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/tags/taxonomy/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/alt/</loc>
+    <lastmod>2025-02-22T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/tags/alt/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/tags/alt/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/audio/</loc>
+    <lastmod>2025-02-22T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/tags/audio/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/tags/audio/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/post/authoring-cover-images-and-audio-article/</loc>
+    <lastmod>2025-02-22T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/pos/mengatur-sampul-dan-audio/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/post/authoring-cover-images-and-audio-article/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/stage/budding/</loc>
+    <lastmod>2025-02-22T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/stage/budding/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/stage/budding/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/content/</loc>
+    <lastmod>2025-02-22T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/cover/</loc>
+    <lastmod>2025-02-22T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/tags/cover/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/tags/cover/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/images/</loc>
+    <lastmod>2025-02-22T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/media/</loc>
+    <lastmod>2025-02-22T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/tags/media/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/tags/media/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/author/a.n.-other/</loc>
+    <lastmod>2025-02-03T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/post/authoring-terms-entry/</loc>
+    <lastmod>2025-02-03T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/pos/mengatur-entri-terms/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/post/authoring-terms-entry/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/post/authoring-redaction-history/</loc>
+    <lastmod>2025-02-03T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/pos/mengatur-riwayat-redaksi/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/post/authoring-redaction-history/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/history/</loc>
+    <lastmod>2025-02-03T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/redaction/</loc>
+    <lastmod>2025-02-03T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/stage/seedling/</loc>
+    <lastmod>2025-02-03T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/stage/seedling/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/stage/seedling/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/terms/</loc>
+    <lastmod>2025-02-03T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/tags/terms/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/tags/terms/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/accent/</loc>
+    <lastmod>2025-02-21T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/color/</loc>
+    <lastmod>2025-02-21T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/categories/configuration/</loc>
+    <lastmod>2025-02-21T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/configuration/</loc>
+    <lastmod>2025-02-21T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/post/configure-discussion/</loc>
+    <lastmod>2025-02-10T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/pos/mengatur-diskusi/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/post/configure-discussion/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/post/configure-slides/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/pos/mengatur-slide/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/post/configure-slides/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/post/configure-logo-and-accent-color/</loc>
+    <lastmod>2025-02-21T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/pos/mengatur-logo-dan-aksen-warna/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/post/configure-logo-and-accent-color/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/post/configure-main-footer/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/pos/mengatur-footer-situs/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/post/configure-main-footer/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/post/configure-menu/</loc>
+    <lastmod>2025-02-04T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/pos/mengatur-menu/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/post/configure-menu/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/post/configure-pagefind/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/pos/mengatur-pagefind/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/post/configure-pagefind/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/discussion/</loc>
+    <lastmod>2025-02-10T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/footer/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/categories/homepage/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/categories/latex/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/logo/</loc>
+    <lastmod>2025-02-21T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/markdown/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/post/markdown-test/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/pos/tes-markdown/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/post/markdown-test/" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/menu/</loc>
+    <lastmod>2025-02-04T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/pagefind/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/tags/slide/</loc>
+    <lastmod>2025-01-26T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/post/tufte-features/</loc>
+    <lastmod>2016-02-20T13:56:01-08:00</lastmod>
+    </url>
+  <url>
+    <loc>http://localhost:1313/hugo-brewm/en/series/</loc>
+    
+    <xhtml:link rel="alternate" hreflang="es-MX" href="http://localhost:1313/hugo-brewm/es-mx/series/" /><xhtml:link rel="alternate" hreflang="fr" href="http://localhost:1313/hugo-brewm/fr/series/" /><xhtml:link rel="alternate" hreflang="hi-IN" href="http://localhost:1313/hugo-brewm/hi/series/" /><xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/series/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/series/" />
+  </url>
+</urlset>

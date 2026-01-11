@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" >
+  <channel>
+    <title>Categories on Example</title>
+    <link>http://localhost:1313/hugo-brewm/en/categories/</link>
+    <description>Recent Posts in Categories on Example</description>
+    <generator>Hugo 0.151.0</generator>
+    <language>en-GB</language>
+    <managingEditor>email@example.com (Author Name)</managingEditor>
+    <webMaster>email@example.com (Author Name)</webMaster>
+    <lastBuildDate>Sat, 10 Jan 2026 16:04:00 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/hugo-brewm/en/categories/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/hugo-brewm/es-mx/categories/index.xml" hreflang="es-mx" rel="alternate" type="application/rss&#43;xml" />
+        
+        <atom:link href="http://localhost:1313/hugo-brewm/fr/categories/index.xml" hreflang="fr" rel="alternate" type="application/rss&#43;xml" />
+        
+        <atom:link href="http://localhost:1313/hugo-brewm/hi/categories/index.xml" hreflang="hi" rel="alternate" type="application/rss&#43;xml" />
+        
+        <atom:link href="http://localhost:1313/hugo-brewm/id/categories/index.xml" hreflang="id" rel="alternate" type="application/rss&#43;xml" />
+        
+    <item>
+      <title>Authoring</title>
+      <link>http://localhost:1313/hugo-brewm/en/categories/authoring/</link>
+      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/categories/authoring/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Configuration</title>
+      <link>http://localhost:1313/hugo-brewm/en/categories/configuration/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/categories/configuration/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Homepage</title>
+      <link>http://localhost:1313/hugo-brewm/en/categories/homepage/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/categories/homepage/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Latex</title>
+      <link>http://localhost:1313/hugo-brewm/en/categories/latex/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/categories/latex/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+  </channel>
+</rss>

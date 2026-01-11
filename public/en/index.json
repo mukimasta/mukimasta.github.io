@@ -1,0 +1,401 @@
+
+{
+    "nodes": [{
+                "id": "719fa4fe573bd36a645353bbd28d930b",
+                "title": "Authoring Stage Taxonomy for Digital Garden",
+                "permalink": "http://localhost:1313/hugo-brewm/en/post/authoring-custom-taxonomy/",
+                "type": "post"
+            },{
+                "id": "873ba95f40751c50553ab2667dc36c7c",
+                "title": "Authoring Cover Images and Audio Articles",
+                "permalink": "http://localhost:1313/hugo-brewm/en/post/authoring-cover-images-and-audio-article/",
+                "type": "post"
+            },{
+                "id": "cce34b9ad7731eb353d7756c6827e49b",
+                "title": "Authoring Terms Entry",
+                "permalink": "http://localhost:1313/hugo-brewm/en/post/authoring-terms-entry/",
+                "type": "post"
+            },{
+                "id": "4e581b6215e4f907a7c69f0b0913edf4",
+                "title": "Authoring The Redaction History",
+                "permalink": "http://localhost:1313/hugo-brewm/en/post/authoring-redaction-history/",
+                "type": "post"
+            },{
+                "id": "f2783b25d74db465ebbcc3d1aca12163",
+                "title": "Configure Discussion",
+                "permalink": "http://localhost:1313/hugo-brewm/en/post/configure-discussion/",
+                "type": "post"
+            },{
+                "id": "09331682f8c9231434cfeb1c12135d7d",
+                "title": "Configure Homepage Slides",
+                "permalink": "http://localhost:1313/hugo-brewm/en/post/configure-slides/",
+                "type": "post"
+            },{
+                "id": "dd63cc08f431d01796a9c374a58adb71",
+                "title": "Configure Logo and Accent Color",
+                "permalink": "http://localhost:1313/hugo-brewm/en/post/configure-logo-and-accent-color/",
+                "type": "post"
+            },{
+                "id": "8e1b18acb820cb48f420f5d9f591282f",
+                "title": "Configure Main Footer",
+                "permalink": "http://localhost:1313/hugo-brewm/en/post/configure-main-footer/",
+                "type": "post"
+            },{
+                "id": "439fecffa54490320418536b63747859",
+                "title": "Configure Menu",
+                "permalink": "http://localhost:1313/hugo-brewm/en/post/configure-menu/",
+                "type": "post"
+            },{
+                "id": "6cb7dd3a82bd05b17ff03c690b19c62c",
+                "title": "Configure Pagefind",
+                "permalink": "http://localhost:1313/hugo-brewm/en/post/configure-pagefind/",
+                "type": "post"
+            },{
+                "id": "727ff61f21cd405159d2d835b27cbba7",
+                "title": "Markdown Test",
+                "permalink": "http://localhost:1313/hugo-brewm/en/post/markdown-test/",
+                "type": "post"
+            },{
+                "id": "8d8f0be5b35c3233b13a6626f015e624",
+                "title": "Hugo-Tufte Features compatibility",
+                "permalink": "http://localhost:1313/hugo-brewm/en/post/tufte-features/",
+                "type": "post"
+            },
+                        {
+                            "id": "categories-authoring",
+                            "title": "Authoring",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/categories/authoring/",
+                            "type": "categories"
+                        },
+                        {
+                            "id": "categories-configuration",
+                            "title": "Configuration",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/categories/configuration/",
+                            "type": "categories"
+                        },
+                        {
+                            "id": "categories-homepage",
+                            "title": "Homepage",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/categories/homepage/",
+                            "type": "categories"
+                        },
+                        {
+                            "id": "categories-latex",
+                            "title": "Latex",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/categories/latex/",
+                            "type": "categories"
+                        },
+                        {
+                            "id": "tags-accent",
+                            "title": "Accent",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/accent/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-alt",
+                            "title": "Alt",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/alt/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-audio",
+                            "title": "Audio",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/audio/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-authoring",
+                            "title": "Authoring",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/authoring/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-color",
+                            "title": "Color",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/color/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-configuration",
+                            "title": "Configuration",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/configuration/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-content",
+                            "title": "Content",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/content/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-cover",
+                            "title": "Cover",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/cover/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-discussion",
+                            "title": "Discussion",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/discussion/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-footer",
+                            "title": "Footer",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/footer/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-history",
+                            "title": "History",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/history/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-images",
+                            "title": "Images",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/images/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-logo",
+                            "title": "Logo",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/logo/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-markdown",
+                            "title": "Markdown",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/markdown/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-media",
+                            "title": "Media",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/media/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-menu",
+                            "title": "Menu",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/menu/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-pagefind",
+                            "title": "Pagefind",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/pagefind/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-redaction",
+                            "title": "Redaction",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/redaction/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-slide",
+                            "title": "Slide",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/slide/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-taxonomy",
+                            "title": "Taxonomy",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/taxonomy/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-terms",
+                            "title": "Terms",
+                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/terms/",
+                            "type": "tags"
+                        },
+    ],
+    "links": [
+            
+                    {
+                        "source": "719fa4fe573bd36a645353bbd28d930b",
+                        "target": "categories-authoring",
+                    },
+                    {
+                        "source": "719fa4fe573bd36a645353bbd28d930b",
+                        "target": "tags-authoring",
+                    },
+                    {
+                        "source": "719fa4fe573bd36a645353bbd28d930b",
+                        "target": "tags-taxonomy",
+                    },
+            
+                    {
+                        "source": "873ba95f40751c50553ab2667dc36c7c",
+                        "target": "categories-authoring",
+                    },
+                    {
+                        "source": "873ba95f40751c50553ab2667dc36c7c",
+                        "target": "tags-authoring",
+                    },
+                    {
+                        "source": "873ba95f40751c50553ab2667dc36c7c",
+                        "target": "tags-content",
+                    },
+                    {
+                        "source": "873ba95f40751c50553ab2667dc36c7c",
+                        "target": "tags-media",
+                    },
+                    {
+                        "source": "873ba95f40751c50553ab2667dc36c7c",
+                        "target": "tags-audio",
+                    },
+                    {
+                        "source": "873ba95f40751c50553ab2667dc36c7c",
+                        "target": "tags-cover",
+                    },
+                    {
+                        "source": "873ba95f40751c50553ab2667dc36c7c",
+                        "target": "tags-images",
+                    },
+                    {
+                        "source": "873ba95f40751c50553ab2667dc36c7c",
+                        "target": "tags-alt",
+                    },
+            
+                    {
+                        "source": "cce34b9ad7731eb353d7756c6827e49b",
+                        "target": "categories-authoring",
+                    },
+                    {
+                        "source": "cce34b9ad7731eb353d7756c6827e49b",
+                        "target": "tags-authoring",
+                    },
+                    {
+                        "source": "cce34b9ad7731eb353d7756c6827e49b",
+                        "target": "tags-cover",
+                    },
+                    {
+                        "source": "cce34b9ad7731eb353d7756c6827e49b",
+                        "target": "tags-taxonomy",
+                    },
+                    {
+                        "source": "cce34b9ad7731eb353d7756c6827e49b",
+                        "target": "tags-terms",
+                    },
+            
+                    {
+                        "source": "4e581b6215e4f907a7c69f0b0913edf4",
+                        "target": "categories-authoring",
+                    },
+                    {
+                        "source": "4e581b6215e4f907a7c69f0b0913edf4",
+                        "target": "tags-authoring",
+                    },
+                    {
+                        "source": "4e581b6215e4f907a7c69f0b0913edf4",
+                        "target": "tags-redaction",
+                    },
+                    {
+                        "source": "4e581b6215e4f907a7c69f0b0913edf4",
+                        "target": "tags-history",
+                    },
+            
+                    {
+                        "source": "f2783b25d74db465ebbcc3d1aca12163",
+                        "target": "categories-configuration",
+                    },
+                    {
+                        "source": "f2783b25d74db465ebbcc3d1aca12163",
+                        "target": "tags-configuration",
+                    },
+                    {
+                        "source": "f2783b25d74db465ebbcc3d1aca12163",
+                        "target": "tags-discussion",
+                    },
+            
+                    {
+                        "source": "09331682f8c9231434cfeb1c12135d7d",
+                        "target": "categories-homepage",
+                    },
+                    {
+                        "source": "09331682f8c9231434cfeb1c12135d7d",
+                        "target": "tags-configuration",
+                    },
+                    {
+                        "source": "09331682f8c9231434cfeb1c12135d7d",
+                        "target": "tags-slide",
+                    },
+            
+                    {
+                        "source": "dd63cc08f431d01796a9c374a58adb71",
+                        "target": "categories-configuration",
+                    },
+                    {
+                        "source": "dd63cc08f431d01796a9c374a58adb71",
+                        "target": "tags-configuration",
+                    },
+                    {
+                        "source": "dd63cc08f431d01796a9c374a58adb71",
+                        "target": "tags-logo",
+                    },
+                    {
+                        "source": "dd63cc08f431d01796a9c374a58adb71",
+                        "target": "tags-color",
+                    },
+                    {
+                        "source": "dd63cc08f431d01796a9c374a58adb71",
+                        "target": "tags-accent",
+                    },
+            
+                    {
+                        "source": "8e1b18acb820cb48f420f5d9f591282f",
+                        "target": "categories-configuration",
+                    },
+                    {
+                        "source": "8e1b18acb820cb48f420f5d9f591282f",
+                        "target": "tags-configuration",
+                    },
+                    {
+                        "source": "8e1b18acb820cb48f420f5d9f591282f",
+                        "target": "tags-footer",
+                    },
+            
+                    {
+                        "source": "439fecffa54490320418536b63747859",
+                        "target": "categories-configuration",
+                    },
+                    {
+                        "source": "439fecffa54490320418536b63747859",
+                        "target": "tags-configuration",
+                    },
+                    {
+                        "source": "439fecffa54490320418536b63747859",
+                        "target": "tags-menu",
+                    },
+            
+                    {
+                        "source": "6cb7dd3a82bd05b17ff03c690b19c62c",
+                        "target": "categories-configuration",
+                    },
+                    {
+                        "source": "6cb7dd3a82bd05b17ff03c690b19c62c",
+                        "target": "tags-configuration",
+                    },
+                    {
+                        "source": "6cb7dd3a82bd05b17ff03c690b19c62c",
+                        "target": "tags-pagefind",
+                    },
+            
+                    {
+                        "source": "727ff61f21cd405159d2d835b27cbba7",
+                        "target": "categories-latex",
+                    },
+                    {
+                        "source": "727ff61f21cd405159d2d835b27cbba7",
+                        "target": "tags-markdown",
+                    },
+            
+                    {
+                        "source": "8d8f0be5b35c3233b13a6626f015e624",
+                        "target": "categories-latex",
+                    },
+    ],
+}

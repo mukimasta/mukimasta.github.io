@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" >
+  <channel>
+    <title>Fase on Contoh</title>
+    <link>http://localhost:1313/hugo-brewm/id/stage/</link>
+    <description>Artikel Terbaru dalam Fase pada Contoh</description>
+    <generator>Hugo 0.151.0</generator>
+    <language>id-ID</language>
+    <managingEditor>email@example.com (Author Name)</managingEditor>
+    <webMaster>email@example.com (Author Name)</webMaster>
+    <lastBuildDate>Sat, 10 Jan 2026 16:04:00 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/hugo-brewm/id/stage/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/hugo-brewm/en/stage/index.xml" hreflang="en" rel="alternate" type="application/rss&#43;xml" />
+        
+    <item>
+      <title>evergreen</title>
+      <link>http://localhost:1313/hugo-brewm/id/stage/evergreen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/id/stage/evergreen/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>kembang</title>
+      <link>http://localhost:1313/hugo-brewm/id/stage/budding/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/id/stage/budding/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>semai</title>
+      <link>http://localhost:1313/hugo-brewm/id/stage/seedling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/id/stage/seedling/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+  </channel>
+</rss>

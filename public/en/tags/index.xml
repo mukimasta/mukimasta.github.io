@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" >
+  <channel>
+    <title>Tags on Example</title>
+    <link>http://localhost:1313/hugo-brewm/en/tags/</link>
+    <description>Recent Posts in Tags on Example</description>
+    <generator>Hugo 0.151.0</generator>
+    <language>en-GB</language>
+    <managingEditor>email@example.com (Author Name)</managingEditor>
+    <webMaster>email@example.com (Author Name)</webMaster>
+    <lastBuildDate>Sat, 10 Jan 2026 16:04:00 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/hugo-brewm/en/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/hugo-brewm/id/tags/index.xml" hreflang="id" rel="alternate" type="application/rss&#43;xml" />
+        
+        <atom:link href="http://localhost:1313/hugo-brewm/es-mx/tags/index.xml" hreflang="es-mx" rel="alternate" type="application/rss&#43;xml" />
+        
+        <atom:link href="http://localhost:1313/hugo-brewm/fr/tags/index.xml" hreflang="fr" rel="alternate" type="application/rss&#43;xml" />
+        
+        <atom:link href="http://localhost:1313/hugo-brewm/hi/tags/index.xml" hreflang="hi" rel="alternate" type="application/rss&#43;xml" />
+        
+    <item>
+      <title>Authoring</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/authoring/</link>
+      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/authoring/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Taxonomy</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/taxonomy/</link>
+      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/taxonomy/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Alt</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/alt/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/alt/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Audio</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/audio/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/audio/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Content</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/content/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/content/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Cover</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/cover/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/cover/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Images</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/images/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/images/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Media</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/media/</link>
+      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/media/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>History</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/history/</link>
+      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/history/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Redaction</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/redaction/</link>
+      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/redaction/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Terms</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/terms/</link>
+      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/terms/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Accent</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/accent/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/accent/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Color</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/color/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/color/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Configuration</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/configuration/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/configuration/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Discussion</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/discussion/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/discussion/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
+    <item>
+      <title>Footer</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/footer/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/footer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Logo</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/logo/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/logo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/markdown/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Menu</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/menu/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/menu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pagefind</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/pagefind/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/pagefind/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Slide</title>
+      <link>http://localhost:1313/hugo-brewm/en/tags/slide/</link>
+      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/hugo-brewm/en/tags/slide/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
