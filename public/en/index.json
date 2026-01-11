@@ -3,212 +3,212 @@
     "nodes": [{
                 "id": "719fa4fe573bd36a645353bbd28d930b",
                 "title": "Authoring Stage Taxonomy for Digital Garden",
-                "permalink": "http://localhost:1313/hugo-brewm/en/post/authoring-custom-taxonomy/",
+                "permalink": "http://localhost:1313/en/post/authoring-custom-taxonomy/",
                 "type": "post"
             },{
                 "id": "873ba95f40751c50553ab2667dc36c7c",
                 "title": "Authoring Cover Images and Audio Articles",
-                "permalink": "http://localhost:1313/hugo-brewm/en/post/authoring-cover-images-and-audio-article/",
+                "permalink": "http://localhost:1313/en/post/authoring-cover-images-and-audio-article/",
                 "type": "post"
             },{
                 "id": "cce34b9ad7731eb353d7756c6827e49b",
                 "title": "Authoring Terms Entry",
-                "permalink": "http://localhost:1313/hugo-brewm/en/post/authoring-terms-entry/",
+                "permalink": "http://localhost:1313/en/post/authoring-terms-entry/",
                 "type": "post"
             },{
                 "id": "4e581b6215e4f907a7c69f0b0913edf4",
                 "title": "Authoring The Redaction History",
-                "permalink": "http://localhost:1313/hugo-brewm/en/post/authoring-redaction-history/",
+                "permalink": "http://localhost:1313/en/post/authoring-redaction-history/",
                 "type": "post"
             },{
                 "id": "f2783b25d74db465ebbcc3d1aca12163",
                 "title": "Configure Discussion",
-                "permalink": "http://localhost:1313/hugo-brewm/en/post/configure-discussion/",
+                "permalink": "http://localhost:1313/en/post/configure-discussion/",
                 "type": "post"
             },{
                 "id": "09331682f8c9231434cfeb1c12135d7d",
                 "title": "Configure Homepage Slides",
-                "permalink": "http://localhost:1313/hugo-brewm/en/post/configure-slides/",
+                "permalink": "http://localhost:1313/en/post/configure-slides/",
                 "type": "post"
             },{
                 "id": "dd63cc08f431d01796a9c374a58adb71",
                 "title": "Configure Logo and Accent Color",
-                "permalink": "http://localhost:1313/hugo-brewm/en/post/configure-logo-and-accent-color/",
+                "permalink": "http://localhost:1313/en/post/configure-logo-and-accent-color/",
                 "type": "post"
             },{
                 "id": "8e1b18acb820cb48f420f5d9f591282f",
                 "title": "Configure Main Footer",
-                "permalink": "http://localhost:1313/hugo-brewm/en/post/configure-main-footer/",
+                "permalink": "http://localhost:1313/en/post/configure-main-footer/",
                 "type": "post"
             },{
                 "id": "439fecffa54490320418536b63747859",
                 "title": "Configure Menu",
-                "permalink": "http://localhost:1313/hugo-brewm/en/post/configure-menu/",
+                "permalink": "http://localhost:1313/en/post/configure-menu/",
                 "type": "post"
             },{
                 "id": "6cb7dd3a82bd05b17ff03c690b19c62c",
                 "title": "Configure Pagefind",
-                "permalink": "http://localhost:1313/hugo-brewm/en/post/configure-pagefind/",
+                "permalink": "http://localhost:1313/en/post/configure-pagefind/",
                 "type": "post"
             },{
                 "id": "727ff61f21cd405159d2d835b27cbba7",
                 "title": "Markdown Test",
-                "permalink": "http://localhost:1313/hugo-brewm/en/post/markdown-test/",
+                "permalink": "http://localhost:1313/en/post/markdown-test/",
                 "type": "post"
             },{
                 "id": "8d8f0be5b35c3233b13a6626f015e624",
                 "title": "Hugo-Tufte Features compatibility",
-                "permalink": "http://localhost:1313/hugo-brewm/en/post/tufte-features/",
+                "permalink": "http://localhost:1313/en/post/tufte-features/",
                 "type": "post"
             },
                         {
                             "id": "categories-authoring",
                             "title": "Authoring",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/categories/authoring/",
+                            "permalink": "http://localhost:1313/en/categories/authoring/",
                             "type": "categories"
                         },
                         {
                             "id": "categories-configuration",
                             "title": "Configuration",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/categories/configuration/",
+                            "permalink": "http://localhost:1313/en/categories/configuration/",
                             "type": "categories"
                         },
                         {
                             "id": "categories-homepage",
                             "title": "Homepage",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/categories/homepage/",
+                            "permalink": "http://localhost:1313/en/categories/homepage/",
                             "type": "categories"
                         },
                         {
                             "id": "categories-latex",
                             "title": "Latex",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/categories/latex/",
+                            "permalink": "http://localhost:1313/en/categories/latex/",
                             "type": "categories"
                         },
                         {
                             "id": "tags-accent",
                             "title": "Accent",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/accent/",
+                            "permalink": "http://localhost:1313/en/tags/accent/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-alt",
                             "title": "Alt",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/alt/",
+                            "permalink": "http://localhost:1313/en/tags/alt/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-audio",
                             "title": "Audio",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/audio/",
+                            "permalink": "http://localhost:1313/en/tags/audio/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-authoring",
                             "title": "Authoring",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/authoring/",
+                            "permalink": "http://localhost:1313/en/tags/authoring/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-color",
                             "title": "Color",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/color/",
+                            "permalink": "http://localhost:1313/en/tags/color/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-configuration",
                             "title": "Configuration",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/configuration/",
+                            "permalink": "http://localhost:1313/en/tags/configuration/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-content",
                             "title": "Content",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/content/",
+                            "permalink": "http://localhost:1313/en/tags/content/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-cover",
                             "title": "Cover",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/cover/",
+                            "permalink": "http://localhost:1313/en/tags/cover/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-discussion",
                             "title": "Discussion",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/discussion/",
+                            "permalink": "http://localhost:1313/en/tags/discussion/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-footer",
                             "title": "Footer",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/footer/",
+                            "permalink": "http://localhost:1313/en/tags/footer/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-history",
                             "title": "History",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/history/",
+                            "permalink": "http://localhost:1313/en/tags/history/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-images",
                             "title": "Images",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/images/",
+                            "permalink": "http://localhost:1313/en/tags/images/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-logo",
                             "title": "Logo",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/logo/",
+                            "permalink": "http://localhost:1313/en/tags/logo/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-markdown",
                             "title": "Markdown",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/markdown/",
+                            "permalink": "http://localhost:1313/en/tags/markdown/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-media",
                             "title": "Media",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/media/",
+                            "permalink": "http://localhost:1313/en/tags/media/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-menu",
                             "title": "Menu",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/menu/",
+                            "permalink": "http://localhost:1313/en/tags/menu/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-pagefind",
                             "title": "Pagefind",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/pagefind/",
+                            "permalink": "http://localhost:1313/en/tags/pagefind/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-redaction",
                             "title": "Redaction",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/redaction/",
+                            "permalink": "http://localhost:1313/en/tags/redaction/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-slide",
                             "title": "Slide",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/slide/",
+                            "permalink": "http://localhost:1313/en/tags/slide/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-taxonomy",
                             "title": "Taxonomy",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/taxonomy/",
+                            "permalink": "http://localhost:1313/en/tags/taxonomy/",
                             "type": "tags"
                         },
                         {
                             "id": "tags-terms",
                             "title": "Terms",
-                            "permalink": "http://localhost:1313/hugo-brewm/en/tags/terms/",
+                            "permalink": "http://localhost:1313/en/tags/terms/",
                             "type": "tags"
                         },
     ],

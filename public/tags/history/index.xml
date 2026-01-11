@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" >
   <channel>
-    <title>History on My New Hugo Site</title>
+    <title>History on MUKIMASTA</title>
     <link>http://localhost:1313/tags/history/</link>
-    <description>Recent Posts in History on My New Hugo Site</description>
+    <description>Recent Posts in History on MUKIMASTA</description>
     <generator>Hugo 0.151.0</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 10 Jan 2026 15:59:02 -0800</lastBuildDate>
+    <language>en-GB</language>
+    <managingEditor>mukimasta@outlook.com (Hanlin Xue)</managingEditor>
+    <webMaster>mukimasta@outlook.com (Hanlin Xue)</webMaster>
+    <lastBuildDate>Sat, 10 Jan 2026 18:34:13 -0800</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/history/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Authoring The Redaction History</title>
-      <link>http://localhost:1313/en/post/authoring-redaction-history/</link>
-      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
+      <title>Post Template</title>
+      <link>http://localhost:1313/post/post_template/</link>
+      <pubDate>Sat, 10 Jan 2026 00:00:00 +0000</pubDate>
+      <author>mukimasta@outlook.com (Hanlin Xue)</author>
       <dc:creator>[Author Name]</dc:creator>
-      <guid>http://localhost:1313/en/post/authoring-redaction-history/</guid>
-      <description>How to set up the redaction history in Hugo Brewm theme</description>
-      <content:encoded>&lt;p&gt;The redaction history functionality enables you to track and communicate content modifications to readers.&#xA;Within the post&amp;rsquo;s front matter, you can specify details such as &lt;code&gt;editor&lt;/code&gt;, &lt;code&gt;reviewer&lt;/code&gt;, and include explanatory notes (&lt;code&gt;note&lt;/code&gt;) about the changes made.&#xA;This feature requires manual configuration in the post&amp;rsquo;s front matter section.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;+++&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;title&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Authoring The Redaction History&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;history&lt;/span&gt; = [&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {&lt;span style=&#34;color:#a6e22e&#34;&gt;date&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2025-02-01&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;author&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Author Name&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;reviewer&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Reviewer Name&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;note&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Example&amp;#34;&lt;/span&gt;},&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {&lt;span style=&#34;color:#a6e22e&#34;&gt;date&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2025-02-02&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;author&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Author Name&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;editor&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Editor Name&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;note&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Addendum (example)&amp;#34;&lt;/span&gt;},&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {&lt;span style=&#34;color:#a6e22e&#34;&gt;date&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;2025-02-03&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#a6e22e&#34;&gt;note&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Errata (example)&amp;#34;&lt;/span&gt;},&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;+++&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A chronological timeline displaying these information will appear under the article&amp;rsquo;s information section, as demonstrated in this example post.&lt;/p&gt;&#xA;</content:encoded>
+      <guid>http://localhost:1313/post/post_template/</guid>
+      <description>This is a post template</description>
+      <content:encoded></content:encoded>
       <category>Authoring</category>
     </item>
   </channel>

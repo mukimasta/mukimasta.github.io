@@ -1,0 +1,7 @@
+[[main]]
+  name       = 'Github'
+  identifier = 'github'
+  weight     = 1
+  url        = 'https://github.com/mukimasta'
+  [[main.params]]
+    class = 'lfill textssc'

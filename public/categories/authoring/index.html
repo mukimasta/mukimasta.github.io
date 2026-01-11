@@ -1,18 +1,34 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
+<html lang="en-GB" dir="ltr">
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <!-- head.html --><!-- meta.html -->
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Authoring | My New Hugo Site</title>
-<meta name="author" content="">
+<title>Authoring | MUKIMASTA</title>
+<meta name="author" content="Hanlin Xue">
+<meta name="description" content="term | MUKIMASTA" >
 <link rel="canonical" href="http://localhost:1313/categories/authoring/">
 
 
 
-    <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/categories/authoring/index.xml" title="Authoring | My New Hugo Site (RSS)" />
+    
+    <!-- twitterCard -->
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Authoring | MUKIMASTA" />
+    <meta name="twitter:description" content="term | MUKIMASTA" />
+        <meta name="twitter:image" content="https://repository-images.githubusercontent.com/923527728/46a32a19-69ac-45b3-91a4-c4d299fb234b" />
+    
+    <!-- openGraph -->
+    <meta property="og:title" content="Authoring | MUKIMASTA" />
+    <meta property="og:description" content="term | MUKIMASTA" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://localhost:1313/categories/authoring/" />
+        <meta property="og:image" content="https://repository-images.githubusercontent.com/923527728/46a32a19-69ac-45b3-91a4-c4d299fb234b" />
+    <meta property="og:site_name" content="MUKIMASTA" />
+    <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/categories/authoring/index.xml" title="Authoring | MUKIMASTA (RSS)" />
     <!-- js.html -->
 
 
@@ -31,9 +47,6 @@
         img {max-width: 86vw;}
     </style>
     <!-- list.html [head] -->
-        <style>
-             #home #list-posts{ max-width: var(--max-width);} @media (min-width: 1421px){ body >main#home >aside#list-tags{ width: calc(100% - 36rem);}}
-        </style>
 </head>
 <body>
     <!-- header.html -->
@@ -49,6 +62,13 @@
     </nav>
     
     <!-- logo.html -->
+    <div id="logo">
+        <a href="http://localhost:1313/" aria-label="MUKIMASTA" aria-description="Homepage"><svg id="logotype" xmlns="http://www.w3.org/2000/svg" version="1.1" width="252pt" aria-label="MUKIMASTA">
+                        <text id="logotype__text" y="19.5pt" x="0">MUKIMASTA</text>
+                    </svg>
+        </a>
+        <hr class="hide"/>
+    </div>
     
     <details class="presentation" id="top-nav">
         <summary class="on-deck">
@@ -57,9 +77,47 @@
         </summary>
         <nav tabindex="-1" aria-label="Top">
             <!-- menu.html -->
+    <details id="has-main-menu" class="presentation" open>
+        <summary  class="hide"  aria-label="Main Menu">
+            <span>Main Menu</span>
+        </summary>
+            
+            <nav id="main-menu" aria-label="Main Menu">
+                <ul class="l1   has-childfree " role="presentation" tabindex="-1" >
+                    
+    
+        <li role="presentation" >
+    <a   class=on-deck href=/>
+        
+            <span>
+                About</span>
+    </a>
+        </li>
+        <li role="presentation" >
+    <a   class=on-deck href=https://github.com/mukimasta rel=external noopener noreferrer nofollow target=_blank>
+        
+            <i class="icon sri">github</i>
+            <span>
+                Github</span>
+    </a>
+        </li>
+                </ul>
+            </nav>
+    </details>
             
             <!-- menu.html -->
             <!-- i18n.html -->
+            <nav id="bi18n" aria-label="Language Selections">
+                <a id="has-i18n" class="on-deck"
+                    href="http://localhost:1313/zh/"
+                    aria-label="Switch Language to Chinese"
+                    aria-description="Current Language is English">
+                    <span class="emoji">🇨🇳&nbsp;</span>
+                    <span class="act iso639 sri" aria-hidden="true">EN</span>
+                    <span class="alt iso639 sri" aria-hidden="true">&rarr; ZH</span>
+                    <span class="t srt languangeName">Chinese</span>
+                </a>
+            </nav>
 
         </nav>
         <div id="top-nav-screen" class="screening js-cpn" role="presentation" aria-hidden="true"></div>
@@ -119,12 +177,12 @@
                     <div role="feed" aria-busy="false" aria-labelledby="list-post-heading">
                         <article class="feed-item"
         aria-posinset="1"
-        aria-setsize="4"
+        aria-setsize="1"
         aria-labelledby="title-1"
         aria-describedby="desc-1">
         <hgroup>
             <div>
-                <time datetime="2025-07-28T00:00:00&#43;00:00">July 28, 2025</time>
+                <time datetime="2026-01-10T00:00:00&#43;00:00">January 10, 2026</time>
                 <span><span>[Author Name]</span>
                         <span>in</span>
                         <!-- terms.html -->
@@ -133,138 +191,20 @@
                 </span>
                 
             </div>
-            <a href="/en/post/authoring-custom-taxonomy/" class="sr0" tabindex="-1" aria-describedby="desc-1">
-                <h1 id="title-1">Authoring Stage Taxonomy for Digital Garden</h1>
+            <a href="/post/post_template/" class="sr0" tabindex="-1" aria-describedby="desc-1">
+                <h1 id="title-1">Post Template</h1>
             </a>
         </hgroup>
-        <a class="sri" href="/en/post/authoring-custom-taxonomy/" aria-label="Authoring Stage Taxonomy for Digital Garden" aria-describedby="desc-1"></a>
-        
-        <section >
-            <div class="par" id="desc-1">This theme supports custom taxonomy and growth stage indicators. By default seedling, budding and evergreen will have predefined indicator.
-
-            </div>
-        </section>
-        <footer>
-            <span class="readingTime">1 min read
-            </span>
-            
-                    <!-- terms.html -->
-            <ul class="rounded invert" role="presentation">
-                    <li><a href="/tags/authoring/" tabindex="-1">Authoring</a></li>
-                    <li><a href="/tags/taxonomy/" tabindex="-1">Taxonomy</a></li>
-            </ul>
-        </footer>
-    </article><hr class="ldots" role="presentation" aria-hidden="true">
-                        <article class="feed-item"
-        aria-posinset="2"
-        aria-setsize="4"
-        aria-labelledby="title-2"
-        aria-describedby="desc-2">
-        <hgroup>
-            <div>
-                <time datetime="2025-02-22T00:00:00&#43;00:00">February 22, 2025</time>
-                <span><span>Author Name</span>
-                        <span>in</span>
-                        <!-- terms.html -->
-            
-                <a href="/categories/authoring/" tabindex="-1">Authoring</a>
-                </span>
-                
-            </div>
-            <a href="/en/post/authoring-cover-images-and-audio-article/" class="sr0" tabindex="-1" aria-describedby="desc-2">
-                <h1 id="title-2">Authoring Cover Images and Audio Articles</h1>
-            </a>
-        </hgroup>
-        <a class="sri" href="/en/post/authoring-cover-images-and-audio-article/" aria-label="Authoring Cover Images and Audio Articles" aria-describedby="desc-2"></a>
+        <a class="sri" href="/post/post_template/" aria-label="Post Template" aria-describedby="desc-1"></a>
         
         <section class="has-cover">
-                <img src=https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_and_styrofoam_%E2%80%93_electrostatic_charge_%28235112299%29.jpg alt="Cat named Cooper with styrofoam on his fur due to electrostatic charge." loading="lazy">
-            <div class="par" id="desc-2">A guide on adding cover images and audio articles
+                <img class="flowlines" src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/16.svg" alt="" style="object-position: 29% 11%" loading="lazy">
+            <div class="par" id="desc-1">This is a post template
             </div>
         </section>
         <footer>
-            <span class="readingTime">1 min read
-            </span>
-            
-                    <!-- terms.html -->
-            <ul class="rounded invert" role="presentation">
-                    <li><a href="/tags/authoring/" tabindex="-1">Authoring</a></li>
-                    <li><a href="/tags/content/" tabindex="-1">Content</a></li>
-                    <li><a href="/tags/media/" tabindex="-1">Media</a></li>
-                    <li><a href="/tags/audio/" tabindex="-1">Audio</a></li>
-                    <li><a href="/tags/cover/" tabindex="-1">Cover</a></li>
-                    <li><a href="/tags/images/" tabindex="-1">Images</a></li>
-                    <li><a href="/tags/alt/" tabindex="-1">Alt</a></li>
-            </ul>
-        </footer>
-    </article><hr class="ldots" role="presentation" aria-hidden="true">
-                        <article class="feed-item"
-        aria-posinset="3"
-        aria-setsize="4"
-        aria-labelledby="title-3"
-        aria-describedby="desc-3">
-        <hgroup>
-            <div>
-                <time datetime="2025-02-03T00:00:00&#43;00:00">February 3, 2025</time>
-                <span><span>[Author Name A.N. Other]</span>
-                        <span>in</span>
-                        <!-- terms.html -->
-            
-                <a href="/categories/authoring/" tabindex="-1">Authoring</a>
-                </span>
-                
-            </div>
-            <a href="/en/post/authoring-terms-entry/" class="sr0" tabindex="-1" aria-describedby="desc-3">
-                <h1 id="title-3">Authoring Terms Entry</h1>
-            </a>
-        </hgroup>
-        <a class="sri" href="/en/post/authoring-terms-entry/" aria-label="Authoring Terms Entry" aria-describedby="desc-3"></a>
-        
-        <section >
-            <div class="par" id="desc-3">How to set the cover and linking of terms entry in Hugo Brewm theme
-            </div>
-        </section>
-        <footer>
-            <span class="readingTime">1 min read
-            </span>
-            
-                    <!-- terms.html -->
-            <ul class="rounded invert" role="presentation">
-                    <li><a href="/tags/authoring/" tabindex="-1">Authoring</a></li>
-                    <li><a href="/tags/cover/" tabindex="-1">Cover</a></li>
-                    <li><a href="/tags/taxonomy/" tabindex="-1">Taxonomy</a></li>
-                    <li><a href="/tags/terms/" tabindex="-1">Terms</a></li>
-            </ul>
-        </footer>
-    </article><hr class="ldots" role="presentation" aria-hidden="true">
-                        <article class="feed-item"
-        aria-posinset="4"
-        aria-setsize="4"
-        aria-labelledby="title-4"
-        aria-describedby="desc-4">
-        <hgroup>
-            <div>
-                <time datetime="2025-02-03T00:00:00&#43;00:00">February 3, 2025</time>
-                <span><span>[Author Name]</span>
-                        <span>in</span>
-                        <!-- terms.html -->
-            
-                <a href="/categories/authoring/" tabindex="-1">Authoring</a>
-                </span>
-                
-            </div>
-            <a href="/en/post/authoring-redaction-history/" class="sr0" tabindex="-1" aria-describedby="desc-4">
-                <h1 id="title-4">Authoring The Redaction History</h1>
-            </a>
-        </hgroup>
-        <a class="sri" href="/en/post/authoring-redaction-history/" aria-label="Authoring The Redaction History" aria-describedby="desc-4"></a>
-        
-        <section >
-            <div class="par" id="desc-4">How to set up the redaction history in Hugo Brewm theme
-            </div>
-        </section>
-        <footer>
-            <span class="readingTime">1 min read
+                        <span class="st evergreen"></span>
+            <span class="readingTime">0 min read
             </span>
             
                     <!-- terms.html -->
@@ -282,6 +222,46 @@
             <!-- excluded last block frome some RSS reader and browser reader mode -->
             
         <!-- main/footer.html -->
+    <hr class="hide">
+    <footer id="main-footer"><div class="column column--multicols pagewidth" style="--multicols: 2"><div id="main-footer-primary">
+                        <p><strong>Impressum</strong></p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<br>
+<fieldset id=cookie-banner>
+<legend>Cookie Banner</legend>
+<div>
+<span>We do not collect cookie</span>
+<img id="no-cookie" alt="No Cookie for Cookie Monster" />
+</div>
+</fieldset>
+                    </div>
+                <div id="main-footer-secondary"  class="column" style="--col: 10rem">
+                        <div>
+                            <p><strong>Example Links</strong></p>
+<ul>
+<li><a href="#">Example Link 1</a></li>
+<li><a href="#">Example Link 2</a></li>
+<li><a href="#">Example Link 3</a></li>
+<li><a href="#">Example Link 4</a></li>
+</ul>
+
+                        </div>
+                        <div>
+                            <p><strong>More Links</strong></p>
+<ul>
+<li><a href="#">More Link 1</a></li>
+<li><a href="#">More Link 2</a></li>
+<li><a href="#">More Link 3</a></li>
+</ul>
+
+                        </div>
+                </div>
+            </div>
+            <div id="unified-footer"><p id="license">© Hanlin Xue 2026</p>
+                    <!-- menu.html -->
+                        <p id="coffee-counter">Made with ❤️ and 7 cups of coffee, if not more.</p>
+            </div>
+    </footer>
         </div>
     </main>
     <!-- footer.html -->

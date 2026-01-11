@@ -1,209 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" >
   <channel>
-    <title>Tags on My New Hugo Site</title>
-    <link>http://localhost:1313/tags/</link>
-    <description>Recent Posts in Tags on My New Hugo Site</description>
+    <title>Tags on MUKIMASTA</title>
+    <link>https://mukimasta.github.io/tags/</link>
+    <description>Recent Posts in Tags on MUKIMASTA</description>
     <generator>Hugo 0.151.0</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 10 Jan 2026 15:59:02 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-GB</language>
+    <managingEditor>mukimasta@outlook.com (Hanlin Xue)</managingEditor>
+    <webMaster>mukimasta@outlook.com (Hanlin Xue)</webMaster>
+    <lastBuildDate>Sat, 10 Jan 2026 19:07:13 -0800</lastBuildDate>
+    <atom:link href="https://mukimasta.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://mukimasta.github.io/zh/tags/index.xml" hreflang="zh" rel="alternate" type="application/rss&#43;xml" />
+        
     <item>
-      <title>Authoring</title>
-      <link>http://localhost:1313/tags/authoring/</link>
-      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/authoring/</guid>
+      <title>Pin</title>
+      <link>https://mukimasta.github.io/tags/pin/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      <author>mukimasta@outlook.com (Hanlin Xue)</author>
+      <dc:creator>Hanlin Xue</dc:creator>
+      <guid>https://mukimasta.github.io/tags/pin/</guid>
       <description></description>
       <content:encoded></content:encoded>
-    </item>
-    <item>
-      <title>Taxonomy</title>
-      <link>http://localhost:1313/tags/taxonomy/</link>
-      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/taxonomy/</guid>
-      <description></description>
-      <content:encoded></content:encoded>
-    </item>
-    <item>
-      <title>Alt</title>
-      <link>http://localhost:1313/tags/alt/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/alt/</guid>
-      <description></description>
-      <content:encoded></content:encoded>
-    </item>
-    <item>
-      <title>Audio</title>
-      <link>http://localhost:1313/tags/audio/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/audio/</guid>
-      <description></description>
-      <content:encoded></content:encoded>
-    </item>
-    <item>
-      <title>Content</title>
-      <link>http://localhost:1313/tags/content/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/content/</guid>
-      <description></description>
-      <content:encoded></content:encoded>
-    </item>
-    <item>
-      <title>Cover</title>
-      <link>http://localhost:1313/tags/cover/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/cover/</guid>
-      <description></description>
-      <content:encoded></content:encoded>
-    </item>
-    <item>
-      <title>Gambar</title>
-      <link>http://localhost:1313/tags/gambar/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/gambar/</guid>
-      <description></description>
-      <content:encoded></content:encoded>
-    </item>
-    <item>
-      <title>Images</title>
-      <link>http://localhost:1313/tags/images/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/images/</guid>
-      <description></description>
-      <content:encoded></content:encoded>
-    </item>
-    <item>
-      <title>Konten</title>
-      <link>http://localhost:1313/tags/konten/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/konten/</guid>
-      <description></description>
-      <content:encoded></content:encoded>
-    </item>
-    <item>
-      <title>Media</title>
-      <link>http://localhost:1313/tags/media/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/media/</guid>
-      <description></description>
-      <content:encoded></content:encoded>
-    </item>
-    <item>
-      <title>Sampul</title>
-      <link>http://localhost:1313/tags/sampul/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/sampul/</guid>
-      <description></description>
-      <content:encoded></content:encoded>
-    </item>
-    <item>
-      <title>History</title>
-      <link>http://localhost:1313/tags/history/</link>
-      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/history/</guid>
-      <description></description>
-      <content:encoded></content:encoded>
-    </item>
-    <item>
-      <title>Redaction</title>
-      <link>http://localhost:1313/tags/redaction/</link>
-      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/redaction/</guid>
-      <description></description>
-      <content:encoded></content:encoded>
-    </item>
-    <item>
-      <title>Redaksi</title>
-      <link>http://localhost:1313/tags/redaksi/</link>
-      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/redaksi/</guid>
-      <description></description>
-      <content:encoded></content:encoded>
-    </item>
-    <item>
-      <title>Riwayat</title>
-      <link>http://localhost:1313/tags/riwayat/</link>
-      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/riwayat/</guid>
-      <description></description>
-      <content:encoded></content:encoded>
-    </item>
-    <item>
-      <title>Terms</title>
-      <link>http://localhost:1313/tags/terms/</link>
-      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/terms/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Accent</title>
-      <link>http://localhost:1313/tags/accent/</link>
-      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/accent/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Color</title>
-      <link>http://localhost:1313/tags/color/</link>
-      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/color/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Configuration</title>
-      <link>http://localhost:1313/tags/configuration/</link>
-      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/configuration/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Discussion</title>
-      <link>http://localhost:1313/tags/discussion/</link>
-      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/discussion/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Footer</title>
-      <link>http://localhost:1313/tags/footer/</link>
-      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/footer/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Logo</title>
-      <link>http://localhost:1313/tags/logo/</link>
-      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/logo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Markdown</title>
-      <link>http://localhost:1313/tags/markdown/</link>
-      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/markdown/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Menu</title>
-      <link>http://localhost:1313/tags/menu/</link>
-      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/menu/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Pagefind</title>
-      <link>http://localhost:1313/tags/pagefind/</link>
-      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/pagefind/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Slide</title>
-      <link>http://localhost:1313/tags/slide/</link>
-      <pubDate>Sun, 26 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/slide/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>

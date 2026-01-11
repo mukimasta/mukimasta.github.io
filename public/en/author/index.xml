@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" >
   <channel>
-    <title>Author on Example</title>
-    <link>http://localhost:1313/hugo-brewm/en/author/</link>
-    <description>Recent Posts in Author on Example</description>
+    <title>Author on MUKIMASTA</title>
+    <link>http://localhost:1313/en/author/</link>
+    <description>Recent Posts in Author on MUKIMASTA</description>
     <generator>Hugo 0.151.0</generator>
     <language>en-GB</language>
     <managingEditor>email@example.com (Author Name)</managingEditor>
     <webMaster>email@example.com (Author Name)</webMaster>
-    <lastBuildDate>Sat, 10 Jan 2026 16:04:00 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/hugo-brewm/en/author/index.xml" rel="self" type="application/rss+xml" />
-        <atom:link href="http://localhost:1313/hugo-brewm/es-mx/author/index.xml" hreflang="es-mx" rel="alternate" type="application/rss&#43;xml" />
+    <lastBuildDate>Sat, 10 Jan 2026 16:11:47 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/author/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/es-mx/author/index.xml" hreflang="es-mx" rel="alternate" type="application/rss&#43;xml" />
         
-        <atom:link href="http://localhost:1313/hugo-brewm/fr/author/index.xml" hreflang="fr" rel="alternate" type="application/rss&#43;xml" />
+        <atom:link href="http://localhost:1313/fr/author/index.xml" hreflang="fr" rel="alternate" type="application/rss&#43;xml" />
         
-        <atom:link href="http://localhost:1313/hugo-brewm/hi/author/index.xml" hreflang="hi" rel="alternate" type="application/rss&#43;xml" />
+        <atom:link href="http://localhost:1313/hi/author/index.xml" hreflang="hi" rel="alternate" type="application/rss&#43;xml" />
         
-        <atom:link href="http://localhost:1313/hugo-brewm/id/author/index.xml" hreflang="id" rel="alternate" type="application/rss&#43;xml" />
+        <atom:link href="http://localhost:1313/id/author/index.xml" hreflang="id" rel="alternate" type="application/rss&#43;xml" />
         
     <item>
-      <title>Author Name</title>
-      <link>http://localhost:1313/hugo-brewm/en/author/author-name/</link>
-      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
+      <title>A.N. Other</title>
+      <link>http://localhost:1313/en/author/a.n.-other/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>email@example.com (Author Name)</author>
       <dc:creator>Author Name</dc:creator>
-      <guid>http://localhost:1313/hugo-brewm/en/author/author-name/</guid>
+      <guid>http://localhost:1313/en/author/a.n.-other/</guid>
+      <description>&lt;h2 id=&#34;an-other&#34;&gt;A.N. Other&lt;/h2&gt;&#xA;&lt;p&gt;This author information is written in &lt;code&gt;content/en/author/A.N. Other/_index.md&lt;/code&gt;.&#xA;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;</description>
+      <content:encoded>&lt;h2 id=&#34;an-other&#34;&gt;A.N. Other&lt;/h2&gt;&#xA;&lt;p&gt;This author information is written in &lt;code&gt;content/en/author/A.N. Other/_index.md&lt;/code&gt;.&#xA;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;&#xA;</content:encoded>
+    </item>
+    <item>
+      <title>Author Name</title>
+      <link>http://localhost:1313/en/author/author-name/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>email@example.com (Author Name)</author>
+      <dc:creator>Author Name</dc:creator>
+      <guid>http://localhost:1313/en/author/author-name/</guid>
       <description>&lt;h2 id=&#34;author-name&#34;&gt;Author Name&lt;/h2&gt;&#xA;&lt;p&gt;This author information is written in &lt;code&gt;content/en/author/author-name/_index.md&lt;/code&gt;.&#xA;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;&#xA;&lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description>
       <content:encoded>&lt;h2 id=&#34;author-name&#34;&gt;Author Name&lt;/h2&gt;&#xA;&lt;p&gt;This author information is written in &lt;code&gt;content/en/author/author-name/_index.md&lt;/code&gt;.&#xA;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;&#xA;&lt;p&gt;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://commons.wikimedia.org/wiki/File:Cat_demonstrating_static_cling_with_styrofoam_peanuts.jpg#/media/File:Cat_and_styrofoam_%E2%80%93_electrostatic_charge_%28235112299%29.jpg&#34; target=&#34;_blank&#34; rel=&#34;external noopener noreferrer nofollow&#34;&gt;Original image&lt;/a&gt; by &lt;a rel=&#34;nofollow&#34; class=&#34;external text&#34; href=&#34;https://www.flickr.com/people/52798669@N00&#34;&gt;Sean McGrath&lt;/a&gt; from Saint John, NB, Canada - &lt;a rel=&#34;nofollow&#34; class=&#34;external text&#34; href=&#34;https://www.flickr.com/photos/mcgraths/235112299/&#34;&gt;Cooper and Styrofoam&lt;/a&gt;, &lt;a href=&#34;https://creativecommons.org/licenses/by/2.0&#34; title=&#34;Creative Commons Attribution 2.0&#34;&gt;CC BY 2.0&lt;/a&gt;, &lt;a href=&#34;https://commons.wikimedia.org/w/index.php?curid=37622131&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;The social icon below is configured in &lt;code&gt;menus.[lang].toml&lt;/code&gt;.&lt;/p&gt;&#xA;</content:encoded>
       <enclosure url="https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_and_styrofoam_%E2%80%93_electrostatic_charge_%28235112299%29.jpg" length="0" type="image/jpeg" />
-    </item>
-    <item>
-      <title>A.N. Other</title>
-      <link>http://localhost:1313/hugo-brewm/en/author/a.n.-other/</link>
-      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
-      <author>email@example.com (Author Name)</author>
-      <dc:creator>Author Name</dc:creator>
-      <guid>http://localhost:1313/hugo-brewm/en/author/a.n.-other/</guid>
-      <description>&lt;h2 id=&#34;an-other&#34;&gt;A.N. Other&lt;/h2&gt;&#xA;&lt;p&gt;This author information is written in &lt;code&gt;content/en/author/A.N. Other/_index.md&lt;/code&gt;.&#xA;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;</description>
-      <content:encoded>&lt;h2 id=&#34;an-other&#34;&gt;A.N. Other&lt;/h2&gt;&#xA;&lt;p&gt;This author information is written in &lt;code&gt;content/en/author/A.N. Other/_index.md&lt;/code&gt;.&#xA;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;&#xA;</content:encoded>
     </item>
   </channel>
 </rss>

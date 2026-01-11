@@ -1,46 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" >
   <channel>
-    <title>Stage on Example</title>
-    <link>http://localhost:1313/hugo-brewm/en/stage/</link>
-    <description>Recent Posts in Stage on Example</description>
+    <title>Stage on MUKIMASTA</title>
+    <link>http://localhost:1313/en/stage/</link>
+    <description>Recent Posts in Stage on MUKIMASTA</description>
     <generator>Hugo 0.151.0</generator>
     <language>en-GB</language>
-    <managingEditor>email@example.com (Author Name)</managingEditor>
-    <webMaster>email@example.com (Author Name)</webMaster>
-    <lastBuildDate>Sat, 10 Jan 2026 16:04:00 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/hugo-brewm/en/stage/index.xml" rel="self" type="application/rss+xml" />
-        <atom:link href="http://localhost:1313/hugo-brewm/id/stage/index.xml" hreflang="id" rel="alternate" type="application/rss&#43;xml" />
+    <managingEditor>mukimasta@outlook.com (Hanlin Xue)</managingEditor>
+    <webMaster>mukimasta@outlook.com (Hanlin Xue)</webMaster>
+    <lastBuildDate>Sat, 10 Jan 2026 16:28:51 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/stage/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/id/en/stage/index.xml" hreflang="id" rel="alternate" type="application/rss&#43;xml" />
         
-    <item>
-      <title>evergreen</title>
-      <link>http://localhost:1313/hugo-brewm/en/stage/evergreen/</link>
-      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
-      <author>email@example.com (Author Name)</author>
-      <dc:creator>Author Name</dc:creator>
-      <guid>http://localhost:1313/hugo-brewm/en/stage/evergreen/</guid>
-      <description></description>
-      <content:encoded></content:encoded>
-    </item>
-    <item>
-      <title>budding</title>
-      <link>http://localhost:1313/hugo-brewm/en/stage/budding/</link>
-      <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
-      <author>email@example.com (Author Name)</author>
-      <dc:creator>Author Name</dc:creator>
-      <guid>http://localhost:1313/hugo-brewm/en/stage/budding/</guid>
-      <description></description>
-      <content:encoded></content:encoded>
-    </item>
-    <item>
-      <title>seedling</title>
-      <link>http://localhost:1313/hugo-brewm/en/stage/seedling/</link>
-      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
-      <author>email@example.com (Author Name)</author>
-      <dc:creator>Author Name</dc:creator>
-      <guid>http://localhost:1313/hugo-brewm/en/stage/seedling/</guid>
-      <description></description>
-      <content:encoded></content:encoded>
-    </item>
+        <atom:link href="http://localhost:1313/id/stage/index.xml" hreflang="id" rel="alternate" type="application/rss&#43;xml" />
+        
+        <atom:link href="http://localhost:1313/stage/index.xml" hreflang="en" rel="alternate" type="application/rss&#43;xml" />
+        
   </channel>
 </rss>

@@ -105,3 +105,75 @@ body[data-contrast="less"] #bionReadSwitch:checked + label {
         backdrop-filter: unset;
     }
 }
+
+/* ------------------------------
+   Home page hero avatar tweaks
+   ------------------------------ */
+/* Home hero: keep left-right layout, but vertically center avatar and make left column narrower */
+main#home .hero {
+    align-items: center; /* vertical centering */
+}
+
+main#home .hero__image {
+    position: static; /* remove sticky "floating" behavior */
+    top: auto;
+    flex: 0 0 320px;  /* narrower "left column" */
+    width: 320px;     /* keep consistent with flex-basis */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-2rem); /* nudge avatar slightly upward */
+}
+
+/* Override theme's 50%/50% split + max-width cap on home */
+main#home .hero__image + .hero__content {
+    width: auto;
+    max-width: none;
+    flex: 1 1 auto;
+}
+
+/* Make home/index text a bit larger */
+main#home .hero__content {
+    font-size: 1.3rem; /* increase base text (theme default is var(--small)) */
+    line-height: 1.5;
+}
+
+/* Make home/index text column wider (theme caps paragraphs to ~27rem) */
+main#home .hero__content p {
+    --col: 38rem; /* adjust: 36rem / 42rem / 48rem */
+    max-width: var(--col);
+}
+
+/* Also allow the whole content block to be wider */
+main#home .hero__image + .hero__content {
+    max-width: 52rem;
+}
+
+/* Optional: slightly larger heading on home */
+main#home .hero__content h1,
+main#home .hero__content h2,
+main#home .hero__content h3 {
+    font-size: calc(var(--LARGE) * 1.08);
+}
+
+/* Make the homepage avatar smaller and circular */
+main#home .hero__image img {
+    max-width: 220px; /* adjust to taste */
+    width: 220px;
+    height: 220px; /* perfect circle */
+    padding: 0.75rem;
+    border-radius: 9999px;
+    object-fit: cover;
+    margin: 0 auto;
+}
+
+/* On small screens, let the theme's stacked mobile layout win */
+@media (max-width: 640px) {
+    main#home .hero__image {
+        flex: unset;
+        width: unset;
+    }
+    main#home .hero__image img {
+        width: 220px;
+    }
+}

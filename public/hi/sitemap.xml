@@ -2,39 +2,39 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/hugo-brewm/hi/author/</loc>
+    <loc>http://localhost:1313/hi/author/</loc>
     
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/author/" /><xhtml:link rel="alternate" hreflang="es-MX" href="http://localhost:1313/hugo-brewm/es-mx/author/" /><xhtml:link rel="alternate" hreflang="fr" href="http://localhost:1313/hugo-brewm/fr/author/" /><xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/author/" />
-    <xhtml:link rel="alternate" hreflang="hi-IN" href="http://localhost:1313/hugo-brewm/hi/author/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/author/" /><xhtml:link rel="alternate" hreflang="es-MX" href="http://localhost:1313/es-mx/author/" /><xhtml:link rel="alternate" hreflang="fr" href="http://localhost:1313/fr/author/" /><xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/id/author/" />
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="http://localhost:1313/hi/author/" />
   </url>
   <url>
-    <loc>http://localhost:1313/hugo-brewm/hi/categories/</loc>
+    <loc>http://localhost:1313/hi/categories/</loc>
     
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/categories/" /><xhtml:link rel="alternate" hreflang="es-MX" href="http://localhost:1313/hugo-brewm/es-mx/categories/" /><xhtml:link rel="alternate" hreflang="fr" href="http://localhost:1313/hugo-brewm/fr/categories/" /><xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/categories/" />
-    <xhtml:link rel="alternate" hreflang="hi-IN" href="http://localhost:1313/hugo-brewm/hi/categories/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/categories/" /><xhtml:link rel="alternate" hreflang="es-MX" href="http://localhost:1313/es-mx/categories/" /><xhtml:link rel="alternate" hreflang="fr" href="http://localhost:1313/fr/categories/" /><xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/id/categories/" />
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="http://localhost:1313/hi/categories/" />
   </url>
   <url>
-    <loc>http://localhost:1313/hugo-brewm/hi/</loc>
+    <loc>http://localhost:1313/hi/</loc>
     
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/" /><xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/" /><xhtml:link rel="alternate" hreflang="es-MX" href="http://localhost:1313/hugo-brewm/es-mx/" /><xhtml:link rel="alternate" hreflang="fr" href="http://localhost:1313/hugo-brewm/fr/" />
-    <xhtml:link rel="alternate" hreflang="hi-IN" href="http://localhost:1313/hugo-brewm/hi/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/" /><xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/id/" /><xhtml:link rel="alternate" hreflang="es-MX" href="http://localhost:1313/es-mx/" /><xhtml:link rel="alternate" hreflang="fr" href="http://localhost:1313/fr/" />
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="http://localhost:1313/hi/" />
   </url>
   <url>
-    <loc>http://localhost:1313/hugo-brewm/hi/series/</loc>
+    <loc>http://localhost:1313/hi/series/</loc>
     
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/series/" /><xhtml:link rel="alternate" hreflang="es-MX" href="http://localhost:1313/hugo-brewm/es-mx/series/" /><xhtml:link rel="alternate" hreflang="fr" href="http://localhost:1313/hugo-brewm/fr/series/" /><xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/series/" />
-    <xhtml:link rel="alternate" hreflang="hi-IN" href="http://localhost:1313/hugo-brewm/hi/series/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/series/" /><xhtml:link rel="alternate" hreflang="es-MX" href="http://localhost:1313/es-mx/series/" /><xhtml:link rel="alternate" hreflang="fr" href="http://localhost:1313/fr/series/" /><xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/id/series/" />
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="http://localhost:1313/hi/series/" />
   </url>
   <url>
-    <loc>http://localhost:1313/hugo-brewm/hi/stage/</loc>
+    <loc>http://localhost:1313/hi/stage/</loc>
     
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/stage/" /><xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/stage/" /><xhtml:link rel="alternate" hreflang="es-MX" href="http://localhost:1313/hugo-brewm/es-mx/stage/" /><xhtml:link rel="alternate" hreflang="fr" href="http://localhost:1313/hugo-brewm/fr/stage/" />
-    <xhtml:link rel="alternate" hreflang="hi-IN" href="http://localhost:1313/hugo-brewm/hi/stage/" />
+    <xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/id/stage/" /><xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/stage/" /><xhtml:link rel="alternate" hreflang="es-MX" href="http://localhost:1313/es-mx/stage/" /><xhtml:link rel="alternate" hreflang="fr" href="http://localhost:1313/fr/stage/" />
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="http://localhost:1313/hi/stage/" />
   </url>
   <url>
-    <loc>http://localhost:1313/hugo-brewm/hi/tags/</loc>
+    <loc>http://localhost:1313/hi/tags/</loc>
     
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/hugo-brewm/en/tags/" /><xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/hugo-brewm/id/tags/" /><xhtml:link rel="alternate" hreflang="es-MX" href="http://localhost:1313/hugo-brewm/es-mx/tags/" /><xhtml:link rel="alternate" hreflang="fr" href="http://localhost:1313/hugo-brewm/fr/tags/" />
-    <xhtml:link rel="alternate" hreflang="hi-IN" href="http://localhost:1313/hugo-brewm/hi/tags/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/tags/" /><xhtml:link rel="alternate" hreflang="es-MX" href="http://localhost:1313/es-mx/tags/" /><xhtml:link rel="alternate" hreflang="fr" href="http://localhost:1313/fr/tags/" /><xhtml:link rel="alternate" hreflang="id-ID" href="http://localhost:1313/id/tags/" />
+    <xhtml:link rel="alternate" hreflang="hi-IN" href="http://localhost:1313/hi/tags/" />
   </url>
 </urlset>

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en-us" dir="ltr">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html lang="en-GB" dir="ltr">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Page Not Found</title>
-    <meta http-equiv="refresh" content="15;url=http://localhost:1313/">
+    <meta http-equiv="refresh" content="15;url=https://mukimasta.github.io/">
     <!-- css.html -->
 
 
-    <link rel="stylesheet" href="http://localhost:1313/css/hugo-brewm.min.css">
+        <link rel="stylesheet" href="https://mukimasta.github.io/css/hugo-brewm.min.css" integrity="sha256-sDGyI6a8DWJLql25Q4kfln2H0EuHq3Z94ohyWOGvesA=" crossorigin="anonymous">
 
 
 <style>
@@ -32,6 +32,13 @@
     </nav>
     
     <!-- logo.html -->
+    <div id="logo">
+        <a href="https://mukimasta.github.io/" aria-label="MUKIMASTA" aria-description="Homepage"><svg id="logotype" xmlns="http://www.w3.org/2000/svg" version="1.1" width="252pt" aria-label="MUKIMASTA">
+                        <text id="logotype__text" y="19.5pt" x="0">MUKIMASTA</text>
+                    </svg>
+        </a>
+        <hr class="hide"/>
+    </div>
     
     <details class="presentation" id="top-nav">
         <summary class="on-deck">
@@ -40,9 +47,47 @@
         </summary>
         <nav tabindex="-1" aria-label="Top">
             <!-- menu.html -->
+    <details id="has-main-menu" class="presentation" open>
+        <summary  class="hide"  aria-label="Main Menu">
+            <span>Main Menu</span>
+        </summary>
+            
+            <nav id="main-menu" aria-label="Main Menu">
+                <ul class="l1   has-childfree " role="presentation" tabindex="-1" >
+                    
+    
+        <li role="presentation" >
+    <a   class=on-deck href=/>
+        
+            <span>
+                About</span>
+    </a>
+        </li>
+        <li role="presentation" >
+    <a   class=on-deck href=https://github.com/mukimasta rel=external noopener noreferrer nofollow target=_blank>
+        
+            <i class="icon sri">github</i>
+            <span>
+                Github</span>
+    </a>
+        </li>
+                </ul>
+            </nav>
+    </details>
             
             <!-- menu.html -->
             <!-- i18n.html -->
+            <nav id="bi18n" aria-label="Language Selections">
+                <a id="has-i18n" class="on-deck"
+                    href="https://mukimasta.github.io/zh/"
+                    aria-label="Switch Language to Chinese"
+                    aria-description="Current Language is English">
+                    <span class="emoji">🇨🇳&nbsp;</span>
+                    <span class="act iso639 sri" aria-hidden="true">EN</span>
+                    <span class="alt iso639 sri" aria-hidden="true">&rarr; ZH</span>
+                    <span class="t srt languangeName">Chinese</span>
+                </a>
+            </nav>
 
         </nav>
         <div id="top-nav-screen" class="screening js-cpn" role="presentation" aria-hidden="true"></div>

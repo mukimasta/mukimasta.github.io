@@ -1,17 +1,17 @@
 ---
 type: 'footer'
 weight: 1
-coffee: 2
 params:
     headless: true
     target: 'https://github.com/foxihd/hugo-brewm'
 ---
 
-**Impressum**
+**MUKIMASTA**
+
+is my personal workshop, where I fuse curiosity, passion, and aesthetics to craft works that only I can bring into the world.
 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
+<!-- 
 <br>
 
 <fieldset id=cookie-banner>
@@ -20,4 +20,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 <span>We do not collect cookie</span>
 <img id="no-cookie" alt="No Cookie for Cookie Monster" />
 </div>
-</fieldset>
+</fieldset> -->

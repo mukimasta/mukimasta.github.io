@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" >
   <channel>
-    <title>Categories on Example</title>
-    <link>http://localhost:1313/hugo-brewm/fr/categories/</link>
-    <description>Posts récents dans Categories allumé Example</description>
+    <title>Categories on MUKIMASTA</title>
+    <link>http://localhost:1313/fr/categories/</link>
+    <description>Posts récents dans Categories allumé MUKIMASTA</description>
     <generator>Hugo 0.151.0</generator>
     <language>fr</language>
-    <managingEditor>email@example.com (Author Name)</managingEditor>
-    <webMaster>email@example.com (Author Name)</webMaster>
-    <lastBuildDate>Sat, 10 Jan 2026 16:04:00 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/hugo-brewm/fr/categories/index.xml" rel="self" type="application/rss+xml" />
-        <atom:link href="http://localhost:1313/hugo-brewm/en/categories/index.xml" hreflang="en" rel="alternate" type="application/rss&#43;xml" />
+    <managingEditor>mukimasta@outlook.com (Hanlin Xue)</managingEditor>
+    <webMaster>mukimasta@outlook.com (Hanlin Xue)</webMaster>
+    <lastBuildDate>Sat, 10 Jan 2026 16:25:26 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/fr/categories/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/categories/index.xml" hreflang="en" rel="alternate" type="application/rss&#43;xml" />
         
-        <atom:link href="http://localhost:1313/hugo-brewm/es-mx/categories/index.xml" hreflang="es-mx" rel="alternate" type="application/rss&#43;xml" />
+        <atom:link href="http://localhost:1313/es-mx/categories/index.xml" hreflang="es-mx" rel="alternate" type="application/rss&#43;xml" />
         
-        <atom:link href="http://localhost:1313/hugo-brewm/hi/categories/index.xml" hreflang="hi" rel="alternate" type="application/rss&#43;xml" />
+        <atom:link href="http://localhost:1313/hi/categories/index.xml" hreflang="hi" rel="alternate" type="application/rss&#43;xml" />
         
-        <atom:link href="http://localhost:1313/hugo-brewm/id/categories/index.xml" hreflang="id" rel="alternate" type="application/rss&#43;xml" />
+        <atom:link href="http://localhost:1313/id/categories/index.xml" hreflang="id" rel="alternate" type="application/rss&#43;xml" />
         
   </channel>
 </rss>

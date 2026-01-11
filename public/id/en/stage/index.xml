@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" >
+  <channel>
+    <title>Fase on MUKIMASTA</title>
+    <link>http://localhost:1313/id/en/stage/</link>
+    <description>Artikel Terbaru dalam Fase pada MUKIMASTA</description>
+    <generator>Hugo 0.151.0</generator>
+    <language>id</language>
+    <managingEditor>mukimasta@outlook.com (Hanlin Xue)</managingEditor>
+    <webMaster>mukimasta@outlook.com (Hanlin Xue)</webMaster>
+    <lastBuildDate>Sat, 10 Jan 2026 16:28:51 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/id/en/stage/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/id/stage/index.xml" hreflang="id" rel="alternate" type="application/rss&#43;xml" />
+        
+        <atom:link href="http://localhost:1313/en/stage/index.xml" hreflang="en" rel="alternate" type="application/rss&#43;xml" />
+        
+        <atom:link href="http://localhost:1313/stage/index.xml" hreflang="en" rel="alternate" type="application/rss&#43;xml" />
+        
+  </channel>
+</rss>

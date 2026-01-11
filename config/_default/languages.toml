@@ -9,44 +9,13 @@
         pagerSize = 6
         path = 'page'
 
-[id]
-    title = 'Contoh'
-    contentDir = 'content/id'
+[zh]
+    contentDir = 'content/zh'
     disabled = false
-    languageCode = 'id-ID'
+    languageCode = 'zh-CN'
     languageDirection = 'ltr'
-    languageName = 'Bahasa Indonesia'
-    [id.pagination]
+    languageName = 'Chinese'
+    [zh.pagination]
         disableAliases = false
-        pagerSize = 12
-        path = 'laman'
-    [id.params]
-        copyright = 'Penyusun <i class="icon copyleft"></i> 2025'
-
-    [id.params.feed]
-        flowlines = false
-    [id.params.home]
-        disableListing = true
-    [id.sitemap]
-        changeFreq = 'always' ## Change posts listings layout
-
-[hi]
-    contentDir = 'content/hi'
-    disabled = false
-    languageCode = 'hi-IN'
-    languageDirection = 'ltr'
-    languageName = 'हिन्दी'
-
-[es-mx]
-    contentDir = 'content/es-mx'
-    disabled = false
-    languageCode = 'es-MX'
-    languageDirection = 'ltr'
-    languageName = 'Español (México)'
-
-[fr]
-    contentDir = 'content/fr'
-    disabled = false
-    languageCode = 'fr'
-    languageDirection = 'ltr'
-    languageName = 'French'
+        pagerSize = 6
+        path = 'page'
