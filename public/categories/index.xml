@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" >
   <channel>
     <title>Categories on MUKIMASTA</title>
-    <link>https://mukimasta.github.io/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent Posts in Categories on MUKIMASTA</description>
     <generator>Hugo 0.151.0</generator>
     <language>en-GB</language>
     <managingEditor>mukimasta@outlook.com (Hanlin Xue)</managingEditor>
     <webMaster>mukimasta@outlook.com (Hanlin Xue)</webMaster>
-    <lastBuildDate>Sat, 10 Jan 2026 19:07:13 -0800</lastBuildDate>
-    <atom:link href="https://mukimasta.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-        <atom:link href="https://mukimasta.github.io/zh/categories/index.xml" hreflang="zh" rel="alternate" type="application/rss&#43;xml" />
+    <lastBuildDate>Fri, 16 Jan 2026 00:56:01 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/zh/categories/index.xml" hreflang="zh" rel="alternate" type="application/rss&#43;xml" />
         
     <item>
       <title>Test</title>
-      <link>https://mukimasta.github.io/categories/test/</link>
+      <link>http://localhost:1313/categories/test/</link>
       <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
       <author>mukimasta@outlook.com (Hanlin Xue)</author>
       <dc:creator>Hanlin Xue</dc:creator>
-      <guid>https://mukimasta.github.io/categories/test/</guid>
+      <guid>http://localhost:1313/categories/test/</guid>
       <description></description>
       <content:encoded></content:encoded>
     </item>

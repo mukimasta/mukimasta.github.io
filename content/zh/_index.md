@@ -1,6 +1,24 @@
 ---
-cover: 'https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/22.svg'
+cover: 'images/head.jpeg'
 keepAspectRatio: true
 ---
 
-## 你好
+## Mukii
+
+Hi~ 欢迎来到我的个人网站。
+
+这里存放着我的创造，我的思考，以及我的人生旅途。
+
+**关于技术与工程** 如果你想查看我关于技术、工作领域的自我介绍以及项目实践，请前往我的 [GitHub - mukimasta ↗](https://github.com/mukimasta).
+
+---
+
+2025 年的夏天，我完成了《青叶树》，这是一本跨越十年的个人作品集 (2015 - 2025)。我挑选了从初中到大学毕业写作的十几篇文字与诗歌，以及创作的两首音乐，将它们编成一本小书。希望在未来的人生里，我能像青叶树一样不断生长，保持茂盛与清澈。
+
+我还喜欢音乐，喜欢研究和声与即兴。在 2025 年，我短暂地加入了一个爵士乐队作为键盘手，尝试着在随机性中创造惊喜，那是快乐的时光。
+
+---
+
+
+个人邮箱：mukimasta@outlook.com  
+工作邮箱：hlxue@uw.edu

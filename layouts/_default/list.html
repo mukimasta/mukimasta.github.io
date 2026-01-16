@@ -35,6 +35,40 @@
                 {{ partial "hero.html" $ }}
                 <hr class="hide"/>
             {{- end }}
+            
+            {{- /* Project Module Start */}}
+            {{- /* 1. Query pages in 'projects' section */}}
+            {{- $projects := where site.RegularPages "Section" "projects" }}
+            
+            {{- /* 2. Filter: only show featured projects */}}
+            {{- $projects := where $projects "Params.featured" true }}
+            
+            {{- /* 3. Sort: by weight (ascending) */}}
+            {{- $projects := $projects.ByWeight }}
+
+            {{- if $projects }}
+                <div id="list-projects" class="has-crsl">
+                    <header class="section-title">
+                        <strong>Selected Projects</strong>
+                    </header>
+                    <div class="crsl">
+                    {{- range $index, $page := $projects }}
+                        {{- $hasCover := partial "page/cover.html" (dict "page" $page) }}
+                        {{- /* Reuse existing card template */}}
+                        {{ template "card" (dict 
+                            "page" $page 
+                            "counter" (add $index 1) 
+                            "paginator" (dict "NumberOfElements" (len $projects)) 
+                            "desc" $page.Description 
+                            "hasCover" $hasCover 
+                        ) }}
+                    {{- end }}
+                    </div>
+                    <hr class="hide"/>
+                </div>
+            {{- end }}
+            {{- /* Project Module End */}}
+
             {{- if $enableListing}}
                 <div id="list-taxonomy" class="has-crsl">
                     <div class="crsl">
