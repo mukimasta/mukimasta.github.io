@@ -6,9 +6,9 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Awesome Project | MUKIMASTA</title>
+<title>Autonomous Driving System | MUKIMASTA</title>
 <meta name="author" content="Hanlin Xue">
-<meta name="description" content="This is a sample project to demonstrate the new project module." >
+<meta name="description" content="This project is a three-month effort to build a self-driving system that works end-to-end on a real mini car. " >
 <link rel="canonical" href="http://localhost:1313/projects/sample-project/">
 
 
@@ -17,16 +17,16 @@
     <!-- twitterCard -->
     
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="My Awesome Project | MUKIMASTA" />
-    <meta name="twitter:description" content="This is a sample project to demonstrate the new project module." />
-        <meta name="twitter:image" content="https://repository-images.githubusercontent.com/923527728/46a32a19-69ac-45b3-91a4-c4d299fb234b" />
+    <meta name="twitter:title" content="Autonomous Driving System | MUKIMASTA" />
+    <meta name="twitter:description" content="This project is a three-month effort to build a self-driving system that works end-to-end on a real mini car. " />
+        <meta name="twitter:image" content="http://localhost:1313/projects/sample-project/images/demo.jpg" />
     
     <!-- openGraph -->
-    <meta property="og:title" content="My Awesome Project | MUKIMASTA" />
-    <meta property="og:description" content="This is a sample project to demonstrate the new project module." />
+    <meta property="og:title" content="Autonomous Driving System | MUKIMASTA" />
+    <meta property="og:description" content="This project is a three-month effort to build a self-driving system that works end-to-end on a real mini car. " />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="http://localhost:1313/projects/sample-project/" />
-        <meta property="og:image" content="https://repository-images.githubusercontent.com/923527728/46a32a19-69ac-45b3-91a4-c4d299fb234b" />
+        <meta property="og:image" content="http://localhost:1313/projects/sample-project/images/demo.jpg" />
     <meta property="og:site_name" content="MUKIMASTA" />
     <!-- js.html -->
 
@@ -153,7 +153,7 @@
             </a>
         </li>
     <li>
-        <a href="" aria-current="page" tabindex="-1">My Awesome Project
+        <a href="" aria-current="page" tabindex="-1">Autonomous Driving System
         </a>
     </li>
             </ul>
@@ -172,19 +172,32 @@
             <!-- title.html -->
         <h1 id="title"
             data-bionRead-safe
-            >My Awesome Project</h1>
+            >Autonomous Driving System</h1>
         </header>
         <!-- audio.html -->
         <section id="content" class="content " aria-labelledby="title" data-bionRead-safe>
-                <h2 id="project-overview">Project Overview</h2>
-<p>This is a sample project page. You can add more details here.</p>
+                <p><img src="/projects/sample-project/images/demo.jpg" alt="Demo"></p>
+<p>This project is a three-month effort to build a self-driving system that works end-to-end on a real mini car. We integrated the whole system, enabling the car to localize itself, plan a path, and physically drive to a destination I selected.</p>
+<!-- The motivation for me behind is simple: curiosity and interest.
+
+I wanted to build an intelligent system that actually runs in the real world—where I can see the results, observe it, and iteratively evolve it; where I can imagine the prospect and the future of something I made with my own hands. That’s cool.
+
+Watching the car succeed, get stuck, and gradually run better over time was the most meaningful part of this project. And it’s this process that forms the most valuable engineering experience. -->
+<h2 id="overview">Overview</h2>
+<p>The system follows a classic autonomous driving stack:</p>
 <ul>
-<li>Feature 1</li>
-<li>Feature 2</li>
-<li>Feature 3</li>
+<li><strong>Localization</strong>: State estimation from a noisy sensor.</li>
+<li><strong>Planning</strong>: Path planning on a known map.</li>
+<li><strong>Control</strong>: Tracking the planned path on a physical car.</li>
 </ul>
-<p>Adding <code>featured: true</code> to the front matter makes it appear on the homepage.
-Adding <code>weight: 1</code> controls the order (lower numbers come first).</p>
+<p>Data flow:</p>
+<p><img src="/projects/sample-project/images/system_data_flow.jpg" alt="system_data_flow"></p>
+<h2 id="highlights">Highlights</h2>
+<p><strong>Real-time Obstacle Avoidance &amp; Smooth Path Following</strong></p>
+<p><img src="/projects/sample-project/images/mpc_data_flow.jpg" alt="mpc_data_flow"></p>
+<h2 id="demonstration">Demonstration</h2>
+<h3 id="obstacle-avoidance">Obstacle Avoidance</h3>
+<p><img src="/projects/sample-project/images/obstacle_avoidance.gif" alt="Obstacle Avoidance"></p>
 
         </section>
     </article>
@@ -204,9 +217,9 @@ Adding <code>weight: 1</code> controls the order (lower numbers come first).</p>
     <li id="has-mastodon">
         <!-- mastodon.html -->
     <form class="form" id="mastodon" action="//sharetomastodon.github.io/" target="_blank" rel="noopener noreferrer">
-        <input id="mastodonTitle" type="hidden" name="title" value="My Awesome Project">
+        <input id="mastodonTitle" type="hidden" name="title" value="Autonomous Driving System">
         <input id="mastodonPermalink" type="hidden" name="url" value="http://localhost:1313/projects/sample-project/">
-        <input id="mastodonText" type="hidden" name="text" value="My Awesome Project http://localhost:1313/projects/sample-project/" disabled>
+        <input id="mastodonText" type="hidden" name="text" value="Autonomous Driving System http://localhost:1313/projects/sample-project/" disabled>
         <input id="mastodonInstance" type="url" class="ldots form__input" placeholder="Enter Mastodon instance (https://www.example.com)" aria-label="Mastodon instance URL">
         <button class="form__button" type="submit" aria-label="Share on Mastodon">
             <i class="icon mastodon sri" aria-hidden="true"></i>
@@ -215,26 +228,26 @@ Adding <code>weight: 1</code> controls the order (lower numbers come first).</p>
     </form>
     </li>
     <li>
-        <a href="mailto:?subject=My%20Awesome%20Project&body=http%3a%2f%2flocalhost%3a1313%2fprojects%2fsample-project%2f" role="button" aria-label="Share on Email">
+        <a href="mailto:?subject=Autonomous%20Driving%20System&body=http%3a%2f%2flocalhost%3a1313%2fprojects%2fsample-project%2f" role="button" aria-label="Share on Email">
             <i class="email sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Email</span>
         </a>
     </li>
     <li>
-        <a href="whatsapp://send?text=My%20Awesome%20Project%20http%3a%2f%2flocalhost%3a1313%2fprojects%2fsample-project%2f" role="button" aria-label="Share on Whatsapp">
+        <a href="whatsapp://send?text=Autonomous%20Driving%20System%20http%3a%2f%2flocalhost%3a1313%2fprojects%2fsample-project%2f" role="button" aria-label="Share on Whatsapp">
             <i class="whatsapp sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Whatsapp</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://telegram.me/share/url?text=My%20Awesome%20Project&amp;url=http://localhost:1313/projects/sample-project/" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://telegram.me/share/url?text=Autonomous%20Driving%20System&amp;url=http://localhost:1313/projects/sample-project/" role="button"
             aria-label="Share on Telegram in new tab">
             <i class="telegram sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Telegram</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://bsky.app/intent/compose?text=My%20Awesome%20Project&amp;url=http://localhost:1313/projects/sample-project/" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://bsky.app/intent/compose?text=Autonomous%20Driving%20System&amp;url=http://localhost:1313/projects/sample-project/" role="button"
             aria-label="Share on Bluesky in new tab">
             <i class="bluesky sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Bluesky</span>
@@ -248,56 +261,56 @@ Adding <code>weight: 1</code> controls the order (lower numbers come first).</p>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://news.ycombinator.com/submitlink?u=http://localhost:1313/projects/sample-project/&amp;t=My%20Awesome%20Project" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://news.ycombinator.com/submitlink?u=http://localhost:1313/projects/sample-project/&amp;t=Autonomous%20Driving%20System" role="button"
             aria-label="Share on Hackernews in new tab">
             <i class="hackernews sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Hackernews</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/projects/sample-project/&amp;title=My%20Awesome%20Project&amp;summary=My%20Awesome%20Project&amp;source=http://localhost:1313/projects/sample-project/" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/projects/sample-project/&amp;title=Autonomous%20Driving%20System&amp;summary=Autonomous%20Driving%20System&amp;source=http://localhost:1313/projects/sample-project/" role="button"
             aria-label="Share on Linkedin in new tab">
             <i class="linkedin sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Linkedin</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://pinterest.com/pin/create/button/?url=http://localhost:1313/projects/sample-project/&amp;media=http://localhost:1313/projects/sample-project/&amp;description=My%20Awesome%20Project" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://pinterest.com/pin/create/button/?url=http://localhost:1313/projects/sample-project/&amp;media=http://localhost:1313/projects/sample-project/&amp;description=Autonomous%20Driving%20System" role="button"
             aria-label="Share on Pinterest in new tab">
             <i class="pinterest sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Pinterest</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://reddit.com/submit/?url=http://localhost:1313/projects/sample-project/&amp;resubmit=true&amp;title=My%20Awesome%20Project" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://reddit.com/submit/?url=http://localhost:1313/projects/sample-project/&amp;resubmit=true&amp;title=Autonomous%20Driving%20System" role="button"
             aria-label="Share on Reddit in new tab">
             <i class="reddit sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Reddit</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=My%20Awesome%20Project&amp;caption=My%20Awesome%20Project&amp;content=http://localhost:1313/projects/sample-project/&amp;canonicalUrl=http://localhost:1313/projects/sample-project/" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Autonomous%20Driving%20System&amp;caption=Autonomous%20Driving%20System&amp;content=http://localhost:1313/projects/sample-project/&amp;canonicalUrl=http://localhost:1313/projects/sample-project/" role="button"
             aria-label="Share on Tumblr in new tab">
             <i class="tumblr sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Tumblr</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://threads.net/intent/post?text=My%20Awesome%20Project&amp;url=http://localhost:1313/projects/sample-project/" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://threads.net/intent/post?text=Autonomous%20Driving%20System&amp;url=http://localhost:1313/projects/sample-project/" role="button"
             aria-label="Share on Threads in new tab">
             <i class="threads sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Threads</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet/?text=My%20Awesome%20Project&amp;url=http://localhost:1313/projects/sample-project/" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet/?text=Autonomous%20Driving%20System&amp;url=http://localhost:1313/projects/sample-project/" role="button"
             aria-label="Share on Twitter in new tab">
             <i class="twitter sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Twitter</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://www.xing.com/app/user?op=share;url=http://localhost:1313/projects/sample-project/;title=My%20Awesome%20Project" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://www.xing.com/app/user?op=share;url=http://localhost:1313/projects/sample-project/;title=Autonomous%20Driving%20System" role="button"
             aria-label="Share on Xing in new tab">
             <i class="xing sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Xing</span>

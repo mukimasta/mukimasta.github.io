@@ -216,7 +216,7 @@
             <div id="qr" role="img" aria-label="QR code"></div>
             <div class="verbose">
                 <div class="has-aria-label-top" aria-label="Post Template"><span>http://localhost:1313/post/post_template/</span></div>
-                <div><span>This page is built on: </span><time datetime="2026-01-15T22:01:35-08:00">2026-01-15 22:01</time></div>
+                <div><span>This page is built on: </span><time datetime="2026-01-16T23:36:47-08:00">2026-01-16 23:36</time></div>
                 <div><span>This page is accessed on: </span><time id="time-stamp"></time></div><div><span>Powered by </span><a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <a href="https://github.com/gohugoio/hugo/releases/tag/v0.151.0" aria-label="Hugo 0.151.0" target="_blank" rel="noopener">v0.151.0</a> & <a href="https://github.com/foxihd/hugo-brewm" target="_blank" rel="noopener">hugo-brewm</a>.</div>
             </div>
         </div>
@@ -447,5 +447,38 @@
     <div id="bionReadSnapshot" hidden></div>
     <!-- [background] baseof.html -->
     <div id="background-body" role="presentation" aria-hidden="true"></div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches ||
+                           document.body.getAttribute('data-theme') === 'dark';
+            
+            
+            mermaid.initialize({
+                startOnLoad: false,
+                theme: isDark ? 'dark' : 'default',
+                securityLevel: 'loose',
+                flowchart: {
+                    useMaxWidth: true,
+                    htmlLabels: true
+                }
+            });
+            
+            
+            document.querySelectorAll('code.language-mermaid').forEach(function(codeBlock) {
+                const preBlock = codeBlock.parentNode;
+                const container = document.createElement('div');
+                container.className = 'mermaid';
+                container.textContent = codeBlock.textContent;
+                preBlock.parentNode.replaceChild(container, preBlock);
+            });
+            
+            
+            mermaid.run();
+        });
+    </script>
 </body>
 </html>

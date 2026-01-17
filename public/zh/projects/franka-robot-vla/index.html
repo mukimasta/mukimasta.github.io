@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <!-- head.html --><!-- meta.html -->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Franka 机械臂 Pi0 VLA 端到端抓取系统 | MUKIMASTA</title>
+<meta name="author" content="Hanlin Xue">
+<meta name="description" content="基于 Pi0 VLA 大模型的端到端机械臂控制系统，验证了从数据采集、模型微调到真机部署的全流程。" >
+<link rel="canonical" href="http://localhost:1313/zh/projects/franka-robot-vla/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/projects/franka-robot-vla/" title="English">
+
+
+    
+    <!-- twitterCard -->
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Franka 机械臂 Pi0 VLA 端到端抓取系统 | MUKIMASTA" />
+    <meta name="twitter:description" content="基于 Pi0 VLA 大模型的端到端机械臂控制系统，验证了从数据采集、模型微调到真机部署的全流程。" />
+        <meta name="twitter:image" content="http://localhost:1313/zh/projects/franka-robot-vla/images/franka_grasping.gif" />
+    
+    <!-- openGraph -->
+    <meta property="og:title" content="Franka 机械臂 Pi0 VLA 端到端抓取系统 | MUKIMASTA" />
+    <meta property="og:description" content="基于 Pi0 VLA 大模型的端到端机械臂控制系统，验证了从数据采集、模型微调到真机部署的全流程。" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://localhost:1313/zh/projects/franka-robot-vla/" />
+        <meta property="og:image" content="http://localhost:1313/zh/projects/franka-robot-vla/images/franka_grasping.gif" />
+    <meta property="og:site_name" content="MUKIMASTA" />
+    <!-- js.html -->
+
+
+    <script src="http://localhost:1313/js/hugo-brewm.min.js" defer></script><!-- css.html -->
+
+
+    <link rel="stylesheet" href="http://localhost:1313/css/hugo-brewm.min.css">
+
+
+
+    
+    <!-- css/inline.html -->
+    <style>
+         
+        body {max-width: 786px; margin: auto; padding: 2rem;}
+        img {max-width: 86vw;}
+    </style>
+    
+</head>
+<body>
+    <!-- header.html -->
+<header class="pagewidth">
+    <div id="background-header" class="background" aria-hidden="true"></div>
+    
+    <nav aria-label="Bypass">
+        <a id="to-content" href="#content" aria-label="Skip to Main Content">
+            <span>Skip to Main Content</span>
+            <kbd class="key" aria-hidden="true" data-key="c"></kbd>
+            <span class="screening" aria-hidden="true"></span>
+        </a>
+    </nav>
+    
+    <!-- logo.html -->
+    <div id="logo">
+        <a href="http://localhost:1313/zh/" aria-label="MUKIMASTA" aria-description="Homepage"><svg id="logotype" xmlns="http://www.w3.org/2000/svg" version="1.1" width="252pt" aria-label="MUKIMASTA">
+                        <text id="logotype__text" y="19.5pt" x="0">MUKIMASTA</text>
+                    </svg>
+        </a>
+        <hr class="hide"/>
+    </div>
+    
+    <details class="presentation" id="top-nav">
+        <summary class="on-deck">
+            <span class="t">Navigation</span>
+            <span class="menu-icon" role="presentation"></span>
+        </summary>
+        <nav tabindex="-1" aria-label="Top">
+            <!-- menu.html -->
+    <details id="has-main-menu" class="presentation" open>
+        <summary  class="hide"  aria-label="Main Menu">
+            <span>Main Menu</span>
+        </summary>
+            
+            <nav id="main-menu" aria-label="Main Menu">
+                <ul class="l1   has-childfree " role="presentation" tabindex="-1" >
+                    
+    
+        <li role="presentation" class="lfill textssc">
+    <a   class=on-deck href=https://github.com/mukimasta rel=external noopener noreferrer nofollow target=_blank>
+        
+            <span>
+                Github</span>
+    </a>
+        </li>
+                </ul>
+            </nav>
+    </details>
+            
+            <!-- menu.html -->
+            <!-- i18n.html -->
+            <nav id="bi18n" aria-label="Language Selections">
+                <a id="has-i18n" class="on-deck"
+                    href="http://localhost:1313/"
+                    aria-label="Switch Language to English"
+                    aria-description="Current Language is Chinese">
+                    <span class="emoji">🇬🇧&nbsp;</span>
+                    <span class="act iso639 sri" aria-hidden="true">ZH</span>
+                    <span class="alt iso639 sri" aria-hidden="true">&rarr; EN</span>
+                    <span class="t srt languangeName">English</span>
+                </a>
+            </nav>
+
+        </nav>
+        <div id="top-nav-screen" class="screening js-cpn" role="presentation" aria-hidden="true"></div>
+        <hr class="hide"/>
+    </details>
+</header>
+    
+    <!-- [main] baseof.html -->
+    <main id="page"class="page"
+        >
+        <!-- main/header.html -->
+        <header class="pagewidth">
+                    <menu id="menu" class="srm"
+                        data-i18n-back="Go Back"
+                        data-i18n-print="Print"
+                        data-i18n-copy="Copy URL"
+                        data-i18n-copying="Copying...">
+                            <li>
+                                <a id="navigatorShare" href="#mastodon" role="button" aria-label="Share">
+                                    <span class="t srt" role="tooltip">Share</span>
+                                </a>
+                            </li>
+                    </menu>
+            <!-- nav.html -->
+<details class="presentation" aria-expanded="true" id="has-breadcrumb" open>
+    <summary id="breadcrumb" tabindex="-1">
+        <span>Breadcrumb</span>
+    </summary>
+        <nav aria-labelledby="breadcrumb">
+            <ul role="presentation" class="breadcrumb ">
+                    <!-- breadcrumb.html -->
+        <li id="is-translated">
+            
+    <!-- l10n.html -->
+    <details id="has-l10n" class="presentation">
+        <summary aria-label="Language Selections" aria-description="Current Language is Chinese">
+            <span>ZH</span>
+        </summary>
+        <nav aria-label="Language Selections">
+            <ul class="on-plank" role="presentation">
+                <li>
+                    <a href="/projects/franka-robot-vla/" aria-label="Switch Language to English" aria-description="Franka Robot VLA End-to-End Grasping System and Fine-tuning">
+                        <span class="emoji">🇬🇧&nbsp;</span>
+                        <span>Franka Robot VLA End-to-End Grasping System and Fine-tuning</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </details>
+        </li>
+        <li>
+            <a href="http://localhost:1313/zh/projects/" aria-current="true">项目
+            </a>
+        </li>
+    <li>
+        <a href="" aria-current="page" tabindex="-1">Franka 机械臂 Pi0 VLA 端到端抓取系统
+        </a>
+    </li>
+            </ul>
+        </nav>
+</details>
+            <hr class="hide"/>
+        </header>
+        <div id="top" role="presentation">
+            
+        </div>
+        
+    <article id="main-article" class="pagewidth sf"
+        role="document" aria-labelledby="title"
+            data-pagefind-ignore="all">
+        <header aria-labelledby="title">
+            <!-- title.html -->
+        <h1 id="title"
+            data-bionRead-safe
+            >Franka 机械臂 Pi0 VLA 端到端抓取系统</h1>
+        </header>
+        <!-- audio.html -->
+        <section id="content" class="content " aria-labelledby="title" data-bionRead-safe>
+                <h3 id="franka-机械臂抓取表现">Franka 机械臂抓取表现</h3>
+<p><img src="/zh/projects/franka-robot-vla/images/franka_grasping.gif" alt="Franka 抓取演示"></p>
+<p><em>使用 Pi0 VLA 模型在 Franka 机械臂上进行物体抓取的演示</em></p>
+<h3 id="迁移到人形机器人">迁移到人形机器人</h3>
+<p><img src="/zh/projects/franka-robot-vla/images/humanoid_grasping.gif" alt="人形机器人抓取演示"></p>
+<p><em>后续成功将抓取能力迁移至人形机器人平台</em></p>
+<hr>
+<h1 id="franka-机械臂-pi0-vla-端到端抓取系统及训练报告">Franka 机械臂 Pi0 VLA 端到端抓取系统及训练报告</h1>
+<p><strong>项目时间</strong>: 2025.03 - 2025.04<br>
+<strong>角色</strong>: 系统架构集成 + 核心模块开发 + 全流程数据采集</p>
+<hr>
+<h2 id="1-项目概述">1. 项目概述</h2>
+<p>本项目旨在验证 <strong>Pi0 VLA (Vision-Language-Action)</strong> 大模型能否直接控制真机完成抓取任务。我们在 8 周内构建了一套完整的端到端闭环系统，完成了从数据采集、模型微调到真机部署的全流程验证。</p>
+<p><strong>核心贡献</strong>：</p>
+<ul>
+<li><strong>自动化数据采集</strong>：设计了一套无人值守的自动化采集流程，解决了手动采集效率低的问题，并保证了数据的高质量。</li>
+<li><strong>实时安全控制</strong>：搭建了从模型推理到真机执行的桥梁，通过位置控制和安全拦截机制，实现了稳定的自然语言指令抓取。</li>
+</ul>
+<hr>
+<h2 id="2-系统架构">2. 系统架构</h2>
+<p>系统主要分为三部分：</p>
+<ol>
+<li><strong>感知端</strong>: 采集双目图像和机械臂状态，通过 ROS2 发送。</li>
+<li><strong>服务端</strong>: 部署 Pi0 VLA 大模型，接收数据，返回动作指令。</li>
+<li><strong>控制端</strong>: 接收指令，通过 ROS2 控制 Franka 机械臂运动。</li>
+</ol>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TB
+    %% 样式定义
+    classDef sensor fill:#e1f5fe,stroke:#01579b,stroke-width:2px,rx:10,ry:10;
+    classDef model fill:#fff3e0,stroke:#ff6f00,stroke-width:2px,rx:10,ry:10;
+    classDef control fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,rx:10,ry:10;
+    classDef process fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,rx:5,ry:5;
+
+    subgraph 感知与采集
+        direction TB
+        A[双目相机]:::sensor --&gt;|时序同步| B(ROS2数据节点):::process
+        C[机械臂状态]:::sensor --&gt;|Joint/Vel| B
+        B --&gt;|自动化Pipeline| D[训练数据集 .npz]:::process
+    end
+
+    subgraph 推理与控制
+        direction TB
+        E[实时观测]:::sensor --&gt;|WebSocket| F(VLA大模型):::model
+        F --&gt;|动作指令| G(安全控制器):::control
+        G --&gt;|执行动作| H[Franka机械臂]:::control
+    end
+</code></pre><hr>
+<h2 id="3-关键技术实现">3. 关键技术实现</h2>
+<h3 id="31-如何教模型学会抓取数据采集">3.1 如何教模型“学会”抓取？（数据采集）</h3>
+<p>高质量的数据是模型微调的前提。传统的人工示教采集效率低下，且样本分布难以覆盖整个工作空间。</p>
+<ul>
+<li><strong>自动化采集</strong>：设计了状态机驱动的采集脚本，使机械臂能够自动循环执行 <code>复位 -&gt; 随机位姿 -&gt; 抓取 -&gt; 抬起</code> 流程。这不仅实现了无人值守的批量采集，还保证了每条轨迹的标准化。</li>
+<li><strong>防止“死记硬背”</strong>：为了避免模型过拟合于固定的空间坐标，我们在采集轨迹中引入了<strong>随机位姿偏移</strong>。通过在目标点周围增加随机噪声，强制模型关注图像中的物体特征，而非单纯记忆关节角度。</li>
+<li><strong>图像一致性</strong>：模型对输入图像的几何特征非常敏感。我们在数据处理管线中实现了**中心裁剪 **，确保相机原始画面在缩放至 224x224 时保持宽高比不变，消除了图像拉伸导致的畸变问题。</li>
+</ul>
+<h3 id="32-如何保证控制的稳定性与安全性实时控制">3.2 如何保证控制的稳定性与安全性？（实时控制）</h3>
+<p>模型推理具有不确定性，直接执行其输出可能导致机械臂动作突变或超限。我们设计了中间层控制器来保障运行安全。</p>
+<ul>
+<li><strong>为什么选“位置控制”？</strong>：初期尝试速度控制时，发现开环累积误差会导致长序列动作逐渐偏离目标。改用<strong>位置控制 (Position Control)</strong> 后，通过下发绝对关节角度，有效消除了积分漂移，显著提升了轨迹跟踪精度。</li>
+<li><strong>安全拦截</strong>：在控制器中植入实时监控逻辑。一旦检测到关节速度或位置指令超出物理安全阈值，系统会立即触发熔断机制，停止执行。</li>
+<li><strong>防抖动处理</strong>：针对模型输出可能存在的信号跳变（如夹爪指令在开合间震荡），引入了<strong>状态滤波</strong>机制。系统仅在连续多帧接收到一致指令时才切换夹爪状态，确保了动作的连贯性。</li>
+</ul>
+<hr>
+<h2 id="4-实验结果与迭代">4. 实验结果与迭代</h2>
+<p>本项目在 8 周内完成了从环境搭建到稳定抓取的全过程，经历了 8 轮核心迭代。</p>
+<p><strong>关键里程碑</strong>:</p>
+<ul>
+<li>
+<p><strong>里程碑 1：自动化闭环 (2025-04-09)</strong></p>
+<ul>
+<li>完成了自动化采集 Pipeline，单日采集效率提升 5 倍，构建了首个包含 270 条轨迹的高质量数据集。</li>
+<li><strong>效果</strong>: 模型首次出现明显的抓取意图，能够移动到物体附近。</li>
+</ul>
+</li>
+<li>
+<p><strong>里程碑 2：突破“不动”瓶颈 (2025-04-10)</strong></p>
+<ul>
+<li><strong>问题</strong>: 机械臂在接近物体时容易停滞不前。</li>
+<li><strong>解决</strong>: 发现是模型输入的历史信息不足。我们将输入序列长度 (Context Length) 从 50 帧增加至 300 帧，让模型能捕捉更长程的时序依赖。</li>
+<li><strong>效果</strong>: 机械臂动作流畅度显著提升，<strong>首次成功完成抓取</strong>。</li>
+</ul>
+</li>
+<li>
+<p><strong>里程碑 3：控制策略重构 (2025-04-21)</strong></p>
+<ul>
+<li><strong>问题</strong>: 使用速度控制时，长时间运行会有累积误差，且动作不够精准。</li>
+<li><strong>解决</strong>: 将底层控制策略从<strong>速度模式 (Velocity)</strong> 切换为<strong>位置模式 (Position)</strong>，并重写了夹爪的去抖动逻辑。</li>
+<li><strong>效果</strong>: 抓取成功率大幅提升，达到了**稳定抓取 ** 的最终状态。</li>
+</ul>
+</li>
+</ul>
+
+        </section>
+    </article>
+        <div id="exclude" role="presentation">
+            <!-- excluded last block frome some RSS reader and browser reader mode -->
+            
+    <hr class="hide" style="margin: 1in 0;">
+    <div id="contentinfo" class="pagewidth" role="contentinfo" data-pagefind-ignore="all">
+            <!-- nav.html -->
+<details class="presentation" aria-expanded="true" id="has-share" open>
+    <summary id="share" tabindex="-1">
+        <span>Share</span>
+    </summary>
+        <nav aria-labelledby="share">
+            <ul role="presentation" class="share srm">
+                    <!-- share.html -->
+    <li id="has-mastodon">
+        <!-- mastodon.html -->
+    <form class="form" id="mastodon" action="//sharetomastodon.github.io/" target="_blank" rel="noopener noreferrer">
+        <input id="mastodonTitle" type="hidden" name="title" value="Franka 机械臂 Pi0 VLA 端到端抓取系统">
+        <input id="mastodonPermalink" type="hidden" name="url" value="http://localhost:1313/zh/projects/franka-robot-vla/">
+        <input id="mastodonText" type="hidden" name="text" value="Franka 机械臂 Pi0 VLA 端到端抓取系统 http://localhost:1313/zh/projects/franka-robot-vla/" disabled>
+        <input id="mastodonInstance" type="url" class="ldots form__input" placeholder="Enter Mastodon instance (https://www.example.com)" aria-label="Mastodon instance URL">
+        <button class="form__button" type="submit" aria-label="Share on Mastodon">
+            <i class="icon mastodon sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Mastodon</span>
+        </button>
+    </form>
+    </li>
+    <li>
+        <a href="mailto:?subject=Franka%20%e6%9c%ba%e6%a2%b0%e8%87%82%20Pi0%20VLA%20%e7%ab%af%e5%88%b0%e7%ab%af%e6%8a%93%e5%8f%96%e7%b3%bb%e7%bb%9f&body=http%3a%2f%2flocalhost%3a1313%2fzh%2fprojects%2ffranka-robot-vla%2f" role="button" aria-label="Share on Email">
+            <i class="email sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Email</span>
+        </a>
+    </li>
+    <li>
+        <a href="whatsapp://send?text=Franka%20%e6%9c%ba%e6%a2%b0%e8%87%82%20Pi0%20VLA%20%e7%ab%af%e5%88%b0%e7%ab%af%e6%8a%93%e5%8f%96%e7%b3%bb%e7%bb%9f%20http%3a%2f%2flocalhost%3a1313%2fzh%2fprojects%2ffranka-robot-vla%2f" role="button" aria-label="Share on Whatsapp">
+            <i class="whatsapp sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Whatsapp</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://telegram.me/share/url?text=Franka%20%e6%9c%ba%e6%a2%b0%e8%87%82%20Pi0%20VLA%20%e7%ab%af%e5%88%b0%e7%ab%af%e6%8a%93%e5%8f%96%e7%b3%bb%e7%bb%9f&amp;url=http://localhost:1313/zh/projects/franka-robot-vla/" role="button"
+            aria-label="Share on Telegram in new tab">
+            <i class="telegram sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Telegram</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://bsky.app/intent/compose?text=Franka%20%e6%9c%ba%e6%a2%b0%e8%87%82%20Pi0%20VLA%20%e7%ab%af%e5%88%b0%e7%ab%af%e6%8a%93%e5%8f%96%e7%b3%bb%e7%bb%9f&amp;url=http://localhost:1313/zh/projects/franka-robot-vla/" role="button"
+            aria-label="Share on Bluesky in new tab">
+            <i class="bluesky sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Bluesky</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http://localhost:1313/zh/projects/franka-robot-vla/" role="button"
+            aria-label="Share on Facebook in new tab">
+            <i class="facebook sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Facebook</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://news.ycombinator.com/submitlink?u=http://localhost:1313/zh/projects/franka-robot-vla/&amp;t=Franka%20%e6%9c%ba%e6%a2%b0%e8%87%82%20Pi0%20VLA%20%e7%ab%af%e5%88%b0%e7%ab%af%e6%8a%93%e5%8f%96%e7%b3%bb%e7%bb%9f" role="button"
+            aria-label="Share on Hackernews in new tab">
+            <i class="hackernews sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Hackernews</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/zh/projects/franka-robot-vla/&amp;title=Franka%20%e6%9c%ba%e6%a2%b0%e8%87%82%20Pi0%20VLA%20%e7%ab%af%e5%88%b0%e7%ab%af%e6%8a%93%e5%8f%96%e7%b3%bb%e7%bb%9f&amp;summary=Franka%20%e6%9c%ba%e6%a2%b0%e8%87%82%20Pi0%20VLA%20%e7%ab%af%e5%88%b0%e7%ab%af%e6%8a%93%e5%8f%96%e7%b3%bb%e7%bb%9f&amp;source=http://localhost:1313/zh/projects/franka-robot-vla/" role="button"
+            aria-label="Share on Linkedin in new tab">
+            <i class="linkedin sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Linkedin</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://pinterest.com/pin/create/button/?url=http://localhost:1313/zh/projects/franka-robot-vla/&amp;media=http://localhost:1313/zh/projects/franka-robot-vla/&amp;description=Franka%20%e6%9c%ba%e6%a2%b0%e8%87%82%20Pi0%20VLA%20%e7%ab%af%e5%88%b0%e7%ab%af%e6%8a%93%e5%8f%96%e7%b3%bb%e7%bb%9f" role="button"
+            aria-label="Share on Pinterest in new tab">
+            <i class="pinterest sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Pinterest</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://reddit.com/submit/?url=http://localhost:1313/zh/projects/franka-robot-vla/&amp;resubmit=true&amp;title=Franka%20%e6%9c%ba%e6%a2%b0%e8%87%82%20Pi0%20VLA%20%e7%ab%af%e5%88%b0%e7%ab%af%e6%8a%93%e5%8f%96%e7%b3%bb%e7%bb%9f" role="button"
+            aria-label="Share on Reddit in new tab">
+            <i class="reddit sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Reddit</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Franka%20%e6%9c%ba%e6%a2%b0%e8%87%82%20Pi0%20VLA%20%e7%ab%af%e5%88%b0%e7%ab%af%e6%8a%93%e5%8f%96%e7%b3%bb%e7%bb%9f&amp;caption=Franka%20%e6%9c%ba%e6%a2%b0%e8%87%82%20Pi0%20VLA%20%e7%ab%af%e5%88%b0%e7%ab%af%e6%8a%93%e5%8f%96%e7%b3%bb%e7%bb%9f&amp;content=http://localhost:1313/zh/projects/franka-robot-vla/&amp;canonicalUrl=http://localhost:1313/zh/projects/franka-robot-vla/" role="button"
+            aria-label="Share on Tumblr in new tab">
+            <i class="tumblr sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Tumblr</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://threads.net/intent/post?text=Franka%20%e6%9c%ba%e6%a2%b0%e8%87%82%20Pi0%20VLA%20%e7%ab%af%e5%88%b0%e7%ab%af%e6%8a%93%e5%8f%96%e7%b3%bb%e7%bb%9f&amp;url=http://localhost:1313/zh/projects/franka-robot-vla/" role="button"
+            aria-label="Share on Threads in new tab">
+            <i class="threads sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Threads</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet/?text=Franka%20%e6%9c%ba%e6%a2%b0%e8%87%82%20Pi0%20VLA%20%e7%ab%af%e5%88%b0%e7%ab%af%e6%8a%93%e5%8f%96%e7%b3%bb%e7%bb%9f&amp;url=http://localhost:1313/zh/projects/franka-robot-vla/" role="button"
+            aria-label="Share on Twitter in new tab">
+            <i class="twitter sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Twitter</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.xing.com/app/user?op=share;url=http://localhost:1313/zh/projects/franka-robot-vla/;title=Franka%20%e6%9c%ba%e6%a2%b0%e8%87%82%20Pi0%20VLA%20%e7%ab%af%e5%88%b0%e7%ab%af%e6%8a%93%e5%8f%96%e7%b3%bb%e7%bb%9f" role="button"
+            aria-label="Share on Xing in new tab">
+            <i class="xing sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Xing</span>
+        </a>
+    </li>
+            </ul>
+        </nav>
+</details>
+    </div>
+    
+        
+        <!-- main/footer.html -->
+    <hr class="hide">
+    <footer id="main-footer">
+            <div id="unified-footer"><p id="license">© MUKIMASTA 2026</p>
+                    <!-- menu.html -->
+            </div>
+    </footer>
+        </div>
+    </main>
+    <!-- footer.html -->
+<footer id="body-footer" class="pagewidth">
+    <div id="background-footer" class="background hide" role="presentation" aria-hidden="true"></div>
+    <div id="focusMode"></div>
+    <!-- a11y.html --><details id="has-a11y" class="presentation js-details hide" name="on-deck" aria-haspopup="true" aria-labelledby="has-a11y-summary"
+    data-i18n-accessibility="Accessibility"
+    data-i18n-optimizeSR="Screen Reader Optimization"
+    data-i18n-optimizeSRdesc="Optimize display and resources for screen reader users who navigate with a pointer device."
+    data-i18n-colorSettings="Color Settings"
+    data-i18n-darkMode="Dark Mode"
+    data-i18n-light="Light"
+    data-i18n-dark="Dark"
+    data-i18n-contrast="Contrast"
+    data-i18n-lessContrast="Low"
+    data-i18n-moreContrast="High"
+    data-i18n-defaultContrast="Default"
+    data-i18n-colorPalette="Color Palette"
+    data-i18n-defaultColor="Default"
+    data-i18n-deuteranopia="Deuteranopia"
+    data-i18n-protanopia="Protanopia"
+    data-i18n-tritanopia="Tritanopia"
+    data-i18n-monochrome="Monochrome"
+    data-i18n-fontSize="Font Size"
+    data-i18n-baselineStretch="Baseline Stretch"
+    data-i18n-OpenDyslexic="Use OpenDyslexic Font"
+    data-i18n-menuControls="Accessibility Menu Controls"
+    data-i18n-save="Save"
+    data-i18n-reset="Reset"
+    data-i18n-close="Close"
+    data-i18n-bionRead="BionRead Mode"
+    data-i18n-focusMode="Focus Mode"
+    data-i18n-noLocalStorage="LocalStorage is not available in your browser. Settings won&#39;t be saved.">
+</details>
+
+
+    <div id="useBionRead" class="sri"></div>
+    <!-- [top] bypass block -->
+    <nav aria-label="Bypass">
+        <a id="to-top" class="srm" href="#top" title="To Content Top" accesskey="c" aria-keyshortcuts="c" aria-label="To Content Top">
+            <span class="t srt">To Content Top</span>
+            <kbd class="key" aria-hidden="true" data-key="c"></kbd>
+        </a>
+    </nav>
+</footer>
+    
+    <!-- [post] single.html -->
+    <div id="bionReadSnapshot" hidden></div>
+    <!-- [background] baseof.html -->
+    <div id="background-body" role="presentation" aria-hidden="true"></div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches ||
+                           document.body.getAttribute('data-theme') === 'dark';
+            
+            
+            mermaid.initialize({
+                startOnLoad: false,
+                theme: isDark ? 'dark' : 'default',
+                securityLevel: 'loose',
+                flowchart: {
+                    useMaxWidth: true,
+                    htmlLabels: true
+                }
+            });
+            
+            
+            document.querySelectorAll('code.language-mermaid').forEach(function(codeBlock) {
+                const preBlock = codeBlock.parentNode;
+                const container = document.createElement('div');
+                container.className = 'mermaid';
+                container.textContent = codeBlock.textContent;
+                preBlock.parentNode.replaceChild(container, preBlock);
+            });
+            
+            
+            mermaid.run();
+        });
+    </script>
+</body>
+</html>

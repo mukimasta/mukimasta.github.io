@@ -10,7 +10,7 @@
 <meta name="author" content="Hanlin Xue">
 <meta name="description" content="section | MUKIMASTA" >
 <link rel="canonical" href="http://localhost:1313/projects/">
-
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/zh/projects/" title="Chinese">
 
 
     
@@ -150,6 +150,25 @@
         <nav aria-labelledby="breadcrumb">
             <ul role="presentation" class="breadcrumb ">
                     <!-- breadcrumb.html -->
+        <li id="is-translated">
+            
+    <!-- l10n.html -->
+    <details id="has-l10n" class="presentation">
+        <summary aria-label="Language Selections" aria-description="Current Language is English">
+            <span>EN</span>
+        </summary>
+        <nav aria-label="Language Selections">
+            <ul class="on-plank" role="presentation">
+                <li>
+                    <a href="/zh/projects/" aria-label="Switch Language to Chinese" aria-description="项目">
+                        <span class="emoji">🇨🇳&nbsp;</span>
+                        <span>项目</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </details>
+        </li>
     <li>
         <a href="" aria-current="page" tabindex="-1">Projects
         </a>
@@ -209,19 +228,19 @@
                 </span>
                 
             </div>
-            <a href="/projects/sample-project/" class="sr0" tabindex="-1" aria-describedby="desc-1">
-                <h1 id="title-1">My Awesome Project</h1>
+            <a href="/projects/autonomous-driving-system/" class="sr0" tabindex="-1" aria-describedby="desc-1">
+                <h1 id="title-1">Autonomous Driving System</h1>
             </a>
         </hgroup>
-        <a class="sri" href="/projects/sample-project/" aria-label="My Awesome Project" aria-describedby="desc-1"></a>
+        <a class="sri" href="/projects/autonomous-driving-system/" aria-label="Autonomous Driving System" aria-describedby="desc-1"></a>
         
         <section class="has-cover">
-                <img class="flowlines" src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/2.svg" alt="" style="object-position: 39% 20%" loading="lazy">
-            <div class="par" id="desc-1">This is a sample project to demonstrate the new project module.
+                <img src=http://localhost:1313/projects/autonomous-driving-system/images/demo.jpg alt="Featured image: Autonomous Driving System" loading="lazy">
+            <div class="par" id="desc-1">This project is a three-month effort to build a self-driving system that works end-to-end on a real mini car. 
             </div>
         </section>
         <footer>
-            <span class="readingTime">1 min read
+            <span class="readingTime">3 min read
             </span>
             
                 <div class="baselineskip" role="presentation"></div>
@@ -234,24 +253,24 @@
         aria-describedby="desc-2">
         <hgroup>
             <div>
-                <time datetime="2026-01-14T00:00:00&#43;00:00">January 14, 2026</time>
+                <time datetime="2025-04-21T00:00:00&#43;00:00">April 21, 2025</time>
                 <span><span>Hanlin Xue</span>
                 </span>
                 
             </div>
-            <a href="/projects/another-project/" class="sr0" tabindex="-1" aria-describedby="desc-2">
-                <h1 id="title-2">Another Cool Project</h1>
+            <a href="/projects/franka-robot-vla/" class="sr0" tabindex="-1" aria-describedby="desc-2">
+                <h1 id="title-2">Franka Robot VLA End-to-End Grasping System and Fine-tuning Report</h1>
             </a>
         </hgroup>
-        <a class="sri" href="/projects/another-project/" aria-label="Another Cool Project" aria-describedby="desc-2"></a>
+        <a class="sri" href="/projects/franka-robot-vla/" aria-label="Franka Robot VLA End-to-End Grasping System and Fine-tuning Report" aria-describedby="desc-2"></a>
         
         <section class="has-cover">
-                <img class="flowlines" src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/8.svg" alt="" style="object-position: 38% 77%" loading="lazy">
-            <div class="par" id="desc-2">A second project example to show the layout.
+                <img class="flowlines" src="https://raw.githubusercontent.com/foxihd/hugo-et-hd/master/static/svg/flowlines/2.svg" alt="" style="object-position: 63% 21%" loading="lazy">
+            <div class="par" id="desc-2">An end-to-end closed-loop system for robot grasping using Pi0 VLA model, verifying the entire process from data collection to real-world deployment.
             </div>
         </section>
         <footer>
-            <span class="readingTime">1 min read
+            <span class="readingTime">4 min read
             </span>
             
                 <div class="baselineskip" role="presentation"></div>
@@ -355,5 +374,38 @@
     
     <!-- [background] baseof.html -->
     <div id="background-body" role="presentation" aria-hidden="true"></div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches ||
+                           document.body.getAttribute('data-theme') === 'dark';
+            
+            
+            mermaid.initialize({
+                startOnLoad: false,
+                theme: isDark ? 'dark' : 'default',
+                securityLevel: 'loose',
+                flowchart: {
+                    useMaxWidth: true,
+                    htmlLabels: true
+                }
+            });
+            
+            
+            document.querySelectorAll('code.language-mermaid').forEach(function(codeBlock) {
+                const preBlock = codeBlock.parentNode;
+                const container = document.createElement('div');
+                container.className = 'mermaid';
+                container.textContent = codeBlock.textContent;
+                preBlock.parentNode.replaceChild(container, preBlock);
+            });
+            
+            
+            mermaid.run();
+        });
+    </script>
 </body>
 </html>

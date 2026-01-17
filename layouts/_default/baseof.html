@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{{- $lang := or site.Language.LanguageCode site.Language.Lang }}
+{{- $dir := or site.Language.LanguageDirection "ltr" }}
+<html lang="{{ $lang }}" dir="{{ $dir }}">
+<head>
+    {{ partial "head.html" . }}
+    {{ block "head" . }}{{ end }}
+    {{- if eq (lower site.Params.analytics.append) "head" -}}
+        {{ partialCached "analytics.html" . }}
+    {{- end }}
+</head>
+{{- if not (or .Params.headless .Params.target .Params.alias) }}
+<body>
+    {{ partial "header.html" . }}
+    {{ block "aside" . }}{{ end }}
+    {{ "<!-- [main] baseof.html -->" | safeHTML }}
+    <main id="{{ .Kind }}" {{- if eq .Kind "page" }}class="{{- with .Params.type -}}{{ . }}{{ else }}page{{ end }}"
+        {{ end -}}>
+        {{ partial "main/header.html" . }}
+        <div id="top" role="presentation">
+            {{ block "top" . }}{{ end }}
+        </div>
+        {{ block "main" . }}{{ end }}
+        <div id="exclude" role="presentation">
+            {{ "<!-- excluded last block frome some RSS reader and browser reader mode -->" | safeHTML }}
+            {{ block "exclude" . }}{{ end }}
+        {{ partialCached "main/footer.html" . }}
+        </div>
+    </main>
+    {{ partialCached "footer.html" . }}
+    {{ block "post" . }}{{ end }}
+    {{ "<!-- [background] baseof.html -->" | safeHTML }}
+    <div id="background-body" role="presentation" aria-hidden="true"></div>
+    {{- if eq (lower site.Params.analytics.append) "body" -}}
+        {{ partialCached "analytics.html" . }}
+    {{- end }}
+
+    {{/* Mermaid Support - Render mermaid code blocks as diagrams */}}
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Detect dark mode
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches ||
+                           document.body.getAttribute('data-theme') === 'dark';
+            
+            // Initialize mermaid with configuration
+            mermaid.initialize({
+                startOnLoad: false,
+                theme: isDark ? 'dark' : 'default',
+                securityLevel: 'loose',
+                flowchart: {
+                    useMaxWidth: true,
+                    htmlLabels: true
+                }
+            });
+            
+            // Find all mermaid code blocks and convert them to diagrams
+            document.querySelectorAll('code.language-mermaid').forEach(function(codeBlock) {
+                const preBlock = codeBlock.parentNode;
+                const container = document.createElement('div');
+                container.className = 'mermaid';
+                container.textContent = codeBlock.textContent;
+                preBlock.parentNode.replaceChild(container, preBlock);
+            });
+            
+            // Run mermaid to render all diagrams
+            mermaid.run();
+        });
+    </script>
+</body>
+{{- end }}
+</html>

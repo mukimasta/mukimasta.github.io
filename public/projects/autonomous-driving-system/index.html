@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <!-- head.html --><!-- meta.html -->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autonomous Driving System | MUKIMASTA</title>
+<meta name="author" content="Hanlin Xue">
+<meta name="description" content="This project is a three-month effort to build a self-driving system that works end-to-end on a real mini car. " >
+<link rel="canonical" href="http://localhost:1313/projects/autonomous-driving-system/">
+
+
+
+    
+    <!-- twitterCard -->
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Autonomous Driving System | MUKIMASTA" />
+    <meta name="twitter:description" content="This project is a three-month effort to build a self-driving system that works end-to-end on a real mini car. " />
+        <meta name="twitter:image" content="http://localhost:1313/projects/autonomous-driving-system/images/obstacle_avoidance.gif" />
+    
+    <!-- openGraph -->
+    <meta property="og:title" content="Autonomous Driving System | MUKIMASTA" />
+    <meta property="og:description" content="This project is a three-month effort to build a self-driving system that works end-to-end on a real mini car. " />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://localhost:1313/projects/autonomous-driving-system/" />
+        <meta property="og:image" content="http://localhost:1313/projects/autonomous-driving-system/images/obstacle_avoidance.gif" />
+    <meta property="og:site_name" content="MUKIMASTA" />
+    <!-- js.html -->
+
+
+    <script src="http://localhost:1313/js/hugo-brewm.min.js" defer></script><!-- css.html -->
+
+
+    <link rel="stylesheet" href="http://localhost:1313/css/hugo-brewm.min.css">
+
+
+
+    
+    <!-- css/inline.html -->
+    <style>
+         
+        body {max-width: 786px; margin: auto; padding: 2rem;}
+        img {max-width: 86vw;}
+    </style>
+    
+</head>
+<body>
+    <!-- header.html -->
+<header class="pagewidth">
+    <div id="background-header" class="background" aria-hidden="true"></div>
+    
+    <nav aria-label="Bypass">
+        <a id="to-content" href="#content" aria-label="Skip to Main Content">
+            <span>Skip to Main Content</span>
+            <kbd class="key" aria-hidden="true" data-key="c"></kbd>
+            <span class="screening" aria-hidden="true"></span>
+        </a>
+    </nav>
+    
+    <!-- logo.html -->
+    <div id="logo">
+        <a href="http://localhost:1313/" aria-label="MUKIMASTA" aria-description="Homepage"><svg id="logotype" xmlns="http://www.w3.org/2000/svg" version="1.1" width="252pt" aria-label="MUKIMASTA">
+                        <text id="logotype__text" y="19.5pt" x="0">MUKIMASTA</text>
+                    </svg>
+        </a>
+        <hr class="hide"/>
+    </div>
+    
+    <details class="presentation" id="top-nav">
+        <summary class="on-deck">
+            <span class="t">Navigation</span>
+            <span class="menu-icon" role="presentation"></span>
+        </summary>
+        <nav tabindex="-1" aria-label="Top">
+            <!-- menu.html -->
+    <details id="has-main-menu" class="presentation" open>
+        <summary  class="hide"  aria-label="Main Menu">
+            <span>Main Menu</span>
+        </summary>
+            
+            <nav id="main-menu" aria-label="Main Menu">
+                <ul class="l1   has-childfree " role="presentation" tabindex="-1" >
+                    
+    
+        <li role="presentation" >
+    <a   class=on-deck href=/>
+        
+            <span>
+                About</span>
+    </a>
+        </li>
+        <li role="presentation" >
+    <a   class=on-deck href=https://github.com/mukimasta rel=external noopener noreferrer nofollow target=_blank>
+        
+            <i class="icon sri">github</i>
+            <span>
+                Github</span>
+    </a>
+        </li>
+                </ul>
+            </nav>
+    </details>
+            
+            <!-- menu.html -->
+            <!-- i18n.html -->
+            <nav id="bi18n" aria-label="Language Selections">
+                <a id="has-i18n" class="on-deck"
+                    href="http://localhost:1313/zh/"
+                    aria-label="Switch Language to Chinese"
+                    aria-description="Current Language is English">
+                    <span class="emoji">🇨🇳&nbsp;</span>
+                    <span class="act iso639 sri" aria-hidden="true">EN</span>
+                    <span class="alt iso639 sri" aria-hidden="true">&rarr; ZH</span>
+                    <span class="t srt languangeName">Chinese</span>
+                </a>
+            </nav>
+
+        </nav>
+        <div id="top-nav-screen" class="screening js-cpn" role="presentation" aria-hidden="true"></div>
+        <hr class="hide"/>
+    </details>
+</header>
+    
+    <!-- [main] baseof.html -->
+    <main id="page"class="page"
+        >
+        <!-- main/header.html -->
+        <header class="pagewidth">
+                    <menu id="menu" class="srm"
+                        data-i18n-back="Go Back"
+                        data-i18n-print="Print"
+                        data-i18n-copy="Copy URL"
+                        data-i18n-copying="Copying...">
+                            <li>
+                                <a id="navigatorShare" href="#mastodon" role="button" aria-label="Share">
+                                    <span class="t srt" role="tooltip">Share</span>
+                                </a>
+                            </li>
+                    </menu>
+            <!-- nav.html -->
+<details class="presentation" aria-expanded="true" id="has-breadcrumb" open>
+    <summary id="breadcrumb" tabindex="-1">
+        <span>Breadcrumb</span>
+    </summary>
+        <nav aria-labelledby="breadcrumb">
+            <ul role="presentation" class="breadcrumb ">
+                    <!-- breadcrumb.html -->
+        <li>
+            <a href="http://localhost:1313/projects/" aria-current="true">Projects
+            </a>
+        </li>
+    <li>
+        <a href="" aria-current="page" tabindex="-1">Autonomous Driving System
+        </a>
+    </li>
+            </ul>
+        </nav>
+</details>
+            <hr class="hide"/>
+        </header>
+        <div id="top" role="presentation">
+            
+        </div>
+        
+    <article id="main-article" class="pagewidth sf"
+        role="document" aria-labelledby="title"
+            data-pagefind-ignore="all">
+        <header aria-labelledby="title">
+            <!-- title.html -->
+        <h1 id="title"
+            data-bionRead-safe
+            >Autonomous Driving System</h1>
+        </header>
+        <!-- audio.html -->
+        <section id="content" class="content " aria-labelledby="title" data-bionRead-safe>
+                <p><img src="/projects/autonomous-driving-system/images/demo.jpg" alt="Demo"></p>
+<p>This project is a three-month effort to build a self-driving system that works end-to-end on a real mini car. We integrated the whole system, enabling the car to localize itself, plan a path, and physically drive to a destination I selected.</p>
+<!-- The motivation for me behind is simple: curiosity and interest.
+
+I wanted to build an intelligent system that actually runs in the real world—where I can see the results, observe it, and iteratively evolve it; where I can imagine the prospect and the future of something I made with my own hands. That’s cool.
+
+Watching the car succeed, get stuck, and gradually run better over time was the most meaningful part of this project. And it’s this process that forms the most valuable engineering experience. -->
+<h2 id="overview">Overview</h2>
+<p>The system follows a classic autonomous driving stack:</p>
+<ul>
+<li><strong>Localization</strong>: State estimation from a noisy sensor.</li>
+<li><strong>Planning</strong>: Path planning on a known map.</li>
+<li><strong>Control</strong>: Tracking the planned path on a physical car.</li>
+</ul>
+<p>Data flow:</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TB
+    %% Strict Top-Down Layout
+    
+    %% --- Top Layer: Inputs ---
+    subgraph Inputs [ ]
+        direction LR
+        style Inputs fill:none,stroke:none
+        Sensors([📡 Sensors&lt;br/&gt;Lidar &amp; Odom])
+        User([👤 User&lt;br/&gt;Selection])
+        Map([🗺️ Map&lt;br/&gt;Data])
+    end
+
+    %% --- Middle Layer: Stack (Vertical) ---
+    %% We group them but rely on edges to enforce order
+    subgraph Stack [Autonomous System]
+        direction TB
+        Plan[🛣️ Planning&lt;br/&gt;&lt;b&gt;PRM + Lazy A*&lt;/b&gt;]
+        Ctrl[🎮 Control&lt;br/&gt;&lt;b&gt;MPC&lt;/b&gt;]
+        Loc[📍 Localization&lt;br/&gt;&lt;b&gt;Particle Filter&lt;/b&gt;]
+    end
+
+    %% --- Bottom Layer: Output ---
+    Car((🏎️ Real Car&lt;br/&gt;Control))
+
+    %% === Positioning Force (Hidden Edges) ===
+    %% These ensure the vertical backbone: Plan -&gt; Ctrl -&gt; Loc -&gt; Car
+    %% We anchor the stack under the middle input (User)
+    User ~~~ Plan
+    Plan ~~~ Ctrl
+    Ctrl ~~~ Loc
+    Loc ~~~ Car
+    
+    %% Force Sensors to be left, Map to be right (relative to stack)
+    Sensors ~~~ Plan
+    Map ~~~ Plan
+
+    %% === Real Data Flow ===
+    Sensors --&gt;|&#34;Raw Data&#34;| Loc
+    Sensors --&gt;|&#34;Real-time Obstacles&#34;| Ctrl
+    User --&gt;|&#34;Target Destination&#34;| Plan
+    Map --&gt;|&#34;Static Obstacles&#34;| Loc
+    Map --&gt;|&#34;Free Space&#34;| Plan
+    
+    %% Loc is now at bottom, providing feedback UP to Plan and Ctrl
+    Loc --&gt;|&#34;Current Pose&#34;| Plan
+    Loc --&gt;|&#34;Current Pose&#34;| Ctrl
+    
+    Plan --&gt;|&#34;Trajectory / Path&#34;| Ctrl
+    
+    Ctrl --&gt;|&#34;Speed &amp; Steering&#34;| Car
+    
+    %% === Styling ===
+    classDef input fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#0d47a1
+    classDef module fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
+    classDef output fill:#ffb74d,stroke:#e65100,stroke-width:4px,color:#000000,font-weight:bold,font-size:16px
+    
+    class User,Map,Sensors input
+    class Loc,Plan,Ctrl module
+    class Car output
+</code></pre><p>The Multi-agent System for non-Holonomic Racing (MuSHR) is an open-source robotic hardware and software platform from University of Washington for learning and researching AI in the setting of autonomous vehicles and mobile robotics.</p>
+<p><a href="https://mushr.io/" target="_blank" rel="external noopener noreferrer nofollow">MuSHR: The UW Open Racecar Project</a></p>
+<h2 id="highlights">Highlights</h2>
+<h3 id="real-time-obstacle-avoidance">Real-time Obstacle Avoidance</h3>
+<p><strong>Motivation:</strong> The baseline controller only tracks the pre-planned path, sometimes it collides with walking pedestrians or unmapped obstacles.</p>
+<p><strong>Idea:</strong> To use existing LiDAR measurements to detect obstacles, convert their coordinates, and then penalize the candidate trajectories that are too close to the obstacles in MPC cost function.</p>
+<h3 id="smooth-path-following">Smooth Path Following</h3>
+<p><strong>Motivation:</strong> The original MPC often <strong>oscillates</strong> (keeps steering left/right), which reduces the stability and comfort.</p>
+<p><strong>Idea:</strong> Add a steering smoothness penalty as a cost function to the MPC algorithm.</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">flowchart TB
+    %% --- Top Layer: Inputs ---
+    subgraph Inputs [ ]
+        direction LR
+        style Inputs fill:none,stroke:none
+        I_Scan([&lt;b&gt;LiDAR Data&lt;/b&gt;])
+        I_Loc([&lt;b&gt;Current Pose&lt;/b&gt;&lt;br/&gt;from Localization])
+        I_Plan([&lt;b&gt;Planned Path&lt;/b&gt;&lt;br/&gt;from Planning])
+        I_Map([&lt;b&gt;Static Map&lt;/b&gt;])
+    end
+
+    %% --- Middle Layer: MPC Module ---
+    subgraph MPC [&lt;b&gt;MPC Controller&lt;/b&gt;]
+        direction TB
+        
+        %% Step 1: Trajectory Generation
+        Generate[🎲 &lt;b&gt;Generate K Future Path Candidates&lt;/b&gt;]
+
+        %% Step 2: Cost Evaluation (Detailed)
+        subgraph Costs [Cost Evaluation]
+            direction TB
+            
+            %% Standard Costs
+            subgraph Standard [Standard Costs]
+                direction LR
+                style Standard fill:none,stroke:none
+                C_Dist[&lt;b&gt;Distance Cost&lt;/b&gt;&lt;br/&gt;vs Reference Path]
+                C_Map[&lt;b&gt;Map Collision Cost&lt;/b&gt;]
+            end
+            
+            %% Highlighted Improvements
+            subgraph Highlights [&lt;b&gt;Key Improvements&lt;/b&gt;]
+                style Highlights fill:#fff3e0,stroke:#ffb74d,stroke-dasharray: 5 5
+                C_Live[&lt;b&gt;Real-time Collision Cost&lt;/b&gt;]
+                C_Smooth[&lt;b&gt;Steering Smoothness Cost&lt;/b&gt;&lt;br/&gt;Penalize Steering Changes]
+            end
+        end
+
+        %% Step 3: Selection
+        Select[✅ &lt;b&gt;Optimization&lt;/b&gt;&lt;br/&gt;Select Min Cost Trajectory]
+    end
+
+    %% --- Bottom Layer: Output ---
+    Car((🏎️\  Real Car&lt;br/&gt;Control))
+
+    %% === Connections ===
+    %% Inputs Flow
+    I_Loc --&gt;|&#34;Current State&#34;| Generate
+    I_Plan --&gt;|&#34;Ref Speed&#34;| Generate
+    
+    %% Cost Dependencies
+    Generate --&gt;|&#34;Path Candidates&#34;| C_Dist
+    I_Plan --&gt;|&#34;Ref Path&#34;| C_Dist
+    
+    Generate --&gt;|&#34;Path Candidates&#34;| C_Map
+    I_Map --&gt;|&#34;Static Map&#34;| C_Map
+    
+    Generate --&gt;|&#34;Path Candidates&#34;| C_Live
+    I_Scan --&gt;|&#34;Real-time Obstacles&#34;| C_Live
+    
+    Generate --&gt;|&#34;Steering Angles&#34;| C_Smooth
+
+    %% Aggregation
+    C_Dist &amp; C_Map &amp; C_Live &amp; C_Smooth --&gt;  Select
+    
+    Select --&gt;|&#34;Speed &amp; Steering&#34;| Car
+
+    %% === Styling ===
+    classDef input fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#0d47a1
+    classDef module fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c
+    classDef highlight fill:#fff8e1,stroke:#ff8f00,stroke-width:3px,color:#bf360c
+    classDef output fill:#ffb74d,stroke:#e65100,stroke-width:4px,color:#000000,font-weight:bold,font-size:16px
+    classDef internal fill:#ffffff,stroke:#7b1fa2,stroke-width:1px,color:#4a148c
+    
+    class I_Plan,I_Loc,I_Scan,I_Map input
+    class MPC module
+    class C_Smooth,C_Live highlight
+    class Generate,C_Dist,C_Map,Select internal
+    class Car output
+</code></pre><h2 id="demonstration">Demonstration</h2>
+<h3 id="real-time-obstacle-avoidance-1">Real-time Obstacle Avoidance</h3>
+<p><img src="/projects/autonomous-driving-system/images/obstacle_avoidance.gif" alt="Obstacle Avoidance"></p>
+
+        </section>
+    </article>
+        <div id="exclude" role="presentation">
+            <!-- excluded last block frome some RSS reader and browser reader mode -->
+            
+    <hr class="hide" style="margin: 1in 0;">
+    <div id="contentinfo" class="pagewidth" role="contentinfo" data-pagefind-ignore="all">
+            <!-- nav.html -->
+<details class="presentation" aria-expanded="true" id="has-share" open>
+    <summary id="share" tabindex="-1">
+        <span>Share</span>
+    </summary>
+        <nav aria-labelledby="share">
+            <ul role="presentation" class="share srm">
+                    <!-- share.html -->
+    <li id="has-mastodon">
+        <!-- mastodon.html -->
+    <form class="form" id="mastodon" action="//sharetomastodon.github.io/" target="_blank" rel="noopener noreferrer">
+        <input id="mastodonTitle" type="hidden" name="title" value="Autonomous Driving System">
+        <input id="mastodonPermalink" type="hidden" name="url" value="http://localhost:1313/projects/autonomous-driving-system/">
+        <input id="mastodonText" type="hidden" name="text" value="Autonomous Driving System http://localhost:1313/projects/autonomous-driving-system/" disabled>
+        <input id="mastodonInstance" type="url" class="ldots form__input" placeholder="Enter Mastodon instance (https://www.example.com)" aria-label="Mastodon instance URL">
+        <button class="form__button" type="submit" aria-label="Share on Mastodon">
+            <i class="icon mastodon sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Mastodon</span>
+        </button>
+    </form>
+    </li>
+    <li>
+        <a href="mailto:?subject=Autonomous%20Driving%20System&body=http%3a%2f%2flocalhost%3a1313%2fprojects%2fautonomous-driving-system%2f" role="button" aria-label="Share on Email">
+            <i class="email sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Email</span>
+        </a>
+    </li>
+    <li>
+        <a href="whatsapp://send?text=Autonomous%20Driving%20System%20http%3a%2f%2flocalhost%3a1313%2fprojects%2fautonomous-driving-system%2f" role="button" aria-label="Share on Whatsapp">
+            <i class="whatsapp sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Whatsapp</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://telegram.me/share/url?text=Autonomous%20Driving%20System&amp;url=http://localhost:1313/projects/autonomous-driving-system/" role="button"
+            aria-label="Share on Telegram in new tab">
+            <i class="telegram sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Telegram</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://bsky.app/intent/compose?text=Autonomous%20Driving%20System&amp;url=http://localhost:1313/projects/autonomous-driving-system/" role="button"
+            aria-label="Share on Bluesky in new tab">
+            <i class="bluesky sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Bluesky</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http://localhost:1313/projects/autonomous-driving-system/" role="button"
+            aria-label="Share on Facebook in new tab">
+            <i class="facebook sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Facebook</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://news.ycombinator.com/submitlink?u=http://localhost:1313/projects/autonomous-driving-system/&amp;t=Autonomous%20Driving%20System" role="button"
+            aria-label="Share on Hackernews in new tab">
+            <i class="hackernews sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Hackernews</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/projects/autonomous-driving-system/&amp;title=Autonomous%20Driving%20System&amp;summary=Autonomous%20Driving%20System&amp;source=http://localhost:1313/projects/autonomous-driving-system/" role="button"
+            aria-label="Share on Linkedin in new tab">
+            <i class="linkedin sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Linkedin</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://pinterest.com/pin/create/button/?url=http://localhost:1313/projects/autonomous-driving-system/&amp;media=http://localhost:1313/projects/autonomous-driving-system/&amp;description=Autonomous%20Driving%20System" role="button"
+            aria-label="Share on Pinterest in new tab">
+            <i class="pinterest sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Pinterest</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://reddit.com/submit/?url=http://localhost:1313/projects/autonomous-driving-system/&amp;resubmit=true&amp;title=Autonomous%20Driving%20System" role="button"
+            aria-label="Share on Reddit in new tab">
+            <i class="reddit sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Reddit</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Autonomous%20Driving%20System&amp;caption=Autonomous%20Driving%20System&amp;content=http://localhost:1313/projects/autonomous-driving-system/&amp;canonicalUrl=http://localhost:1313/projects/autonomous-driving-system/" role="button"
+            aria-label="Share on Tumblr in new tab">
+            <i class="tumblr sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Tumblr</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://threads.net/intent/post?text=Autonomous%20Driving%20System&amp;url=http://localhost:1313/projects/autonomous-driving-system/" role="button"
+            aria-label="Share on Threads in new tab">
+            <i class="threads sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Threads</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet/?text=Autonomous%20Driving%20System&amp;url=http://localhost:1313/projects/autonomous-driving-system/" role="button"
+            aria-label="Share on Twitter in new tab">
+            <i class="twitter sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Twitter</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.xing.com/app/user?op=share;url=http://localhost:1313/projects/autonomous-driving-system/;title=Autonomous%20Driving%20System" role="button"
+            aria-label="Share on Xing in new tab">
+            <i class="xing sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Xing</span>
+        </a>
+    </li>
+            </ul>
+        </nav>
+</details>
+    </div>
+    
+        
+        <!-- main/footer.html -->
+    <hr class="hide">
+    <footer id="main-footer"><div class="column column--multicols pagewidth" style="--multicols: 2"><div id="main-footer-primary">
+                        <p><strong>MUKIMASTA</strong></p>
+<p>is my personal workshop, where I fuse curiosity, passion, and aesthetics to craft works that only I can bring into the world.</p>
+<!-- 
+<br>
+
+<fieldset id=cookie-banner>
+<legend>Cookie Banner</legend>
+<div>
+<span>We do not collect cookie</span>
+<img id="no-cookie" alt="No Cookie for Cookie Monster" />
+</div>
+</fieldset> -->
+                    </div>
+                <div id="main-footer-secondary"  class="column" style="--col: 10rem">
+                        <div>
+                            <p><strong>Example Links</strong></p>
+<ul>
+<li><a href="#">Example Link 1</a></li>
+<li><a href="#">Example Link 2</a></li>
+<li><a href="#">Example Link 3</a></li>
+<li><a href="#">Example Link 4</a></li>
+</ul>
+
+                        </div>
+                        <div>
+                            <p><strong>More Links</strong></p>
+<ul>
+<li><a href="#">More Link 1</a></li>
+<li><a href="#">More Link 2</a></li>
+<li><a href="#">More Link 3</a></li>
+</ul>
+
+                        </div>
+                </div>
+            </div>
+            <div id="unified-footer"><p id="license">© MUKIMASTA 2026</p>
+                    <!-- menu.html -->
+                        <p id="coffee-counter">Made with ❤️ and 5 cups of coffee, if not more.</p>
+            </div>
+    </footer>
+        </div>
+    </main>
+    <!-- footer.html -->
+<footer id="body-footer" class="pagewidth">
+    <div id="background-footer" class="background hide" role="presentation" aria-hidden="true"></div>
+    <div id="focusMode"></div>
+    <!-- a11y.html --><details id="has-a11y" class="presentation js-details hide" name="on-deck" aria-haspopup="true" aria-labelledby="has-a11y-summary"
+    data-i18n-accessibility="Accessibility"
+    data-i18n-optimizeSR="Screen Reader Optimization"
+    data-i18n-optimizeSRdesc="Optimize display and resources for screen reader users who navigate with a pointer device."
+    data-i18n-colorSettings="Color Settings"
+    data-i18n-darkMode="Dark Mode"
+    data-i18n-light="Light"
+    data-i18n-dark="Dark"
+    data-i18n-contrast="Contrast"
+    data-i18n-lessContrast="Low"
+    data-i18n-moreContrast="High"
+    data-i18n-defaultContrast="Default"
+    data-i18n-colorPalette="Color Palette"
+    data-i18n-defaultColor="Default"
+    data-i18n-deuteranopia="Deuteranopia"
+    data-i18n-protanopia="Protanopia"
+    data-i18n-tritanopia="Tritanopia"
+    data-i18n-monochrome="Monochrome"
+    data-i18n-fontSize="Font Size"
+    data-i18n-baselineStretch="Baseline Stretch"
+    data-i18n-OpenDyslexic="Use OpenDyslexic Font"
+    data-i18n-menuControls="Accessibility Menu Controls"
+    data-i18n-save="Save"
+    data-i18n-reset="Reset"
+    data-i18n-close="Close"
+    data-i18n-bionRead="BionRead Mode"
+    data-i18n-focusMode="Focus Mode"
+    data-i18n-noLocalStorage="LocalStorage is not available in your browser. Settings won&#39;t be saved.">
+</details>
+
+
+    <div id="useBionRead" class="sri"></div>
+    <!-- [top] bypass block -->
+    <nav aria-label="Bypass">
+        <a id="to-top" class="srm" href="#top" title="To Content Top" accesskey="c" aria-keyshortcuts="c" aria-label="To Content Top">
+            <span class="t srt">To Content Top</span>
+            <kbd class="key" aria-hidden="true" data-key="c"></kbd>
+        </a>
+    </nav>
+</footer>
+    
+    <!-- [post] single.html -->
+    <div id="bionReadSnapshot" hidden></div>
+    <!-- [background] baseof.html -->
+    <div id="background-body" role="presentation" aria-hidden="true"></div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches ||
+                           document.body.getAttribute('data-theme') === 'dark';
+            
+            
+            mermaid.initialize({
+                startOnLoad: false,
+                theme: isDark ? 'dark' : 'default',
+                securityLevel: 'loose',
+                flowchart: {
+                    useMaxWidth: true,
+                    htmlLabels: true
+                }
+            });
+            
+            
+            document.querySelectorAll('code.language-mermaid').forEach(function(codeBlock) {
+                const preBlock = codeBlock.parentNode;
+                const container = document.createElement('div');
+                container.className = 'mermaid';
+                container.textContent = codeBlock.textContent;
+                preBlock.parentNode.replaceChild(container, preBlock);
+            });
+            
+            
+            mermaid.run();
+        });
+    </script>
+</body>
+</html>

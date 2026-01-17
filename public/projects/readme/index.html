@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <!-- head.html --><!-- meta.html -->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> | MUKIMASTA</title>
+<meta name="author" content="Hanlin Xue">
+<meta name="description" content="Franka Robot VLA End-to-End Control System Technical Report Project Duration: 2025.03 - 2025.04
+Role: System Architect &#43; Core Module Developer &#43; Data …" >
+<link rel="canonical" href="http://localhost:1313/projects/readme/">
+
+
+
+    
+    <!-- twitterCard -->
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content=" | MUKIMASTA" />
+    <meta name="twitter:description" content="Franka Robot VLA End-to-End Control System Technical Report Project Duration: 2025.03 - 2025.04
+Role: System Architect &#43; Core Module Developer &#43; Data …" />
+        <meta name="twitter:image" content="https://repository-images.githubusercontent.com/923527728/46a32a19-69ac-45b3-91a4-c4d299fb234b" />
+    
+    <!-- openGraph -->
+    <meta property="og:title" content=" | MUKIMASTA" />
+    <meta property="og:description" content="Franka Robot VLA End-to-End Control System Technical Report Project Duration: 2025.03 - 2025.04
+Role: System Architect &#43; Core Module Developer &#43; Data …" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://localhost:1313/projects/readme/" />
+        <meta property="og:image" content="https://repository-images.githubusercontent.com/923527728/46a32a19-69ac-45b3-91a4-c4d299fb234b" />
+    <meta property="og:site_name" content="MUKIMASTA" />
+    <!-- js.html -->
+
+
+    <script src="http://localhost:1313/js/hugo-brewm.min.js" defer></script><!-- css.html -->
+
+
+    <link rel="stylesheet" href="http://localhost:1313/css/hugo-brewm.min.css">
+
+
+
+    
+    <!-- css/inline.html -->
+    <style>
+         
+        body {max-width: 786px; margin: auto; padding: 2rem;}
+        img {max-width: 86vw;}
+    </style>
+    
+</head>
+<body>
+    <!-- header.html -->
+<header class="pagewidth">
+    <div id="background-header" class="background" aria-hidden="true"></div>
+    
+    <nav aria-label="Bypass">
+        <a id="to-content" href="#content" aria-label="Skip to Main Content">
+            <span>Skip to Main Content</span>
+            <kbd class="key" aria-hidden="true" data-key="c"></kbd>
+            <span class="screening" aria-hidden="true"></span>
+        </a>
+    </nav>
+    
+    <!-- logo.html -->
+    <div id="logo">
+        <a href="http://localhost:1313/" aria-label="MUKIMASTA" aria-description="Homepage"><svg id="logotype" xmlns="http://www.w3.org/2000/svg" version="1.1" width="252pt" aria-label="MUKIMASTA">
+                        <text id="logotype__text" y="19.5pt" x="0">MUKIMASTA</text>
+                    </svg>
+        </a>
+        <hr class="hide"/>
+    </div>
+    
+    <details class="presentation" id="top-nav">
+        <summary class="on-deck">
+            <span class="t">Navigation</span>
+            <span class="menu-icon" role="presentation"></span>
+        </summary>
+        <nav tabindex="-1" aria-label="Top">
+            <!-- menu.html -->
+    <details id="has-main-menu" class="presentation" open>
+        <summary  class="hide"  aria-label="Main Menu">
+            <span>Main Menu</span>
+        </summary>
+            
+            <nav id="main-menu" aria-label="Main Menu">
+                <ul class="l1   has-childfree " role="presentation" tabindex="-1" >
+                    
+    
+        <li role="presentation" >
+    <a   class=on-deck href=/>
+        
+            <span>
+                About</span>
+    </a>
+        </li>
+        <li role="presentation" >
+    <a   class=on-deck href=https://github.com/mukimasta rel=external noopener noreferrer nofollow target=_blank>
+        
+            <i class="icon sri">github</i>
+            <span>
+                Github</span>
+    </a>
+        </li>
+                </ul>
+            </nav>
+    </details>
+            
+            <!-- menu.html -->
+            <!-- i18n.html -->
+            <nav id="bi18n" aria-label="Language Selections">
+                <a id="has-i18n" class="on-deck"
+                    href="http://localhost:1313/zh/"
+                    aria-label="Switch Language to Chinese"
+                    aria-description="Current Language is English">
+                    <span class="emoji">🇨🇳&nbsp;</span>
+                    <span class="act iso639 sri" aria-hidden="true">EN</span>
+                    <span class="alt iso639 sri" aria-hidden="true">&rarr; ZH</span>
+                    <span class="t srt languangeName">Chinese</span>
+                </a>
+            </nav>
+
+        </nav>
+        <div id="top-nav-screen" class="screening js-cpn" role="presentation" aria-hidden="true"></div>
+        <hr class="hide"/>
+    </details>
+</header>
+    
+    <!-- [main] baseof.html -->
+    <main id="page"class="page"
+        >
+        <!-- main/header.html -->
+        <header class="pagewidth">
+                    <menu id="menu" class="srm"
+                        data-i18n-back="Go Back"
+                        data-i18n-print="Print"
+                        data-i18n-copy="Copy URL"
+                        data-i18n-copying="Copying...">
+                            <li>
+                                <a id="navigatorShare" href="#mastodon" role="button" aria-label="Share">
+                                    <span class="t srt" role="tooltip">Share</span>
+                                </a>
+                            </li>
+                    </menu>
+            <!-- nav.html -->
+<details class="presentation" aria-expanded="true" id="has-breadcrumb" open>
+    <summary id="breadcrumb" tabindex="-1">
+        <span>Breadcrumb</span>
+    </summary>
+        <nav aria-labelledby="breadcrumb">
+            <ul role="presentation" class="breadcrumb ">
+                    <!-- breadcrumb.html -->
+        <li>
+            <a href="http://localhost:1313/projects/" aria-current="true">Projects
+            </a>
+        </li>
+    <li>
+        <a href="" aria-current="page" tabindex="-1">
+        </a>
+    </li>
+            </ul>
+        </nav>
+</details>
+            <hr class="hide"/>
+        </header>
+        <div id="top" role="presentation">
+            
+        </div>
+        
+    <article id="main-article" class="pagewidth sf"
+        role="document" aria-labelledby="title"
+            data-pagefind-ignore="all">
+        <header aria-labelledby="title">
+            <!-- title.html -->
+        <h1 id="title"
+            data-bionRead-safe
+            ></h1>
+        </header>
+        <!-- audio.html -->
+        <section id="content" class="content " aria-labelledby="title" data-bionRead-safe>
+                <h1 id="franka-robot-vla-end-to-end-control-system-technical-report">Franka Robot VLA End-to-End Control System Technical Report</h1>
+<p><strong>Project Duration</strong>: 2025.03 - 2025.04<br>
+<strong>Role</strong>: System Architect + Core Module Developer + Data Pipeline Owner</p>
+<hr>
+<h2 id="1-project-overview">1. Project Overview</h2>
+<p>This project aims to verify the capability of the <strong>Pi0 VLA (Vision-Language-Action)</strong> model to directly control a real robot for grasping tasks. Within 8 weeks, we built a complete end-to-end closed-loop system, validating the entire process from data collection and model fine-tuning to real-world deployment.</p>
+<p><strong>Core Contributions</strong>:</p>
+<ul>
+<li><strong>Automated Data Collection</strong>: Designed an unattended automated collection pipeline, resolving the inefficiency of manual collection and ensuring high data quality.</li>
+<li><strong>Real-time Safety Control</strong>: Bridged the gap between model inference and real-robot execution. Achieved stable natural language grasping via position control and safety interception mechanisms.</li>
+</ul>
+<hr>
+<h2 id="2-system-architecture">2. System Architecture</h2>
+<p>The system consists of three main components:</p>
+<ol>
+<li><strong>Perception</strong>: Captures dual-camera images and robot states, transmitting them via ROS2.</li>
+<li><strong>Server</strong>: Hosts the Pi0 VLA model, receiving observations and returning action commands.</li>
+<li><strong>Control</strong>: Receives commands and controls the Franka robot motion via ROS2.</li>
+</ol>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TB
+    %% Style Definitions
+    classDef sensor fill:#e1f5fe,stroke:#01579b,stroke-width:2px,rx:10,ry:10;
+    classDef model fill:#fff3e0,stroke:#ff6f00,stroke-width:2px,rx:10,ry:10;
+    classDef control fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,rx:10,ry:10;
+    classDef process fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,rx:5,ry:5;
+
+    subgraph Perception_Collection [Collection]
+        direction TB
+        A[Dual Cameras]:::sensor --&gt;|Time Sync| B(ROS2 Data Node):::process
+        C[Robot State]:::sensor --&gt;|Joint/Vel| B
+        B --&gt;|Auto Pipeline| D[Training Dataset .npz]:::process
+    end
+
+    subgraph Inference_Control [Inference &amp; Control]
+        direction TB
+        E[Real-time Obs]:::sensor --&gt;|WebSocket| F(VLA Model):::model
+        F --&gt;|Action Command| G(Safety Controller):::control
+        G --&gt;|Execute| H[Franka Robot]:::control
+    end
+</code></pre><hr>
+<h2 id="3-key-technical-implementation">3. Key Technical Implementation</h2>
+<h3 id="31-how-to-teach-the-model-to-grasp-data-collection">3.1 How to Teach the Model to Grasp? (Data Collection)</h3>
+<p>High-quality data is the prerequisite for model fine-tuning. Traditional manual demonstration is inefficient and lacks spatial coverage.</p>
+<ul>
+<li><strong>Automated Collection</strong>: Designed a state-machine-driven script that cycles through <code>Reset -&gt; Random Pose -&gt; Grasp -&gt; Lift</code>. This enables unattended batch collection and standardizes every trajectory.</li>
+<li><strong>Preventing &ldquo;Rote Memorization&rdquo;</strong>: To prevent the model from overfitting to fixed spatial coordinates, we introduced <strong>Random Pose Noise</strong> in the collection trajectories. By adding noise around target points, we force the model to focus on object features rather than memorizing joint angles.</li>
+<li><strong>Image Consistency</strong>: The model is sensitive to geometric features. We implemented a <strong>Center Crop</strong> pipeline, ensuring the raw camera feed maintains its aspect ratio when resized to 224x224, eliminating distortion caused by stretching.</li>
+</ul>
+<h3 id="32-ensuring-stability-and-safety-real-time-control">3.2 Ensuring Stability and Safety? (Real-time Control)</h3>
+<p>Model inference is non-deterministic. Direct execution of its output can lead to abrupt motions or limit violations. We designed an intermediate controller to ensure safety.</p>
+<ul>
+<li><strong>Why Position Control?</strong>: Initial attempts with Velocity Control suffered from open-loop cumulative errors (integral drift), causing long-horizon actions to drift. Switching to <strong>Position Control</strong> (sending absolute joint angles) eliminated this drift and significantly improved tracking accuracy.</li>
+<li><strong>Safety Interception</strong>: Implemented real-time monitoring logic in the controller. The system immediately triggers a <strong>Kill Switch (Fuse Mechanism)</strong> if joint velocity or position commands exceed physical safety thresholds.</li>
+<li><strong>Jitter Suppression</strong>: Addressed signal flickering (e.g., gripper toggling between open/close) using a <strong>State Filter</strong>. The system only switches gripper state after receiving consistent commands for multiple consecutive frames.</li>
+</ul>
+<hr>
+<h2 id="4-results--iteration">4. Results &amp; Iteration</h2>
+<p>This project completed the full cycle from setup to stable grasping within 8 weeks, going through 8 core iterations.</p>
+<p><strong>Key Milestones</strong>:</p>
+<ul>
+<li>
+<p><strong>Milestone 1: Automated Loop (2025-04-09)</strong></p>
+<ul>
+<li>Completed the automated pipeline, boosting daily collection efficiency by 5x and creating the first high-quality dataset (270 trajectories).</li>
+<li><em>Result</em>: Model showed first signs of grasping intent (approaching objects).</li>
+</ul>
+</li>
+<li>
+<p><strong>Milestone 2: Breaking the &ldquo;Stagnation&rdquo; Bottleneck (2025-04-10)</strong></p>
+<ul>
+<li><em>Problem</em>: Robot tended to freeze when approaching objects.</li>
+<li><em>Solution</em>: Increased Model Context Length from 50 to 300 frames to capture longer temporal dependencies.</li>
+<li><em>Result</em>: Robot motion became fluid; <strong>First successful grasp achieved</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Milestone 3: Control Strategy Refactor (2025-04-21)</strong></p>
+<ul>
+<li><em>Problem</em>: Velocity control caused drift and instability over long durations.</li>
+<li><em>Solution</em>: Switched underlying control strategy from <strong>Velocity Mode</strong> to <strong>Position Mode</strong> and rewrote gripper de-bouncing logic.</li>
+<li><em>Result</em>: Achieved <strong>Stable Grasping</strong> state.</li>
+</ul>
+</li>
+</ul>
+
+        </section>
+    </article>
+        <div id="exclude" role="presentation">
+            <!-- excluded last block frome some RSS reader and browser reader mode -->
+            
+    <hr class="hide" style="margin: 1in 0;">
+    <div id="contentinfo" class="pagewidth" role="contentinfo" data-pagefind-ignore="all">
+            <!-- nav.html -->
+<details class="presentation" aria-expanded="true" id="has-share" open>
+    <summary id="share" tabindex="-1">
+        <span>Share</span>
+    </summary>
+        <nav aria-labelledby="share">
+            <ul role="presentation" class="share srm">
+                    <!-- share.html -->
+    <li id="has-mastodon">
+        <!-- mastodon.html -->
+    <form class="form" id="mastodon" action="//sharetomastodon.github.io/" target="_blank" rel="noopener noreferrer">
+        <input id="mastodonTitle" type="hidden" name="title" value="">
+        <input id="mastodonPermalink" type="hidden" name="url" value="http://localhost:1313/projects/readme/">
+        <input id="mastodonText" type="hidden" name="text" value=" http://localhost:1313/projects/readme/" disabled>
+        <input id="mastodonInstance" type="url" class="ldots form__input" placeholder="Enter Mastodon instance (https://www.example.com)" aria-label="Mastodon instance URL">
+        <button class="form__button" type="submit" aria-label="Share on Mastodon">
+            <i class="icon mastodon sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Mastodon</span>
+        </button>
+    </form>
+    </li>
+    <li>
+        <a href="mailto:?subject=&body=http%3a%2f%2flocalhost%3a1313%2fprojects%2freadme%2f" role="button" aria-label="Share on Email">
+            <i class="email sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Email</span>
+        </a>
+    </li>
+    <li>
+        <a href="whatsapp://send?text=%20http%3a%2f%2flocalhost%3a1313%2fprojects%2freadme%2f" role="button" aria-label="Share on Whatsapp">
+            <i class="whatsapp sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Whatsapp</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://telegram.me/share/url?text=&amp;url=http://localhost:1313/projects/readme/" role="button"
+            aria-label="Share on Telegram in new tab">
+            <i class="telegram sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Telegram</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://bsky.app/intent/compose?text=&amp;url=http://localhost:1313/projects/readme/" role="button"
+            aria-label="Share on Bluesky in new tab">
+            <i class="bluesky sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Bluesky</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http://localhost:1313/projects/readme/" role="button"
+            aria-label="Share on Facebook in new tab">
+            <i class="facebook sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Facebook</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://news.ycombinator.com/submitlink?u=http://localhost:1313/projects/readme/&amp;t=" role="button"
+            aria-label="Share on Hackernews in new tab">
+            <i class="hackernews sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Hackernews</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/projects/readme/&amp;title=&amp;summary=&amp;source=http://localhost:1313/projects/readme/" role="button"
+            aria-label="Share on Linkedin in new tab">
+            <i class="linkedin sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Linkedin</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://pinterest.com/pin/create/button/?url=http://localhost:1313/projects/readme/&amp;media=http://localhost:1313/projects/readme/&amp;description=" role="button"
+            aria-label="Share on Pinterest in new tab">
+            <i class="pinterest sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Pinterest</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://reddit.com/submit/?url=http://localhost:1313/projects/readme/&amp;resubmit=true&amp;title=" role="button"
+            aria-label="Share on Reddit in new tab">
+            <i class="reddit sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Reddit</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=&amp;caption=&amp;content=http://localhost:1313/projects/readme/&amp;canonicalUrl=http://localhost:1313/projects/readme/" role="button"
+            aria-label="Share on Tumblr in new tab">
+            <i class="tumblr sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Tumblr</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://threads.net/intent/post?text=&amp;url=http://localhost:1313/projects/readme/" role="button"
+            aria-label="Share on Threads in new tab">
+            <i class="threads sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Threads</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet/?text=&amp;url=http://localhost:1313/projects/readme/" role="button"
+            aria-label="Share on Twitter in new tab">
+            <i class="twitter sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Twitter</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.xing.com/app/user?op=share;url=http://localhost:1313/projects/readme/;title=" role="button"
+            aria-label="Share on Xing in new tab">
+            <i class="xing sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Xing</span>
+        </a>
+    </li>
+            </ul>
+        </nav>
+</details>
+    </div>
+    
+        
+        <!-- main/footer.html -->
+    <hr class="hide">
+    <footer id="main-footer"><div class="column column--multicols pagewidth" style="--multicols: 2"><div id="main-footer-primary">
+                        <p><strong>MUKIMASTA</strong></p>
+<p>is my personal workshop, where I fuse curiosity, passion, and aesthetics to craft works that only I can bring into the world.</p>
+<!-- 
+<br>
+
+<fieldset id=cookie-banner>
+<legend>Cookie Banner</legend>
+<div>
+<span>We do not collect cookie</span>
+<img id="no-cookie" alt="No Cookie for Cookie Monster" />
+</div>
+</fieldset> -->
+                    </div>
+                <div id="main-footer-secondary"  class="column" style="--col: 10rem">
+                        <div>
+                            <p><strong>Example Links</strong></p>
+<ul>
+<li><a href="#">Example Link 1</a></li>
+<li><a href="#">Example Link 2</a></li>
+<li><a href="#">Example Link 3</a></li>
+<li><a href="#">Example Link 4</a></li>
+</ul>
+
+                        </div>
+                        <div>
+                            <p><strong>More Links</strong></p>
+<ul>
+<li><a href="#">More Link 1</a></li>
+<li><a href="#">More Link 2</a></li>
+<li><a href="#">More Link 3</a></li>
+</ul>
+
+                        </div>
+                </div>
+            </div>
+            <div id="unified-footer"><p id="license">© MUKIMASTA 2026</p>
+                    <!-- menu.html -->
+                        <p id="coffee-counter">Made with ❤️ and 5 cups of coffee, if not more.</p>
+            </div>
+    </footer>
+        </div>
+    </main>
+    <!-- footer.html -->
+<footer id="body-footer" class="pagewidth">
+    <div id="background-footer" class="background hide" role="presentation" aria-hidden="true"></div>
+    <div id="focusMode"></div>
+    <!-- a11y.html --><details id="has-a11y" class="presentation js-details hide" name="on-deck" aria-haspopup="true" aria-labelledby="has-a11y-summary"
+    data-i18n-accessibility="Accessibility"
+    data-i18n-optimizeSR="Screen Reader Optimization"
+    data-i18n-optimizeSRdesc="Optimize display and resources for screen reader users who navigate with a pointer device."
+    data-i18n-colorSettings="Color Settings"
+    data-i18n-darkMode="Dark Mode"
+    data-i18n-light="Light"
+    data-i18n-dark="Dark"
+    data-i18n-contrast="Contrast"
+    data-i18n-lessContrast="Low"
+    data-i18n-moreContrast="High"
+    data-i18n-defaultContrast="Default"
+    data-i18n-colorPalette="Color Palette"
+    data-i18n-defaultColor="Default"
+    data-i18n-deuteranopia="Deuteranopia"
+    data-i18n-protanopia="Protanopia"
+    data-i18n-tritanopia="Tritanopia"
+    data-i18n-monochrome="Monochrome"
+    data-i18n-fontSize="Font Size"
+    data-i18n-baselineStretch="Baseline Stretch"
+    data-i18n-OpenDyslexic="Use OpenDyslexic Font"
+    data-i18n-menuControls="Accessibility Menu Controls"
+    data-i18n-save="Save"
+    data-i18n-reset="Reset"
+    data-i18n-close="Close"
+    data-i18n-bionRead="BionRead Mode"
+    data-i18n-focusMode="Focus Mode"
+    data-i18n-noLocalStorage="LocalStorage is not available in your browser. Settings won&#39;t be saved.">
+</details>
+
+
+    <div id="useBionRead" class="sri"></div>
+    <!-- [top] bypass block -->
+    <nav aria-label="Bypass">
+        <a id="to-top" class="srm" href="#top" title="To Content Top" accesskey="c" aria-keyshortcuts="c" aria-label="To Content Top">
+            <span class="t srt">To Content Top</span>
+            <kbd class="key" aria-hidden="true" data-key="c"></kbd>
+        </a>
+    </nav>
+</footer>
+    
+    <!-- [post] single.html -->
+    <div id="bionReadSnapshot" hidden></div>
+    <!-- [background] baseof.html -->
+    <div id="background-body" role="presentation" aria-hidden="true"></div>
+</body>
+</html>

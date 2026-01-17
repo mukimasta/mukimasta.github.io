@@ -128,7 +128,7 @@
     <!-- hero.html -->
     <section class="hero" aria-label="Homepage" tabindex="0">
         <picture class="hero__image ">
-            <img src="images/head.jpeg" alt=""/>
+            <img src="http://localhost:1313/zh/images/head.jpeg" alt=""/>
         </picture>
         <div class="hero__content"><h2 id="mukii">Mukii</h2>
 <p>Hi~ 欢迎来到我的个人网站。</p>
@@ -145,6 +145,44 @@
     </section>
 
                 <hr class="hide"/>
+                <div id="list-projects" class="has-crsl">
+                    <header class="section-title">
+                        <strong>Selected Projects</strong>
+                    </header>
+                    <div class="crsl">
+                        <article class="feed-item"
+        aria-posinset="1"
+        aria-setsize="1"
+        aria-labelledby="title-1"
+        aria-describedby="desc-1">
+        <hgroup>
+            <div>
+                <time datetime="2025-04-21T00:00:00&#43;00:00">1年1月1日</time>
+                <span>
+                </span>
+                
+            </div>
+            <a href="/zh/projects/franka-robot-vla/" class="sr0" tabindex="-1" aria-describedby="desc-1">
+                <h1 id="title-1">Franka 机械臂 Pi0 VLA 端到端抓取系统</h1>
+            </a>
+        </hgroup>
+        <a class="sri" href="/zh/projects/franka-robot-vla/" aria-label="Franka 机械臂 Pi0 VLA 端到端抓取系统" aria-describedby="desc-1"></a>
+        
+        <section class="has-cover">
+                <img src=http://localhost:1313/zh/projects/franka-robot-vla/images/franka_grasping.gif alt="Featured image: Franka 机械臂 Pi0 VLA 端到端抓取系统" loading="lazy">
+            <div class="par" id="desc-1">基于 Pi0 VLA 大模型的端到端机械臂控制系统，验证了从数据采集、模型微调到真机部署的全流程。
+            </div>
+        </section>
+        <footer>
+            <span class="readingTime">1 min read
+            </span>
+            
+                <div class="baselineskip" role="presentation"></div>
+        </footer>
+    </article>
+                    </div>
+                    <hr class="hide"/>
+                </div>
                 <div id="list-taxonomy" class="has-crsl">
                     <div class="crsl">
                             <!-- listing.html -->
@@ -224,5 +262,38 @@
     
     <!-- [background] baseof.html -->
     <div id="background-body" role="presentation" aria-hidden="true"></div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches ||
+                           document.body.getAttribute('data-theme') === 'dark';
+            
+            
+            mermaid.initialize({
+                startOnLoad: false,
+                theme: isDark ? 'dark' : 'default',
+                securityLevel: 'loose',
+                flowchart: {
+                    useMaxWidth: true,
+                    htmlLabels: true
+                }
+            });
+            
+            
+            document.querySelectorAll('code.language-mermaid').forEach(function(codeBlock) {
+                const preBlock = codeBlock.parentNode;
+                const container = document.createElement('div');
+                container.className = 'mermaid';
+                container.textContent = codeBlock.textContent;
+                preBlock.parentNode.replaceChild(container, preBlock);
+            });
+            
+            
+            mermaid.run();
+        });
+    </script>
 </body>
 </html>

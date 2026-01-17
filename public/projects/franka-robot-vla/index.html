@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <!-- head.html --><!-- meta.html -->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Franka Robot VLA End-to-End Grasping System and Fine-tuning | MUKIMASTA</title>
+<meta name="author" content="Hanlin Xue">
+<meta name="description" content="Pi0 VLA Grasping System Fine-tuning Report; Successfully transferred to humanoid robot" >
+<link rel="canonical" href="http://localhost:1313/projects/franka-robot-vla/">
+<link rel="alternate" hreflang="zh" href="http://localhost:1313/zh/projects/franka-robot-vla/" title="Chinese">
+
+
+    
+    <!-- twitterCard -->
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Franka Robot VLA End-to-End Grasping System and Fine-tuning | MUKIMASTA" />
+    <meta name="twitter:description" content="Pi0 VLA Grasping System Fine-tuning Report; Successfully transferred to humanoid robot" />
+        <meta name="twitter:image" content="http://localhost:1313/projects/franka-robot-vla/images/franka_grasping.gif" />
+    
+    <!-- openGraph -->
+    <meta property="og:title" content="Franka Robot VLA End-to-End Grasping System and Fine-tuning | MUKIMASTA" />
+    <meta property="og:description" content="Pi0 VLA Grasping System Fine-tuning Report; Successfully transferred to humanoid robot" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://localhost:1313/projects/franka-robot-vla/" />
+        <meta property="og:image" content="http://localhost:1313/projects/franka-robot-vla/images/franka_grasping.gif" />
+    <meta property="og:site_name" content="MUKIMASTA" />
+    <!-- js.html -->
+
+
+    <script src="http://localhost:1313/js/hugo-brewm.min.js" defer></script><!-- css.html -->
+
+
+    <link rel="stylesheet" href="http://localhost:1313/css/hugo-brewm.min.css">
+
+
+
+    
+    <!-- css/inline.html -->
+    <style>
+         
+        body {max-width: 786px; margin: auto; padding: 2rem;}
+        img {max-width: 86vw;}
+    </style>
+    
+</head>
+<body>
+    <!-- header.html -->
+<header class="pagewidth">
+    <div id="background-header" class="background" aria-hidden="true"></div>
+    
+    <nav aria-label="Bypass">
+        <a id="to-content" href="#content" aria-label="Skip to Main Content">
+            <span>Skip to Main Content</span>
+            <kbd class="key" aria-hidden="true" data-key="c"></kbd>
+            <span class="screening" aria-hidden="true"></span>
+        </a>
+    </nav>
+    
+    <!-- logo.html -->
+    <div id="logo">
+        <a href="http://localhost:1313/" aria-label="MUKIMASTA" aria-description="Homepage"><svg id="logotype" xmlns="http://www.w3.org/2000/svg" version="1.1" width="252pt" aria-label="MUKIMASTA">
+                        <text id="logotype__text" y="19.5pt" x="0">MUKIMASTA</text>
+                    </svg>
+        </a>
+        <hr class="hide"/>
+    </div>
+    
+    <details class="presentation" id="top-nav">
+        <summary class="on-deck">
+            <span class="t">Navigation</span>
+            <span class="menu-icon" role="presentation"></span>
+        </summary>
+        <nav tabindex="-1" aria-label="Top">
+            <!-- menu.html -->
+    <details id="has-main-menu" class="presentation" open>
+        <summary  class="hide"  aria-label="Main Menu">
+            <span>Main Menu</span>
+        </summary>
+            
+            <nav id="main-menu" aria-label="Main Menu">
+                <ul class="l1   has-childfree " role="presentation" tabindex="-1" >
+                    
+    
+        <li role="presentation" >
+    <a   class=on-deck href=/>
+        
+            <span>
+                About</span>
+    </a>
+        </li>
+        <li role="presentation" >
+    <a   class=on-deck href=https://github.com/mukimasta rel=external noopener noreferrer nofollow target=_blank>
+        
+            <i class="icon sri">github</i>
+            <span>
+                Github</span>
+    </a>
+        </li>
+                </ul>
+            </nav>
+    </details>
+            
+            <!-- menu.html -->
+            <!-- i18n.html -->
+            <nav id="bi18n" aria-label="Language Selections">
+                <a id="has-i18n" class="on-deck"
+                    href="http://localhost:1313/zh/"
+                    aria-label="Switch Language to Chinese"
+                    aria-description="Current Language is English">
+                    <span class="emoji">🇨🇳&nbsp;</span>
+                    <span class="act iso639 sri" aria-hidden="true">EN</span>
+                    <span class="alt iso639 sri" aria-hidden="true">&rarr; ZH</span>
+                    <span class="t srt languangeName">Chinese</span>
+                </a>
+            </nav>
+
+        </nav>
+        <div id="top-nav-screen" class="screening js-cpn" role="presentation" aria-hidden="true"></div>
+        <hr class="hide"/>
+    </details>
+</header>
+    
+    <!-- [main] baseof.html -->
+    <main id="page"class="page"
+        >
+        <!-- main/header.html -->
+        <header class="pagewidth">
+                    <menu id="menu" class="srm"
+                        data-i18n-back="Go Back"
+                        data-i18n-print="Print"
+                        data-i18n-copy="Copy URL"
+                        data-i18n-copying="Copying...">
+                            <li>
+                                <a id="navigatorShare" href="#mastodon" role="button" aria-label="Share">
+                                    <span class="t srt" role="tooltip">Share</span>
+                                </a>
+                            </li>
+                    </menu>
+            <!-- nav.html -->
+<details class="presentation" aria-expanded="true" id="has-breadcrumb" open>
+    <summary id="breadcrumb" tabindex="-1">
+        <span>Breadcrumb</span>
+    </summary>
+        <nav aria-labelledby="breadcrumb">
+            <ul role="presentation" class="breadcrumb ">
+                    <!-- breadcrumb.html -->
+        <li id="is-translated">
+            
+    <!-- l10n.html -->
+    <details id="has-l10n" class="presentation">
+        <summary aria-label="Language Selections" aria-description="Current Language is English">
+            <span>EN</span>
+        </summary>
+        <nav aria-label="Language Selections">
+            <ul class="on-plank" role="presentation">
+                <li>
+                    <a href="/zh/projects/franka-robot-vla/" aria-label="Switch Language to Chinese" aria-description="Franka 机械臂 Pi0 VLA 端到端抓取系统">
+                        <span class="emoji">🇨🇳&nbsp;</span>
+                        <span>Franka 机械臂 Pi0 VLA 端到端抓取系统</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </details>
+        </li>
+        <li>
+            <a href="http://localhost:1313/projects/" aria-current="true">Projects
+            </a>
+        </li>
+    <li>
+        <a href="" aria-current="page" tabindex="-1">Franka Robot VLA End-to-End Grasping System and Fine-tuning
+        </a>
+    </li>
+            </ul>
+        </nav>
+</details>
+            <hr class="hide"/>
+        </header>
+        <div id="top" role="presentation">
+            
+        </div>
+        
+    <article id="main-article" class="pagewidth sf"
+        role="document" aria-labelledby="title"
+            data-pagefind-ignore="all">
+        <header aria-labelledby="title">
+            <!-- title.html -->
+        <h1 id="title"
+            data-bionRead-safe
+            >Franka Robot VLA End-to-End Grasping System and Fine-tuning</h1>
+        </header>
+        <!-- audio.html -->
+        <section id="content" class="content " aria-labelledby="title" data-bionRead-safe>
+                <h3 id="grasping-performance-on-franka-robot">Grasping Performance on Franka Robot</h3>
+<p><img src="/projects/franka-robot-vla/images/franka_grasping.gif" alt="Franka Grasping"></p>
+<p><em>Demonstration of object grasping using Pi0 VLA model on Franka robotic arm</em></p>
+<h3 id="transfer-to-humanoid-robot">Transfer to Humanoid Robot</h3>
+<p><img src="/projects/franka-robot-vla/images/humanoid_grasping.gif" alt="Humanoid Grasping"></p>
+<p><em>Successfully transferred the grasping capability to humanoid robot</em></p>
+<hr>
+<blockquote>
+<p>Within 8 weeks, we built a complete fine-tuning system for the Pi0 VLA model and achieved stable grasping on real hardware.</p></blockquote>
+<p><strong>Project Duration</strong>: 2025.03 - 2025.04<br>
+<strong>Role</strong>: System Architecture Integration + Core Module Development + Data Collection Pipeline</p>
+<hr>
+<h2 id="1-project-overview">1. Project Overview</h2>
+<p>This project aims to verify whether the <strong>Pi0 VLA (Vision-Language-Action)</strong> model can directly control a real robot to perform grasping tasks. In 8 weeks, we built a complete end-to-end closed-loop system, validating the entire process from data collection and model fine-tuning to real-world deployment.</p>
+<p><strong>Core Contributions</strong>:</p>
+<ul>
+<li><strong>System Architecture</strong>: Designed the ROS2 node communication architecture, implementing a closed-loop data flow from camera perception and model inference to controller execution.</li>
+<li><strong>Automated Data Collection</strong>: Designed an unattended automated pipeline (Auto-detection, Distortion Correction, Time Sync), resolving the inefficiency of manual collection.</li>
+<li><strong>Real-time Safety Control</strong>: Implemented Position/Velocity dual control modes, ensuring safety and stability via Joint Limit Protection, Max Delta Checks, and Gripper Logic Optimization.</li>
+<li><strong>Engineering &amp; Efficiency</strong>: Developed one-click startup scripts and parallel training workflows, establishing version control standards to boost iteration speed.</li>
+</ul>
+<hr>
+<h2 id="2-system-architecture">2. System Architecture</h2>
+<p>The system consists of three main parts:</p>
+<ol>
+<li><strong>Perception</strong>: Captures dual-camera images and robot states, transmitting them via ROS2.</li>
+<li><strong>Server</strong>: Hosts the Pi0 VLA model, receiving observations and returning action commands.</li>
+<li><strong>Control</strong>: Receives commands and controls the Franka robot motion via ROS2.</li>
+</ol>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph TB
+    %% Style Definitions
+    classDef sensor fill:#e1f5fe,stroke:#01579b,stroke-width:2px,rx:10,ry:10;
+    classDef model fill:#fff3e0,stroke:#ff6f00,stroke-width:2px,rx:10,ry:10;
+    classDef control fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,rx:10,ry:10;
+    classDef process fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,rx:5,ry:5;
+
+    subgraph Perception_Collection [Perception &amp; Collection]
+        direction TB
+        A[Dual Cameras]:::sensor --&gt;|Time Sync| B(ROS2 Data Node):::process
+        C[Robot State]:::sensor --&gt;|Joint/Vel| B
+        B --&gt;|Auto Pipeline| D[Training Dataset .npz]:::process
+    end
+
+    subgraph Inference_Control [Inference &amp; Control]
+        direction TB
+        E[Real-time Obs]:::sensor --&gt;|WebSocket| F(VLA Model):::model
+        F --&gt;|Action Command| G(Safety Controller):::control
+        G --&gt;|Execute| H[Franka Robot]:::control
+    end
+</code></pre><hr>
+<h2 id="3-key-technical-implementation">3. Key Technical Implementation</h2>
+<h3 id="31-how-to-teach-the-model-to-grasp-data-collection">3.1 How to Teach the Model to Grasp? (Data Collection)</h3>
+<p>High-quality data is the prerequisite for model fine-tuning. Traditional manual demonstration is inefficient and lacks spatial coverage.</p>
+<ul>
+<li><strong>Automated Collection</strong>: We designed a state-machine-driven script that automatically cycles through <code>Reset -&gt; Random Pose -&gt; Grasp -&gt; Lift</code>. This allows for unattended batch collection and ensures every trajectory is standardized.</li>
+<li><strong>Preventing &ldquo;Rote Memorization&rdquo;</strong>: To prevent the model from overfitting to fixed spatial coordinates, we introduced <strong>Random Pose Noise</strong> in the collection trajectories. By adding random offsets around target points, we force the model to focus on object features in the image rather than just memorizing joint angles.</li>
+<li><strong>Image Consistency</strong>: The model is sensitive to geometric distortion. We implemented a <strong>Center Crop</strong> pipeline, ensuring the raw camera feed maintains its aspect ratio when resized to 224x224. This eliminates stretching issues that could confuse the model.</li>
+</ul>
+<h3 id="32-how-to-ensure-stability-and-safety-real-time-control">3.2 How to Ensure Stability and Safety? (Real-time Control)</h3>
+<p>Model inference is probabilistic and can be noisy. Directly executing its output may lead to abrupt motions or safety violations. We designed an intermediate controller to ensure safety.</p>
+<ul>
+<li><strong>Why Position Control?</strong>: We initially tried Velocity Control but found that open-loop cumulative errors (integral drift) caused the robot to drift away from the target over long sequences. Switching to <strong>Position Control</strong> (sending absolute joint angles) eliminated this drift and significantly improved tracking accuracy.</li>
+<li><strong>Safety Interception</strong>: We embedded real-time monitoring logic in the controller. If any joint velocity or position command exceeds physical safety limits, the system triggers a <strong>Fuse Mechanism</strong> (Hard Stop) to prevent hardware damage.</li>
+<li><strong>Jitter Suppression</strong>: The model sometimes outputs flickering signals (e.g., the gripper toggling rapidly between open and close). We added a <strong>State Filter</strong> that only changes the gripper state after receiving consistent commands for multiple consecutive frames, ensuring smooth action.</li>
+</ul>
+<hr>
+<h2 id="4-iteration--optimization">4. Iteration &amp; Optimization</h2>
+<p>This project completed the full cycle from setup to stable grasping within 8 weeks, going through 8 core iterations.</p>
+<p><strong>Key Milestones</strong>:</p>
+<ul>
+<li>
+<p><strong>Milestone 1: Automated Loop (2025-04-09)</strong></p>
+<ul>
+<li>Completed the automated pipeline, boosting daily collection efficiency by 5x and creating the first high-quality dataset (270 trajectories).</li>
+<li><em>Result</em>: Model showed first signs of grasping intent (approaching objects).</li>
+</ul>
+</li>
+<li>
+<p><strong>Milestone 2: Breaking the &ldquo;Stagnation&rdquo; Bottleneck (2025-04-10)</strong></p>
+<ul>
+<li><em>Problem</em>: Robot tended to freeze when approaching objects.</li>
+<li><em>Solution</em>: Increased Model Context Length from 50 to 300 frames to capture longer temporal dependencies.</li>
+<li><em>Result</em>: Robot motion became fluid; <strong>First successful grasp achieved</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Milestone 3: Control Strategy Refactor (2025-04-21)</strong></p>
+<ul>
+<li><em>Problem</em>: Velocity control caused drift and instability over long durations.</li>
+<li><em>Solution</em>: Switched underlying control strategy from <strong>Velocity Mode</strong> to <strong>Position Mode</strong> and rewrote gripper de-bouncing logic.</li>
+<li><em>Result</em>: Achieved <strong>Stable Grasping</strong> state.</li>
+</ul>
+</li>
+</ul>
+
+        </section>
+    </article>
+        <div id="exclude" role="presentation">
+            <!-- excluded last block frome some RSS reader and browser reader mode -->
+            
+    <hr class="hide" style="margin: 1in 0;">
+    <div id="contentinfo" class="pagewidth" role="contentinfo" data-pagefind-ignore="all">
+            <!-- nav.html -->
+<details class="presentation" aria-expanded="true" id="has-share" open>
+    <summary id="share" tabindex="-1">
+        <span>Share</span>
+    </summary>
+        <nav aria-labelledby="share">
+            <ul role="presentation" class="share srm">
+                    <!-- share.html -->
+    <li id="has-mastodon">
+        <!-- mastodon.html -->
+    <form class="form" id="mastodon" action="//sharetomastodon.github.io/" target="_blank" rel="noopener noreferrer">
+        <input id="mastodonTitle" type="hidden" name="title" value="Franka Robot VLA End-to-End Grasping System and Fine-tuning">
+        <input id="mastodonPermalink" type="hidden" name="url" value="http://localhost:1313/projects/franka-robot-vla/">
+        <input id="mastodonText" type="hidden" name="text" value="Franka Robot VLA End-to-End Grasping System and Fine-tuning http://localhost:1313/projects/franka-robot-vla/" disabled>
+        <input id="mastodonInstance" type="url" class="ldots form__input" placeholder="Enter Mastodon instance (https://www.example.com)" aria-label="Mastodon instance URL">
+        <button class="form__button" type="submit" aria-label="Share on Mastodon">
+            <i class="icon mastodon sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Mastodon</span>
+        </button>
+    </form>
+    </li>
+    <li>
+        <a href="mailto:?subject=Franka%20Robot%20VLA%20End-to-End%20Grasping%20System%20and%20Fine-tuning&body=http%3a%2f%2flocalhost%3a1313%2fprojects%2ffranka-robot-vla%2f" role="button" aria-label="Share on Email">
+            <i class="email sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Email</span>
+        </a>
+    </li>
+    <li>
+        <a href="whatsapp://send?text=Franka%20Robot%20VLA%20End-to-End%20Grasping%20System%20and%20Fine-tuning%20http%3a%2f%2flocalhost%3a1313%2fprojects%2ffranka-robot-vla%2f" role="button" aria-label="Share on Whatsapp">
+            <i class="whatsapp sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Whatsapp</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://telegram.me/share/url?text=Franka%20Robot%20VLA%20End-to-End%20Grasping%20System%20and%20Fine-tuning&amp;url=http://localhost:1313/projects/franka-robot-vla/" role="button"
+            aria-label="Share on Telegram in new tab">
+            <i class="telegram sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Telegram</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://bsky.app/intent/compose?text=Franka%20Robot%20VLA%20End-to-End%20Grasping%20System%20and%20Fine-tuning&amp;url=http://localhost:1313/projects/franka-robot-vla/" role="button"
+            aria-label="Share on Bluesky in new tab">
+            <i class="bluesky sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Bluesky</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://facebook.com/sharer/sharer.php?u=http://localhost:1313/projects/franka-robot-vla/" role="button"
+            aria-label="Share on Facebook in new tab">
+            <i class="facebook sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Facebook</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://news.ycombinator.com/submitlink?u=http://localhost:1313/projects/franka-robot-vla/&amp;t=Franka%20Robot%20VLA%20End-to-End%20Grasping%20System%20and%20Fine-tuning" role="button"
+            aria-label="Share on Hackernews in new tab">
+            <i class="hackernews sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Hackernews</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://localhost:1313/projects/franka-robot-vla/&amp;title=Franka%20Robot%20VLA%20End-to-End%20Grasping%20System%20and%20Fine-tuning&amp;summary=Franka%20Robot%20VLA%20End-to-End%20Grasping%20System%20and%20Fine-tuning&amp;source=http://localhost:1313/projects/franka-robot-vla/" role="button"
+            aria-label="Share on Linkedin in new tab">
+            <i class="linkedin sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Linkedin</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://pinterest.com/pin/create/button/?url=http://localhost:1313/projects/franka-robot-vla/&amp;media=http://localhost:1313/projects/franka-robot-vla/&amp;description=Franka%20Robot%20VLA%20End-to-End%20Grasping%20System%20and%20Fine-tuning" role="button"
+            aria-label="Share on Pinterest in new tab">
+            <i class="pinterest sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Pinterest</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://reddit.com/submit/?url=http://localhost:1313/projects/franka-robot-vla/&amp;resubmit=true&amp;title=Franka%20Robot%20VLA%20End-to-End%20Grasping%20System%20and%20Fine-tuning" role="button"
+            aria-label="Share on Reddit in new tab">
+            <i class="reddit sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Reddit</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Franka%20Robot%20VLA%20End-to-End%20Grasping%20System%20and%20Fine-tuning&amp;caption=Franka%20Robot%20VLA%20End-to-End%20Grasping%20System%20and%20Fine-tuning&amp;content=http://localhost:1313/projects/franka-robot-vla/&amp;canonicalUrl=http://localhost:1313/projects/franka-robot-vla/" role="button"
+            aria-label="Share on Tumblr in new tab">
+            <i class="tumblr sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Tumblr</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://threads.net/intent/post?text=Franka%20Robot%20VLA%20End-to-End%20Grasping%20System%20and%20Fine-tuning&amp;url=http://localhost:1313/projects/franka-robot-vla/" role="button"
+            aria-label="Share on Threads in new tab">
+            <i class="threads sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Threads</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet/?text=Franka%20Robot%20VLA%20End-to-End%20Grasping%20System%20and%20Fine-tuning&amp;url=http://localhost:1313/projects/franka-robot-vla/" role="button"
+            aria-label="Share on Twitter in new tab">
+            <i class="twitter sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Twitter</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.xing.com/app/user?op=share;url=http://localhost:1313/projects/franka-robot-vla/;title=Franka%20Robot%20VLA%20End-to-End%20Grasping%20System%20and%20Fine-tuning" role="button"
+            aria-label="Share on Xing in new tab">
+            <i class="xing sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Xing</span>
+        </a>
+    </li>
+            </ul>
+        </nav>
+</details>
+    </div>
+    
+        
+        <!-- main/footer.html -->
+    <hr class="hide">
+    <footer id="main-footer"><div class="column column--multicols pagewidth" style="--multicols: 2"><div id="main-footer-primary">
+                        <p><strong>MUKIMASTA</strong></p>
+<p>is my personal workshop, where I fuse curiosity, passion, and aesthetics to craft works that only I can bring into the world.</p>
+<!-- 
+<br>
+
+<fieldset id=cookie-banner>
+<legend>Cookie Banner</legend>
+<div>
+<span>We do not collect cookie</span>
+<img id="no-cookie" alt="No Cookie for Cookie Monster" />
+</div>
+</fieldset> -->
+                    </div>
+                <div id="main-footer-secondary"  class="column" style="--col: 10rem">
+                        <div>
+                            <p><strong>Example Links</strong></p>
+<ul>
+<li><a href="#">Example Link 1</a></li>
+<li><a href="#">Example Link 2</a></li>
+<li><a href="#">Example Link 3</a></li>
+<li><a href="#">Example Link 4</a></li>
+</ul>
+
+                        </div>
+                        <div>
+                            <p><strong>More Links</strong></p>
+<ul>
+<li><a href="#">More Link 1</a></li>
+<li><a href="#">More Link 2</a></li>
+<li><a href="#">More Link 3</a></li>
+</ul>
+
+                        </div>
+                </div>
+            </div>
+            <div id="unified-footer"><p id="license">© MUKIMASTA 2026</p>
+                    <!-- menu.html -->
+                        <p id="coffee-counter">Made with ❤️ and 5 cups of coffee, if not more.</p>
+            </div>
+    </footer>
+        </div>
+    </main>
+    <!-- footer.html -->
+<footer id="body-footer" class="pagewidth">
+    <div id="background-footer" class="background hide" role="presentation" aria-hidden="true"></div>
+    <div id="focusMode"></div>
+    <!-- a11y.html --><details id="has-a11y" class="presentation js-details hide" name="on-deck" aria-haspopup="true" aria-labelledby="has-a11y-summary"
+    data-i18n-accessibility="Accessibility"
+    data-i18n-optimizeSR="Screen Reader Optimization"
+    data-i18n-optimizeSRdesc="Optimize display and resources for screen reader users who navigate with a pointer device."
+    data-i18n-colorSettings="Color Settings"
+    data-i18n-darkMode="Dark Mode"
+    data-i18n-light="Light"
+    data-i18n-dark="Dark"
+    data-i18n-contrast="Contrast"
+    data-i18n-lessContrast="Low"
+    data-i18n-moreContrast="High"
+    data-i18n-defaultContrast="Default"
+    data-i18n-colorPalette="Color Palette"
+    data-i18n-defaultColor="Default"
+    data-i18n-deuteranopia="Deuteranopia"
+    data-i18n-protanopia="Protanopia"
+    data-i18n-tritanopia="Tritanopia"
+    data-i18n-monochrome="Monochrome"
+    data-i18n-fontSize="Font Size"
+    data-i18n-baselineStretch="Baseline Stretch"
+    data-i18n-OpenDyslexic="Use OpenDyslexic Font"
+    data-i18n-menuControls="Accessibility Menu Controls"
+    data-i18n-save="Save"
+    data-i18n-reset="Reset"
+    data-i18n-close="Close"
+    data-i18n-bionRead="BionRead Mode"
+    data-i18n-focusMode="Focus Mode"
+    data-i18n-noLocalStorage="LocalStorage is not available in your browser. Settings won&#39;t be saved.">
+</details>
+
+
+    <div id="useBionRead" class="sri"></div>
+    <!-- [top] bypass block -->
+    <nav aria-label="Bypass">
+        <a id="to-top" class="srm" href="#top" title="To Content Top" accesskey="c" aria-keyshortcuts="c" aria-label="To Content Top">
+            <span class="t srt">To Content Top</span>
+            <kbd class="key" aria-hidden="true" data-key="c"></kbd>
+        </a>
+    </nav>
+</footer>
+    
+    <!-- [post] single.html -->
+    <div id="bionReadSnapshot" hidden></div>
+    <!-- [background] baseof.html -->
+    <div id="background-body" role="presentation" aria-hidden="true"></div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches ||
+                           document.body.getAttribute('data-theme') === 'dark';
+            
+            
+            mermaid.initialize({
+                startOnLoad: false,
+                theme: isDark ? 'dark' : 'default',
+                securityLevel: 'loose',
+                flowchart: {
+                    useMaxWidth: true,
+                    htmlLabels: true
+                }
+            });
+            
+            
+            document.querySelectorAll('code.language-mermaid').forEach(function(codeBlock) {
+                const preBlock = codeBlock.parentNode;
+                const container = document.createElement('div');
+                container.className = 'mermaid';
+                container.textContent = codeBlock.textContent;
+                preBlock.parentNode.replaceChild(container, preBlock);
+            });
+            
+            
+            mermaid.run();
+        });
+    </script>
+</body>
+</html>

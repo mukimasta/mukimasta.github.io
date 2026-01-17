@@ -177,3 +177,27 @@ main#home .hero__image img {
         width: 220px;
     }
 }
+
+/* ------------------------------
+   Mermaid Diagram Styles
+   ------------------------------ */
+.mermaid {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: var(--bg-light);
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+/* Dark mode support for mermaid diagrams */
+@media (prefers-color-scheme: dark) {
+    .mermaid {
+        background: var(--bg-dark);
+    }
+}
+
+body[data-theme="dark"] .mermaid {
+    background: var(--bg-dark);
+}
