@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" >
   <channel>
     <title>项目 on MUKIMASTA</title>
-    <link>http://localhost:1313/zh/projects/</link>
+    <link>https://mukimasta.github.io/zh/projects/</link>
     <description>Recent Posts in 项目 on MUKIMASTA</description>
     <generator>Hugo 0.151.0</generator>
     <language>zh-CN</language>
     <managingEditor>mukimasta@outlook.com (Hanlin Xue)</managingEditor>
     <webMaster>mukimasta@outlook.com (Hanlin Xue)</webMaster>
-    <lastBuildDate>Fri, 16 Jan 2026 23:36:47 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/zh/projects/index.xml" rel="self" type="application/rss+xml" />
-        <atom:link href="http://localhost:1313/projects/index.xml" hreflang="en" rel="alternate" type="application/rss&#43;xml" />
+    <lastBuildDate>Wed, 21 Jan 2026 00:49:02 -0800</lastBuildDate>
+    <atom:link href="https://mukimasta.github.io/zh/projects/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://mukimasta.github.io/projects/index.xml" hreflang="en" rel="alternate" type="application/rss&#43;xml" />
         
   </channel>
 </rss>

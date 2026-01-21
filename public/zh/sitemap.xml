@@ -2,45 +2,61 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/zh/projects/franka-robot-vla/</loc>
-    <lastmod>2025-04-21T00:00:00+00:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/projects/franka-robot-vla/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="http://localhost:1313/zh/projects/franka-robot-vla/" />
+    <loc>https://mukimasta.github.io/zh/projects/franka-robot-vla/</loc>
+    <lastmod>2026-01-16T23:44:43-08:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/projects/franka-robot-vla/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/projects/franka-robot-vla/" />
   </url>
   <url>
-    <loc>http://localhost:1313/zh/projects/</loc>
-    <lastmod>2025-04-21T00:00:00+00:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/projects/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="http://localhost:1313/zh/projects/" />
+    <loc>https://mukimasta.github.io/zh/categories/</loc>
+    <lastmod>2026-01-20T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/categories/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/categories/" />
   </url>
   <url>
-    <loc>http://localhost:1313/zh/</loc>
+    <loc>https://mukimasta.github.io/zh/distributed_systems/blog1/</loc>
+    <lastmod>2026-01-20T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>https://mukimasta.github.io/zh/categories/distributed_systems/</loc>
+    <lastmod>2026-01-20T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>https://mukimasta.github.io/zh/distributed_systems/</loc>
+    <lastmod>2026-01-20T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>https://mukimasta.github.io/zh/tags/distributed_systems/</loc>
+    <lastmod>2026-01-20T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>https://mukimasta.github.io/zh/tags/</loc>
+    <lastmod>2026-01-20T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/tags/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/tags/" />
+  </url>
+  <url>
+    <loc>https://mukimasta.github.io/zh/</loc>
     <lastmod>2026-01-16T02:18:57-08:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="http://localhost:1313/zh/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/" />
   </url>
   <url>
-    <loc>http://localhost:1313/zh/categories/</loc>
+    <loc>https://mukimasta.github.io/zh/series/</loc>
     
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/categories/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="http://localhost:1313/zh/categories/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/series/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/series/" />
   </url>
   <url>
-    <loc>http://localhost:1313/zh/series/</loc>
+    <loc>https://mukimasta.github.io/zh/stage/</loc>
     
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/series/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="http://localhost:1313/zh/series/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/stage/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/stage/" />
   </url>
   <url>
-    <loc>http://localhost:1313/zh/stage/</loc>
-    
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/stage/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="http://localhost:1313/zh/stage/" />
-  </url>
-  <url>
-    <loc>http://localhost:1313/zh/tags/</loc>
-    
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/tags/" />
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="http://localhost:1313/zh/tags/" />
+    <loc>https://mukimasta.github.io/zh/projects/</loc>
+    <lastmod>2026-01-16T23:44:43-08:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/projects/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/projects/" />
   </url>
 </urlset>

@@ -1,0 +1,33 @@
+
+{
+    "nodes": [{
+                "id": "4633e9ca41818fbc39460cb7500a534c",
+                "title": "Distributed System Blog 01 – Exactly-Once RPC",
+                "permalink": "https://mukimasta.github.io/zh/distributed_systems/blog1/",
+                "type": "post"
+            },
+                        {
+                            "id": "categories-distributed_systems",
+                            "title": "Distributed_systems",
+                            "permalink": "https://mukimasta.github.io/zh/categories/distributed_systems/",
+                            "type": "categories"
+                        },
+                        {
+                            "id": "tags-distributed_systems",
+                            "title": "Distributed_systems",
+                            "permalink": "https://mukimasta.github.io/zh/tags/distributed_systems/",
+                            "type": "tags"
+                        },
+    ],
+    "links": [
+            
+                    {
+                        "source": "4633e9ca41818fbc39460cb7500a534c",
+                        "target": "categories-distributed_systems",
+                    },
+                    {
+                        "source": "4633e9ca41818fbc39460cb7500a534c",
+                        "target": "tags-distributed_systems",
+                    },
+    ],
+}

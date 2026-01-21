@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head>
+    <!-- head.html --><!-- meta.html -->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Distributed System Blog 01 – Exactly-Once RPC | MUKIMASTA</title>
+<meta name="author" content="[Mukii]">
+<meta name="description" content="在不可靠网络上实现 Exactly-Once RPC" >
+<meta name="keywords" content="distributed_systems">
+<link rel="canonical" href="https://mukimasta.github.io/zh/distributed_systems/blog1/">
+
+
+
+    
+    <!-- twitterCard -->
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Distributed System Blog 01 – Exactly-Once RPC | MUKIMASTA" />
+    <meta name="twitter:description" content="在不可靠网络上实现 Exactly-Once RPC" />
+        <meta name="twitter:image" content="https://repository-images.githubusercontent.com/923527728/46a32a19-69ac-45b3-91a4-c4d299fb234b" />
+    
+    <!-- openGraph -->
+    <meta property="og:title" content="Distributed System Blog 01 – Exactly-Once RPC | MUKIMASTA" />
+    <meta property="og:description" content="在不可靠网络上实现 Exactly-Once RPC" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://mukimasta.github.io/zh/distributed_systems/blog1/" />
+        <meta property="og:image" content="https://repository-images.githubusercontent.com/923527728/46a32a19-69ac-45b3-91a4-c4d299fb234b" />
+    <meta property="og:site_name" content="MUKIMASTA" />
+    <!-- js.html -->
+
+<script src="https://mukimasta.github.io/js/hugo-brewm.min.js"
+            integrity="sha384-jKedt60L0oLjg994ZTQgXiusosMZ9jG0hLEeUgrIqtEDG1EeiRGtIonB53&#43;MN1/L" crossorigin="anonymous"
+            defer></script><!-- css.html -->
+
+
+        <link rel="stylesheet" href="https://mukimasta.github.io/css/hugo-brewm.min.css" integrity="sha256-gFiUoibTEDX5OViwJznnd1mij0QhN5efXiJdNMZ4GF8=" crossorigin="anonymous">
+
+
+
+    
+    <!-- css/inline.html -->
+    <style>
+         
+        body {max-width: 786px; margin: auto; padding: 2rem;}
+        img {max-width: 86vw;}
+    </style>
+    
+</head>
+<body>
+    <!-- header.html -->
+<header class="pagewidth">
+    <div id="background-header" class="background" aria-hidden="true"></div>
+    
+    <nav aria-label="Bypass">
+        <a id="to-content" href="#content" aria-label="Skip to Main Content">
+            <span>Skip to Main Content</span>
+            <kbd class="key" aria-hidden="true" data-key="c"></kbd>
+            <span class="screening" aria-hidden="true"></span>
+        </a>
+    </nav>
+    
+    <!-- logo.html -->
+    <div id="logo">
+        <a href="https://mukimasta.github.io/zh/" aria-label="MUKIMASTA" aria-description="Homepage"><svg id="logotype" xmlns="http://www.w3.org/2000/svg" version="1.1" width="252pt" aria-label="MUKIMASTA">
+                        <text id="logotype__text" y="19.5pt" x="0">MUKIMASTA</text>
+                    </svg>
+        </a>
+        <hr class="hide"/>
+    </div>
+    
+    <details class="presentation" id="top-nav">
+        <summary class="on-deck">
+            <span class="t">Navigation</span>
+            <span class="menu-icon" role="presentation"></span>
+        </summary>
+        <nav tabindex="-1" aria-label="Top">
+            <!-- menu.html -->
+    <details id="has-main-menu" class="presentation" open>
+        <summary  class="hide"  aria-label="Main Menu">
+            <span>Main Menu</span>
+        </summary>
+            
+            <nav id="main-menu" aria-label="Main Menu">
+                <ul class="l1   has-childfree " role="presentation" tabindex="-1" >
+                    
+    
+        <li role="presentation" class="lfill textssc">
+    <a   class=on-deck href=https://github.com/mukimasta rel=external noopener noreferrer nofollow target=_blank>
+        
+            <span>
+                Github</span>
+    </a>
+        </li>
+                </ul>
+            </nav>
+    </details>
+            
+            <!-- menu.html -->
+            <!-- i18n.html -->
+            <nav id="bi18n" aria-label="Language Selections">
+                <a id="has-i18n" class="on-deck"
+                    href="https://mukimasta.github.io/"
+                    aria-label="Switch Language to English"
+                    aria-description="Current Language is Chinese">
+                    <span class="emoji">🇬🇧&nbsp;</span>
+                    <span class="act iso639 sri" aria-hidden="true">ZH</span>
+                    <span class="alt iso639 sri" aria-hidden="true">&rarr; EN</span>
+                    <span class="t srt languangeName">English</span>
+                </a>
+            </nav>
+
+        </nav>
+        <div id="top-nav-screen" class="screening js-cpn" role="presentation" aria-hidden="true"></div>
+        <hr class="hide"/>
+    </details>
+</header>
+    
+    <!-- [main] baseof.html -->
+    <main id="page"class="post"
+        >
+        <!-- main/header.html -->
+        <header class="pagewidth">
+                    <menu id="menu" class="srm"
+                        data-i18n-back="Go Back"
+                        data-i18n-print="Print"
+                        data-i18n-copy="Copy URL"
+                        data-i18n-copying="Copying...">
+                            <li>
+                                <a id="navigatorShare" href="#mastodon" role="button" aria-label="Share">
+                                    <span class="t srt" role="tooltip">Share</span>
+                                </a>
+                            </li>
+                    </menu>
+            <!-- nav.html -->
+<details class="presentation" aria-expanded="true" id="has-breadcrumb" open>
+    <summary id="breadcrumb" tabindex="-1">
+        <span>Breadcrumb</span>
+    </summary>
+        <nav aria-labelledby="breadcrumb">
+            <ul role="presentation" class="breadcrumb ">
+                    <!-- breadcrumb.html -->
+        <li>
+            <a href="https://mukimasta.github.io/zh/distributed_systems/" aria-current="true">Distributed_systems
+            </a>
+        </li>
+    <li>
+        <a href="" aria-current="page" tabindex="-1">Distributed System Blog 01 – Exactly-Once RPC
+        </a>
+    </li>
+            </ul>
+        </nav>
+</details>
+            <hr class="hide"/>
+        </header>
+        <div id="top" role="presentation">
+            
+        </div>
+        
+    <article id="main-article" class="pagewidth rm"
+        role="document" aria-labelledby="title"
+            data-pagefind-body>
+        <header aria-labelledby="title">
+            <!-- title.html -->
+        <h1 id="title"
+                data-pagefind-meta="title"
+            data-bionRead-safe
+            >Distributed System Blog 01 – Exactly-Once RPC</h1>
+            <div id="doc-author" class="textsw"><span>[Mukii]</span>
+            </div>
+            <!-- timestamp.html-->
+        <time datetime="2026-01-20T00:00:00&#43;00:00">2026年1月20日</time>
+        </header>
+        <!-- audio.html -->
+        <section id="content" class="content " aria-labelledby="title" data-bionRead-safe>
+                <h1 id="distributed-system-blog-01--exactly-once-rpc">Distributed System Blog 01 – Exactly-Once RPC</h1>
+<p><strong>在不可靠网络上实现 Exactly-Once RPC</strong></p>
+<h2 id="0--前言">0  前言</h2>
+<h3 id="01--分布式系统">0.1  分布式系统</h3>
+<p>我们每天都在用分布式系统：</p>
+<ul>
+<li>打开微信 →  你的手机连接到腾讯的服务器</li>
+<li>刷抖音     →  视频从字节的服务器传给你</li>
+<li>网购         →  订单信息存在阿里的数据库里</li>
+</ul>
+<p><strong>分布式系统 = 多个独立计算节点通过网络协作实现共同的目标</strong></p>
+<p><strong>为什么需要分布式系统？</strong></p>
+<ul>
+<li>单机装不下： Facebook 有 30 亿用户，一台机器存不下所有数据</li>
+<li>单机扛不住： 双十一每秒几十万订单，一台机器处理不过来</li>
+<li>单机会挂掉： 服务器会坏，硬盘会烧，需要备份</li>
+</ul>
+<p>但多台机器带来了新的问题：它们之间如何通过网络通信协作？</p>
+<h3 id="02--remote-procedure-call-rpc">0.2  Remote Procedure Call (RPC)</h3>
+<p>你平时用 app：</p>
+<pre tabindex="0"><code>点击朋友头像 → 看到个人资料
+刷新朋友圈 → 看到最新动态
+发送消息 → 对方收到
+</code></pre><p>这些操作背后就像调用了一个远程函数。</p>
+<p>想象你在写代码：</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 本地函数调用</span>
+</span></span><span class="line"><span class="cl"><span class="n">profile</span> <span class="o">=</span> <span class="n">get_profile</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
+</span></span></code></pre></div><p>这个函数在你的程序里执行，读取本地内存的数据。</p>
+<p>但如果数据在另一台机器上呢？</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># 远程函数调用（RPC）</span>
+</span></span><span class="line"><span class="cl"><span class="n">profile</span> <span class="o">=</span> <span class="n">remote_get_profile</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
+</span></span></code></pre></div><p>这个函数：</p>
+<ol>
+<li>把请求通过网络发给服务器</li>
+<li>服务器执行函数</li>
+<li>把结果通过网络发回来</li>
+</ol>
+<p>看起来只是加了个 &ldquo;remote&rdquo;，但加入了网络，一切都变了。</p>
+<h3 id="03--一个转账的故事">0.3  一个转账的故事</h3>
+<p>想象这个场景：</p>
+<pre tabindex="0"><code>你打开手机 app，给朋友转账 100 元
+点击&#34;确认转账&#34;
+loading...
+loading...
+10 秒过去了，还在 loading
+</code></pre><p>你会怎么做？</p>
+<ul>
+<li>再点一次？万一第一次成功了呢？那就转了 200 元</li>
+<li>放弃？万一根本没转成功呢？</li>
+<li>等着？等到什么时候？</li>
+</ul>
+<p><strong>这就是分布式系统的核心困境：网络是不可靠的</strong></p>
+<h3 id="04--网络有多不可靠">0.4  网络有多不可靠？</h3>
+<p>发送&quot;转账 100 元&quot;后，没收到回复。发生了什么？</p>
+<pre tabindex="0"><code>情况1：请求在路上丢了
+Client ----X---&gt; Server
+(Server 根本没收到)
+
+情况2：Server 执行了，但回复丢了
+Client --------&gt; Server ✔️
+Client &lt;---X---- Server
+(钱转了，但你不知道)
+
+情况3：网络很慢
+Client ----😴---&gt; Server 🕒
+(还在路上，看起来像丢了)
+</code></pre><p><strong>关键困境：你无法区分这些情况，也无法保证消息到达的顺序。</strong></p>
+<h3 id="05--我们的目标exactly-once-rpc">0.5  我们的目标：Exactly-Once RPC</h3>
+<p>不管网络环境如何，我们想要保证：每个操作恰好执行一次（Exactly-Once）。</p>
+<p>“Exactly-Once”怎么实现？</p>
+<p><strong>Exactly-Once = At-Least-Once + At-Most-Once</strong></p>
+<p>拆开来看：</p>
+<ul>
+<li><strong>不能是 0 次</strong> → 至少执行 1 次（At-Least-Once）</li>
+<li><strong>不能是 2+ 次</strong> → 至多执行 1 次（At-Most-Once）</li>
+</ul>
+<h2 id="1--at-least-once-rpc">1  At-Least-Once RPC</h2>
+<p>我们先来实现 At-Least-Once RPC，也就是先保证每个操作被 Server 至少执行一次，并且 Client 总会收到执行结果。</p>
+<p>At-Least-Once 在 Client 层级上实现。</p>
+<h3 id="11--重试机制">1.1  重试机制</h3>
+<p>我们先来解决第一种情况：请求可能丢失，也就是 Server 没有收到请求：</p>
+<pre tabindex="0"><code>  Client    ----X---&gt;    Server
+转账 100 元  (网络丢包)  (根本没收到)
+
+结果: 0 次执行
+</code></pre><p>怎么办？</p>
+<p>一个很直觉的想法是：重试</p>
+<p>我们每间隔一段时间，就重新发送一次请求，直到成功收到回复为止。</p>
+<pre tabindex="0"><code>  Client    ----X---&gt;    Server
+转账 100 元  (网络丢包)  (根本没收到)
+
+  Client    --------&gt;    Server
+转账 100 元    (重试)    (成功执行)
+
+  Client    &lt;--------    Server
+ (收到回复)              (回复结果)
+
+结果: 1 次执行
+</code></pre><p>看起来很合理，但是，这样会带来一个问题。</p>
+<p>考虑这个场景：</p>
+<pre tabindex="0"><code>时刻 T1: Client 发送 &#34;转账 100&#34;
+时刻 T2: (超时，没回复)
+时刻 T3: Client 重试，再次发送 &#34;转账 100&#34;
+时刻 T4: Server 回复 &#34;成功&#34;
+时刻 T5: Client 发送新命令 &#34;查询余额&#34;
+时刻 T6: Server 回复 &#34;成功&#34;
+
+问题: 这个 &#34;成功&#34; 是哪个命令的回复？
+- 转账的回复？
+- 查询余额的回复？
+</code></pre><p>如果 Client 误以为&quot;成功&quot;是&quot;查询余额&quot;的回复，但其实是第一次&quot;转账&quot;的延迟回复，系统就乱了。</p>
+<p><strong>问题本质：回复和请求失去了对应关系。</strong></p>
+<h3 id="12--requestid-请求标识">1.2  RequestID 请求标识</h3>
+<p>怎么建立对应关系？给每个请求打标签。</p>
+<p>标签需要满足：</p>
+<ul>
+<li>重试时保持不变（这样才知道是同一个请求）</li>
+<li>新命令时改变（这样才能区分不同请求）</li>
+</ul>
+<p><strong>自然的选择：递增的 request_id</strong></p>
+<pre tabindex="0"><code>Client 维护一个计数器:
+request_id = 0
+
+发送新命令:
+  request_id += 1
+  发送 (request_id, command)
+
+重试时:
+  发送相同的 (request_id, command)
+  (request_id 不变！)
+</code></pre><p>Server 的回复也必须带上 request_id，否则 Client 无法匹配。</p>
+<p>具体场景：</p>
+<pre tabindex="0"><code>T1: Client 发送 (request_id=1, &#34;转账 100&#34;)
+T2: (超时，准备重试) 
+T3: Client 发送 (request_id=1, &#34;转账 100&#34;)  ← ID 不变
+T4: Server 回复 (request_id=1, &#34;成功&#34;)
+T5: Client 发送 (request_id=2, &#34;查询余额&#34;) ← ID 递增
+T6: Server 回复 (request_id=1, &#34;成功&#34;)
+
+Client 检查: request_id=1 ≠ 当前的 request_id=2
+→ 这是旧回复，忽略
+→ 继续等待 request_id=2 的回复
+</code></pre><p>完整的消息格式：</p>
+<pre tabindex="0"><code>Request:
+  request_id: 第几个请求
+  command:    要执行什么
+
+Reply:
+  request_id: 回复哪个请求
+  result:     执行结果
+</code></pre><h3 id="13--at-least-once-的完整逻辑">1.3  At-Least-Once 的完整逻辑：</h3>
+<pre tabindex="0"><code>Client 的状态:
+- current_request_id: 当前请求的 ID
+- current_command:    当前请求的命令
+- timer:              重试定时器
+
+发送新命令:
+  current_request_id += 1
+  current_command = command
+  发送 Request(current_request_id, command)
+  启动 timer
+
+收到回复 Reply(reply_request_id, result):
+  if reply_request_id == current_request_id:
+      停止 timer
+      返回 result
+  else:
+      忽略 (这是旧请求的回复)
+
+Timer 超时:
+  重发 Request(current_request_id, current_command)
+  重启 timer
+</code></pre><p><strong>至此，我们实现了 At-Least-Once：只要 Client 不停重试，请求最终会到达并执行，Client 最终会收到回复。</strong></p>
+<h2 id="2--at-most-once-rpc">2  At-Most-Once RPC</h2>
+<p>Client 重试会导致 Server 收到多个相同的请求。我们即将实现的 At-Most-Once 需要保证每个请求只被执行一次。</p>
+<p>At-Most-Once 在 Server 层级上实现。</p>
+<h3 id="21--去重机制">2.1  去重机制</h3>
+<p>Server 怎么知道这是重复请求？</p>
+<p>用我们已有的东西：<strong>request_id</strong></p>
+<pre tabindex="0"><code>Server 维护一个记录:
+seen = {1, 2, 5, 7, ...}
+
+收到请求 Request(request_id, command):
+  if request_id in seen:
+      这是重复请求
+      ...
+  else:
+      这是新请求
+      ...
+</code></pre><p>对于多个 Client 的情况：</p>
+<p>Server 的记录的 Key 变成 (client_id, request_id)：</p>
+<p>在网络通信中，每个消息天然就带有发送者的地址（address）。我们直接用这个地址作为 client_id 即可。</p>
+<p>所以一个请求的完整的唯一标识是：(client_id, request_id)，这也是在 Server 层要维护的记录。
+其中：</p>
+<ul>
+<li><strong>client_id</strong>：由网络框架提供（发送者的地址）</li>
+<li><strong>request_id</strong>：由我们的应用层维护（递增序列号）</li>
+</ul>
+<h3 id="22--请求--结果-映射表">2.2  请求 → 结果 映射表</h3>
+<p>在接收到重复请求后，要怎么做？</p>
+<pre tabindex="0"><code>T1: Client 发送 Request(request_id=1, command)
+    Server 执行，回复丢失
+
+T2: Client 重试，发送 Request(request_id=1, command)
+    Server 发现: 之前见过 (client_id, 1)
+    然后呢？
+</code></pre><p>Server 不能：</p>
+<ul>
+<li>重新执行 → 违反 at-most-once</li>
+<li>不回复 → Client 会一直等</li>
+</ul>
+<p><strong>Server 必须：返回之前的结果</strong></p>
+<p>对于每个请求 (client_id, request_id)，保存对应的结果。</p>
+<p><strong>HashMap: (client_id, request_id) -&gt; Result</strong></p>
+<p>使用一个“请求 → 结果”映射表，收到旧请求时返回即可。</p>
+<p>Server 不能无限保存历史。</p>
+<h3 id="23--单请求假设下的垃圾回收机制">2.3  单请求假设下的垃圾回收机制</h3>
+<p>Client 单请求假设：Client 在未收到当前请求的回复之前不会请求新命令。</p>
+<pre tabindex="0"><code>Client 的行为:
+发送 req=1 → 等回复 → 收到
+发送 req=2 → 等回复 → 收到
+发送 req=3 → ...
+</code></pre><p>在此情况下：</p>
+<pre tabindex="0"><code>Client 发送了 request_id=N+1
+→ 说明它已经收到了 request_id≤N 的回复
+→ Server 可以丢弃 request_id≤N 的记录
+</code></pre><p>所以只需保存最后一个：</p>
+<pre tabindex="0"><code>history = {
+  client_A: (last_id, last_result),
+  client_B: (last_id, last_result),
+}
+
+收到新请求 N:
+  history[client_id] = (N, result)
+  // 自动覆盖旧的，只保留最新
+</code></pre><p><strong>HashMap: client_id -&gt; (request_id, Result)</strong></p>
+<h3 id="24--at-most-once-的完整逻辑">2.4  At-Most-Once 的完整逻辑</h3>
+<pre tabindex="0"><code>Server 的状态:
+- history: map[client_id → (last_request_id, last_result)]
+
+收到请求 Request(request_id, command) 来自 client_id:
+  
+  record = history.get(client_id)
+  
+  if record 不存在:
+      // 第一次见到这个 Client
+      result = execute(command)
+      history[client_id] = (request_id, result)
+      发送 Reply(request_id, result)
+      return
+  
+  if request_id &lt;= record.last_request_id:
+      // 重复或乱序的旧请求
+      发送 Reply(request_id, record.last_result)
+      return
+  
+  // 新请求 (request_id &gt; last_request_id)
+  result = execute(command)
+  history[client_id] = (request_id, result)  // 覆盖旧记录
+  发送 Reply(request_id, result)
+</code></pre><h2 id="3--exactly-once-rpc-完整架构">3  Exactly-Once RPC 完整架构</h2>
+<pre tabindex="0"><code>Client 节点                    Server 节点
+┌──────────────┐              ┌────────────────┐
+│ Retry Logic  │   Command    │ AMOApplication │
+│    (ALO)     │  ─────────→  │     (AMO)      │
+│              │    Result    │       ↓        │
+│              │  ←─────────  │  Application   │
+│              │              │   (business)   │
+└──────────────┘              └────────────────┘
+</code></pre><p>详细版本：</p>
+<pre tabindex="0"><code>Client Node                              Server Node
+┌─────────────────────────┐             ┌──────────────────────────┐
+│ Retry Logic (ALO impl)  │             │ AMOApplication (AMO impl)│
+│                         │             │                          │
+│ • request_id: 1,2,3...  │  Command    │ • Dedup check:           │
+│ • Timer: retry timeout  │  +request_id│   req_id &lt;= last_req_id? │
+│ • Match reply: ID match?│             │                          │
+│                         │ ─────────→  │ • Save history:          │
+│                         │             │   map[client_id→         │
+│                         │             │       (req_id, result)]  │
+│                         │  Result     │                          │
+│                         │  +request_id│   ↓ if new request       │
+│ Match → stop retry      │ ←─────────  │                          │
+│                         │             │ Application (Business)   │
+│                         │             │ • Get/Put/Append         │
+│                         │             │ • Transfer/Query         │
+│                         │             │ • ... (any business)     │
+└─────────────────────────┘             └──────────────────────────┘
+         ↑                                         ↑
+client_id provided by network          Get client_id from message
+framework (sender address)             (sender address)
+</code></pre><p><strong>Server 内部分层（怎么做）</strong></p>
+<pre tabindex="0"><code>Server 内部:
+┌─────────────────────┐
+│  AMOApplication     │ ← 去重层
+│      (包装)          │   只关心 request_id
+│                     │   不关心业务逻辑
+│        ↓            │
+│  Application        │ ← 业务层
+│   (具体业务)          │   只关心业务逻辑
+│  • KVStore          │   不关心去重
+│  • GameServer       │
+│  • ShoppingCart     │
+└─────────────────────┘
+</code></pre><h2 id="4--拓展延伸">4  拓展延伸</h2>
+<p>不是所有操作都怕重复</p>
+<h3 id="41--side-effect-和-idempotence">4.1  Side Effect 和 Idempotence</h3>
+<p><strong>Side Effect = 改变系统状态的操作</strong></p>
+<pre tabindex="0"><code>无副作用 (读操作):
+- GET(key)          - 只读，不改变状态
+- QUERY_BALANCE()   - 只读，不改变状态
+
+有副作用 (写操作):
+- PUT(key, value)   - 修改状态
+- TRANSFER(amount)  - 修改状态
+- APPEND(key, val)  - 修改状态
+</code></pre><p>如果操作有副作用，重复执行可能产生错误的结果。</p>
+<p><strong>Idempotence（幂等性）= 执行多次和执行一次的效果相同</strong></p>
+<pre tabindex="0"><code>幂等操作:
+- GET(key)            - 读多次结果一样
+- PUT(key, &#34;value&#34;)   - 设置成固定值，重复设置还是那个值
+- DELETE(key)         - 删除（删除已删除的 = 还是删除）
+
+非幂等操作:
+- APPEND(key, value)  - 每次追加，越来越长
+- INCREMENT(counter)  - 每次加 1，越来越大
+- TRANSFER(amount)    - 每次扣钱，越来越少
+</code></pre><p><strong>为什么重要？</strong></p>
+<p>如果操作是幂等的，系统可以简化：</p>
+<pre tabindex="0"><code>Client: 不确定是否成功？直接重试就行
+Server: 重复执行也没事
+→ 不需要复杂的 AMO 机制，at-least-once 就够了
+</code></pre><p>这就是为什么 DNS、NFS 等系统能用简单的 at-least-once。</p>
+<h3 id="42-我们的方案适用范围">4.2 我们的方案适用范围</h3>
+<p>适用于：</p>
+<ul>
+<li>非幂等操作（需要 AMO 保护）
+<ul>
+<li>APPEND、INCREMENT、TRANSFER 等</li>
+</ul>
+</li>
+<li>Client 单请求模式（垃圾回收依赖这个假设）
+<ul>
+<li>一个 Client 一次只发一个请求</li>
+</ul>
+</li>
+<li>有状态服务（需要记住历史）
+<ul>
+<li>需要持久化存储的服务</li>
+</ul>
+</li>
+</ul>
+<h2 id="5--结语">5  结语</h2>
+<p>Lab 1 看起来很简单：实现一个 RPC。</p>
+<p>但它揭示了分布式系统的核心挑战：<strong>如何在不确定性中构建确定性？</strong></p>
+<p>我们的答案不是消除不确定性（做不到），而是：</p>
+<ul>
+<li>承认网络不可靠</li>
+<li>分解问题（exactly-once = at-least + at-most）</li>
+<li>分层设计（Client 重试 + Server 去重）</li>
+<li>利用假设（单请求 → 垃圾回收机制）</li>
+<li>用简单机制组合成复杂保证</li>
+</ul>
+<p>这不仅仅是一个 Lab 的解法，更是分布式系统设计的基本哲学。</p>
+<p>下一步：Lab 2 会引入 Primary-Backup，在不可靠的服务器上实现可靠的服务。</p>
+
+        </section>
+            <footer>
+                
+    <nav id="keywords" aria-label="Tags">
+        <span>Tag:&nbsp;</span>
+        
+        <!-- terms.html -->
+            <ul class="inline" role="presentation">
+                    <li><a href="/zh/tags/distributed_systems/" >Distributed_systems</a></li>
+            </ul>
+    </nav>
+            </footer>
+    </article>
+        <div id="exclude" role="presentation">
+            <!-- excluded last block frome some RSS reader and browser reader mode -->
+            
+    <hr class="hide" style="margin: 1in 0;">
+    <div id="contentinfo" class="pagewidth" role="contentinfo" data-pagefind-ignore="all">
+                <!-- related.html -->
+                <!-- colophon.html -->
+    <div id="colophon" style="display: none;" aria-live="polite">
+        <strong class="section-title">Colophon</strong>
+        <div>
+            <div id="qr" role="img" aria-label="QR code"></div>
+            <div class="verbose">
+                <div class="has-aria-label-top" aria-label="Distributed System Blog 01 – Exactly-Once RPC"><span>https://mukimasta.github.io/zh/distributed_systems/blog1/</span></div>
+                <div><span>This page is built on: </span><time datetime="2026-01-21T00:49:02-08:00">2026-01-21 00:49</time></div>
+                <div><span>This page is accessed on: </span><time id="time-stamp"></time></div><div><span>Powered by </span><a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <a href="https://github.com/gohugoio/hugo/releases/tag/v0.151.0" aria-label="Hugo 0.151.0" target="_blank" rel="noopener">v0.151.0</a> & <a href="https://github.com/foxihd/hugo-brewm" target="_blank" rel="noopener">hugo-brewm</a>.</div>
+            </div>
+        </div>
+    </div>
+                <!-- history.html -->
+            
+            <!-- nav.html -->
+<details class="presentation" aria-expanded="true" id="has-share" open>
+    <summary id="share" tabindex="-1">
+        <span>Share</span>
+    </summary>
+        <nav aria-labelledby="share">
+            <ul role="presentation" class="share srm">
+                    <!-- share.html -->
+    <li id="has-mastodon">
+        <!-- mastodon.html -->
+    <form class="form" id="mastodon" action="//sharetomastodon.github.io/" target="_blank" rel="noopener noreferrer">
+        <input id="mastodonTitle" type="hidden" name="title" value="Distributed System Blog 01 – Exactly-Once RPC">
+        <input id="mastodonPermalink" type="hidden" name="url" value="https://mukimasta.github.io/zh/distributed_systems/blog1/">
+        <input id="mastodonText" type="hidden" name="text" value="Distributed System Blog 01 – Exactly-Once RPC https://mukimasta.github.io/zh/distributed_systems/blog1/" disabled>
+        <input id="mastodonInstance" type="url" class="ldots form__input" placeholder="Enter Mastodon instance (https://www.example.com)" aria-label="Mastodon instance URL">
+        <button class="form__button" type="submit" aria-label="Share on Mastodon">
+            <i class="icon mastodon sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Mastodon</span>
+        </button>
+    </form>
+    </li>
+    <li>
+        <a href="mailto:?subject=Distributed%20System%20Blog%2001%20%e2%80%93%20Exactly-Once%20RPC&body=https%3a%2f%2fmukimasta.github.io%2fzh%2fdistributed_systems%2fblog1%2f" role="button" aria-label="Share on Email">
+            <i class="email sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Email</span>
+        </a>
+    </li>
+    <li>
+        <a href="whatsapp://send?text=Distributed%20System%20Blog%2001%20%e2%80%93%20Exactly-Once%20RPC%20https%3a%2f%2fmukimasta.github.io%2fzh%2fdistributed_systems%2fblog1%2f" role="button" aria-label="Share on Whatsapp">
+            <i class="whatsapp sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Whatsapp</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://telegram.me/share/url?text=Distributed%20System%20Blog%2001%20%e2%80%93%20Exactly-Once%20RPC&amp;url=https://mukimasta.github.io/zh/distributed_systems/blog1/" role="button"
+            aria-label="Share on Telegram in new tab">
+            <i class="telegram sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Telegram</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://bsky.app/intent/compose?text=Distributed%20System%20Blog%2001%20%e2%80%93%20Exactly-Once%20RPC&amp;url=https://mukimasta.github.io/zh/distributed_systems/blog1/" role="button"
+            aria-label="Share on Bluesky in new tab">
+            <i class="bluesky sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Bluesky</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://facebook.com/sharer/sharer.php?u=https://mukimasta.github.io/zh/distributed_systems/blog1/" role="button"
+            aria-label="Share on Facebook in new tab">
+            <i class="facebook sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Facebook</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://news.ycombinator.com/submitlink?u=https://mukimasta.github.io/zh/distributed_systems/blog1/&amp;t=Distributed%20System%20Blog%2001%20%e2%80%93%20Exactly-Once%20RPC" role="button"
+            aria-label="Share on Hackernews in new tab">
+            <i class="hackernews sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Hackernews</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://mukimasta.github.io/zh/distributed_systems/blog1/&amp;title=Distributed%20System%20Blog%2001%20%e2%80%93%20Exactly-Once%20RPC&amp;summary=Distributed%20System%20Blog%2001%20%e2%80%93%20Exactly-Once%20RPC&amp;source=https://mukimasta.github.io/zh/distributed_systems/blog1/" role="button"
+            aria-label="Share on Linkedin in new tab">
+            <i class="linkedin sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Linkedin</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://pinterest.com/pin/create/button/?url=https://mukimasta.github.io/zh/distributed_systems/blog1/&amp;media=https://mukimasta.github.io/zh/distributed_systems/blog1/&amp;description=Distributed%20System%20Blog%2001%20%e2%80%93%20Exactly-Once%20RPC" role="button"
+            aria-label="Share on Pinterest in new tab">
+            <i class="pinterest sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Pinterest</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://reddit.com/submit/?url=https://mukimasta.github.io/zh/distributed_systems/blog1/&amp;resubmit=true&amp;title=Distributed%20System%20Blog%2001%20%e2%80%93%20Exactly-Once%20RPC" role="button"
+            aria-label="Share on Reddit in new tab">
+            <i class="reddit sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Reddit</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Distributed%20System%20Blog%2001%20%e2%80%93%20Exactly-Once%20RPC&amp;caption=Distributed%20System%20Blog%2001%20%e2%80%93%20Exactly-Once%20RPC&amp;content=https://mukimasta.github.io/zh/distributed_systems/blog1/&amp;canonicalUrl=https://mukimasta.github.io/zh/distributed_systems/blog1/" role="button"
+            aria-label="Share on Tumblr in new tab">
+            <i class="tumblr sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Tumblr</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://threads.net/intent/post?text=Distributed%20System%20Blog%2001%20%e2%80%93%20Exactly-Once%20RPC&amp;url=https://mukimasta.github.io/zh/distributed_systems/blog1/" role="button"
+            aria-label="Share on Threads in new tab">
+            <i class="threads sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Threads</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet/?text=Distributed%20System%20Blog%2001%20%e2%80%93%20Exactly-Once%20RPC&amp;url=https://mukimasta.github.io/zh/distributed_systems/blog1/" role="button"
+            aria-label="Share on Twitter in new tab">
+            <i class="twitter sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Twitter</span>
+        </a>
+    </li>
+    <li>
+        <a rel="noopener noreferrer" target="_blank" href="https://www.xing.com/app/user?op=share;url=https://mukimasta.github.io/zh/distributed_systems/blog1/;title=Distributed%20System%20Blog%2001%20%e2%80%93%20Exactly-Once%20RPC" role="button"
+            aria-label="Share on Xing in new tab">
+            <i class="xing sri" aria-hidden="true"></i>
+            <span class="t srt" role="tooltip">Share on Xing</span>
+        </a>
+    </li>
+            </ul>
+        </nav>
+</details>
+    </div>
+    
+        
+        <!-- main/footer.html -->
+    <hr class="hide">
+    <footer id="main-footer">
+            <div id="unified-footer"><p id="license">© MUKIMASTA 2026</p>
+                    <!-- menu.html -->
+                        <p id="coffee-counter">Made with ❤️ and 3 cups of coffee, if not more.</p>
+            </div>
+    </footer>
+        </div>
+    </main>
+    <!-- footer.html -->
+<footer id="body-footer" class="pagewidth">
+    <div id="background-footer" class="background hide" role="presentation" aria-hidden="true"></div>
+    <div id="focusMode"></div>
+    <!-- a11y.html --><details id="has-a11y" class="presentation js-details hide" name="on-deck" aria-haspopup="true" aria-labelledby="has-a11y-summary"
+    data-i18n-accessibility="Accessibility"
+    data-i18n-optimizeSR="Screen Reader Optimization"
+    data-i18n-optimizeSRdesc="Optimize display and resources for screen reader users who navigate with a pointer device."
+    data-i18n-colorSettings="Color Settings"
+    data-i18n-darkMode="Dark Mode"
+    data-i18n-light="Light"
+    data-i18n-dark="Dark"
+    data-i18n-contrast="Contrast"
+    data-i18n-lessContrast="Low"
+    data-i18n-moreContrast="High"
+    data-i18n-defaultContrast="Default"
+    data-i18n-colorPalette="Color Palette"
+    data-i18n-defaultColor="Default"
+    data-i18n-deuteranopia="Deuteranopia"
+    data-i18n-protanopia="Protanopia"
+    data-i18n-tritanopia="Tritanopia"
+    data-i18n-monochrome="Monochrome"
+    data-i18n-fontSize="Font Size"
+    data-i18n-baselineStretch="Baseline Stretch"
+    data-i18n-OpenDyslexic="Use OpenDyslexic Font"
+    data-i18n-menuControls="Accessibility Menu Controls"
+    data-i18n-save="Save"
+    data-i18n-reset="Reset"
+    data-i18n-close="Close"
+    data-i18n-bionRead="BionRead Mode"
+    data-i18n-focusMode="Focus Mode"
+    data-i18n-noLocalStorage="LocalStorage is not available in your browser. Settings won&#39;t be saved.">
+</details>
+
+
+    <div id="useBionRead" class="sri"></div>
+    <!-- [top] bypass block -->
+    <nav aria-label="Bypass">
+        <a id="to-top" class="srm" href="#top" title="To Content Top" accesskey="c" aria-keyshortcuts="c" aria-label="To Content Top">
+            <span class="t srt">To Content Top</span>
+            <kbd class="key" aria-hidden="true" data-key="c"></kbd>
+        </a>
+    </nav>
+</footer>
+    
+    <!-- [post] single.html -->
+    <div id="bionReadSnapshot" hidden></div>
+    <!-- [background] baseof.html -->
+    <div id="background-body" role="presentation" aria-hidden="true"></div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches ||
+                           document.body.getAttribute('data-theme') === 'dark';
+            
+            
+            mermaid.initialize({
+                startOnLoad: false,
+                theme: isDark ? 'dark' : 'default',
+                securityLevel: 'loose',
+                flowchart: {
+                    useMaxWidth: true,
+                    htmlLabels: true
+                }
+            });
+            
+            
+            document.querySelectorAll('code.language-mermaid').forEach(function(codeBlock) {
+                const preBlock = codeBlock.parentNode;
+                const container = document.createElement('div');
+                container.className = 'mermaid';
+                container.textContent = codeBlock.textContent;
+                preBlock.parentNode.replaceChild(container, preBlock);
+            });
+            
+            
+            mermaid.run();
+        });
+    </script>
+</body>
+</html>

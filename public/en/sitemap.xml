@@ -2,108 +2,108 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/projects/franka-robot-vla/</loc>
-    <lastmod>2025-04-21T00:00:00+00:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="http://localhost:1313/zh/projects/franka-robot-vla/" />
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/projects/franka-robot-vla/" />
+    <loc>https://mukimasta.github.io/projects/franka-robot-vla/</loc>
+    <lastmod>2026-01-16T23:44:43-08:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/projects/franka-robot-vla/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/projects/franka-robot-vla/" />
   </url>
   <url>
-    <loc>http://localhost:1313/projects/autonomous-driving-system/</loc>
-    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+    <loc>https://mukimasta.github.io/projects/autonomous-driving-system/</loc>
+    <lastmod>2026-01-16T23:44:43-08:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://mukimasta.github.io/categories/</loc>
     <lastmod>2026-01-10T00:00:00+00:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="http://localhost:1313/zh/categories/" />
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/categories/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/categories/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/categories/" />
   </url>
   <url>
-    <loc>http://localhost:1313/tags/pin/</loc>
+    <loc>https://mukimasta.github.io/tags/pin/</loc>
     <lastmod>2026-01-10T00:00:00+00:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/post/post_template/</loc>
+    <loc>https://mukimasta.github.io/post/post_template/</loc>
     <lastmod>2026-01-10T00:00:00+00:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://mukimasta.github.io/tags/</loc>
     <lastmod>2026-01-10T00:00:00+00:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="http://localhost:1313/zh/tags/" />
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/tags/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/tags/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/tags/" />
   </url>
   <url>
-    <loc>http://localhost:1313/categories/test/</loc>
+    <loc>https://mukimasta.github.io/categories/test/</loc>
     <lastmod>2026-01-10T00:00:00+00:00</lastmod>
     </url>
   <url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://mukimasta.github.io/</loc>
     <lastmod>2026-01-16T02:18:57-08:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="http://localhost:1313/zh/" />
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/" />
   </url>
   <url>
-    <loc>http://localhost:1313/stage/budding/</loc>
+    <loc>https://mukimasta.github.io/stage/budding/</loc>
     <lastmod>2026-01-10T16:04:27-08:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/stage/budding/_index.id/" />
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/stage/budding/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/stage/budding/_index.id/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/stage/budding/" />
   </url>
   <url>
-    <loc>http://localhost:1313/stage/evergreen/</loc>
+    <loc>https://mukimasta.github.io/stage/evergreen/</loc>
     <lastmod>2026-01-10T16:04:27-08:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/stage/evergreen/_index.id/" />
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/stage/evergreen/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/stage/evergreen/_index.id/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/stage/evergreen/" />
   </url>
   <url>
-    <loc>http://localhost:1313/stage/evergreen/_index.id/</loc>
+    <loc>https://mukimasta.github.io/stage/evergreen/_index.id/</loc>
     <lastmod>2026-01-10T16:04:27-08:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/stage/evergreen/" />
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/stage/evergreen/_index.id/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/stage/evergreen/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/stage/evergreen/_index.id/" />
   </url>
   <url>
-    <loc>http://localhost:1313/stage/_index.id/</loc>
+    <loc>https://mukimasta.github.io/stage/_index.id/</loc>
     <lastmod>2026-01-10T16:04:27-08:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/stage/" />
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/stage/_index.id/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/stage/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/stage/_index.id/" />
   </url>
   <url>
-    <loc>http://localhost:1313/stage/budding/_index.id/</loc>
+    <loc>https://mukimasta.github.io/stage/budding/_index.id/</loc>
     <lastmod>2026-01-10T16:04:27-08:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/stage/budding/" />
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/stage/budding/_index.id/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/stage/budding/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/stage/budding/_index.id/" />
   </url>
   <url>
-    <loc>http://localhost:1313/post/</loc>
+    <loc>https://mukimasta.github.io/post/</loc>
     <lastmod>2026-01-10T19:12:46-08:00</lastmod>
     <changefreq>always</changefreq>
     </url>
   <url>
-    <loc>http://localhost:1313/projects/</loc>
+    <loc>https://mukimasta.github.io/projects/</loc>
     <lastmod>2026-01-16T02:18:57-08:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="http://localhost:1313/zh/projects/" />
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/projects/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/projects/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/projects/" />
   </url>
   <url>
-    <loc>http://localhost:1313/stage/seedling/</loc>
+    <loc>https://mukimasta.github.io/stage/seedling/</loc>
     <lastmod>2026-01-10T16:04:27-08:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/stage/seedling/_index.id/" />
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/stage/seedling/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/stage/seedling/_index.id/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/stage/seedling/" />
   </url>
   <url>
-    <loc>http://localhost:1313/stage/seedling/_index.id/</loc>
+    <loc>https://mukimasta.github.io/stage/seedling/_index.id/</loc>
     <lastmod>2026-01-10T16:04:27-08:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/stage/seedling/" />
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/stage/seedling/_index.id/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/stage/seedling/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/stage/seedling/_index.id/" />
   </url>
   <url>
-    <loc>http://localhost:1313/series/</loc>
+    <loc>https://mukimasta.github.io/series/</loc>
     
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="http://localhost:1313/zh/series/" />
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/series/" />
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/series/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/series/" />
   </url>
   <url>
-    <loc>http://localhost:1313/stage/</loc>
+    <loc>https://mukimasta.github.io/stage/</loc>
     <lastmod>2026-01-10T16:04:27-08:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/stage/_index.id/" />
-    <xhtml:link rel="alternate" hreflang="en-GB" href="http://localhost:1313/stage/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/stage/_index.id/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/stage/" />
   </url>
 </urlset>

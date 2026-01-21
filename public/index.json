@@ -3,19 +3,19 @@
     "nodes": [{
                 "id": "a0f22c875411e8bef06d74c5e2d7ee1b",
                 "title": "Post Template",
-                "permalink": "http://localhost:1313/post/post_template/",
+                "permalink": "https://mukimasta.github.io/post/post_template/",
                 "type": "post"
             },
                         {
                             "id": "categories-test",
                             "title": "Test",
-                            "permalink": "http://localhost:1313/categories/test/",
+                            "permalink": "https://mukimasta.github.io/categories/test/",
                             "type": "categories"
                         },
                         {
                             "id": "tags-pin",
                             "title": "Pin",
-                            "permalink": "http://localhost:1313/tags/pin/",
+                            "permalink": "https://mukimasta.github.io/tags/pin/",
                             "type": "tags"
                         },
     ],

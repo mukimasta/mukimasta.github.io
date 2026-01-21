@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" >
   <channel>
     <title>MUKIMASTA</title>
-    <link>http://localhost:1313/</link>
+    <link>https://mukimasta.github.io/</link>
     <description>Recent Posts on MUKIMASTA</description>
     <generator>Hugo 0.151.0</generator>
     <language>en-GB</language>
     <managingEditor>mukimasta@outlook.com (Hanlin Xue)</managingEditor>
     <webMaster>mukimasta@outlook.com (Hanlin Xue)</webMaster>
-    <lastBuildDate>Fri, 16 Jan 2026 23:36:47 -0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-        <atom:link href="http://localhost:1313/zh/index.xml" hreflang="zh" rel="alternate" type="application/rss&#43;xml" />
+    <lastBuildDate>Wed, 21 Jan 2026 00:49:02 -0800</lastBuildDate>
+    <atom:link href="https://mukimasta.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://mukimasta.github.io/zh/index.xml" hreflang="zh" rel="alternate" type="application/rss&#43;xml" />
         
     <item>
       <title>Post Template</title>
-      <link>http://localhost:1313/post/post_template/</link>
+      <link>https://mukimasta.github.io/post/post_template/</link>
       <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
       <author>mukimasta@outlook.com (Hanlin Xue)</author>
       <dc:creator>[Author Name]</dc:creator>
-      <guid>http://localhost:1313/post/post_template/</guid>
+      <guid>https://mukimasta.github.io/post/post_template/</guid>
       <description>This is a post template</description>
       <content:encoded>&lt;h2 id=&#34;post-template&#34;&gt;Post Template&lt;/h2&gt;&#xA;&lt;p&gt;This is a post template.&lt;/p&gt;&#xA;</content:encoded>
       <category>Test</category>
