@@ -3,6 +3,7 @@ title: "Franka 机械臂 Pi0 VLA 端到端抓取系统"
 date: 2025-04-21
 description: "基于 Pi0 VLA 大模型的端到端机械臂控制系统，验证了从数据采集、模型微调到真机部署的全流程。"
 featured: true
+draft: true
 cover: './images/franka_grasping.gif'
 weight: 2
 ---

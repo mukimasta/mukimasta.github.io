@@ -2,42 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" >
   <channel>
     <title>Stage on MUKIMASTA</title>
-    <link>https://mukimasta.github.io/stage/</link>
+    <link>http://localhost:1313/stage/</link>
     <description>Recent Posts in Stage on MUKIMASTA</description>
     <generator>Hugo 0.151.0</generator>
     <language>en-GB</language>
     <managingEditor>mukimasta@outlook.com (Hanlin Xue)</managingEditor>
     <webMaster>mukimasta@outlook.com (Hanlin Xue)</webMaster>
-    <lastBuildDate>Wed, 21 Jan 2026 00:49:02 -0800</lastBuildDate>
-    <atom:link href="https://mukimasta.github.io/stage/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Jan 2026 00:03:30 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/stage/index.xml" rel="self" type="application/rss+xml" />
         
     <item>
       <title>budding</title>
-      <link>https://mukimasta.github.io/stage/budding/</link>
+      <link>http://localhost:1313/stage/budding/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>mukimasta@outlook.com (Hanlin Xue)</author>
       <dc:creator>Hanlin Xue</dc:creator>
-      <guid>https://mukimasta.github.io/stage/budding/</guid>
+      <guid>http://localhost:1313/stage/budding/</guid>
       <description></description>
       <content:encoded></content:encoded>
     </item>
     <item>
       <title>evergreen</title>
-      <link>https://mukimasta.github.io/stage/evergreen/</link>
+      <link>http://localhost:1313/stage/evergreen/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>mukimasta@outlook.com (Hanlin Xue)</author>
       <dc:creator>Hanlin Xue</dc:creator>
-      <guid>https://mukimasta.github.io/stage/evergreen/</guid>
+      <guid>http://localhost:1313/stage/evergreen/</guid>
       <description></description>
       <content:encoded></content:encoded>
     </item>
     <item>
       <title>seedling</title>
-      <link>https://mukimasta.github.io/stage/seedling/</link>
+      <link>http://localhost:1313/stage/seedling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <author>mukimasta@outlook.com (Hanlin Xue)</author>
       <dc:creator>Hanlin Xue</dc:creator>
-      <guid>https://mukimasta.github.io/stage/seedling/</guid>
+      <guid>http://localhost:1313/stage/seedling/</guid>
       <description></description>
       <content:encoded></content:encoded>
     </item>

@@ -3,6 +3,7 @@ title: "Franka Robot VLA End-to-End Grasping System and Fine-tuning"
 date: 2025-04-21
 description: "Pi0 VLA Grasping System Fine-tuning Report; Successfully transferred to humanoid robot"
 featured: true
+draft: true
 cover: './images/franka_grasping.gif'
 weight: 1
 ---

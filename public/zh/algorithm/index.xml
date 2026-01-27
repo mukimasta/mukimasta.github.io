@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" >
+  <channel>
+    <title>Algorithms on MUKIMASTA</title>
+    <link>http://localhost:1313/zh/algorithm/</link>
+    <description>Recent Posts in Algorithms on MUKIMASTA</description>
+    <generator>Hugo 0.151.0</generator>
+    <language>zh-CN</language>
+    <managingEditor>mukimasta@outlook.com (Hanlin Xue)</managingEditor>
+    <webMaster>mukimasta@outlook.com (Hanlin Xue)</webMaster>
+    <lastBuildDate>Tue, 27 Jan 2026 00:03:30 -0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/zh/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>动态规划 (Dynamic Programming)</title>
+      <link>http://localhost:1313/zh/algorithm/dp/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+      <author>mukimasta@outlook.com (Hanlin Xue)</author>
+      <dc:creator>[Mukii]</dc:creator>
+      <guid>http://localhost:1313/zh/algorithm/dp/</guid>
+      <description>LeetCode 笔记：动态规划</description>
+      <content:encoded>&lt;h2 id=&#34;1--概述&#34;&gt;1  概述&lt;/h2&gt;&#xA;&lt;h3 id=&#34;11--状态&#34;&gt;1.1  状态&lt;/h3&gt;&#xA;&lt;p&gt;状态是一组量化参数，用于描述一个特定局面。&lt;/p&gt;&#xA;&lt;p&gt;例如：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;象棋：状态可以是棋盘上所有棋子的坐标&lt;/li&gt;&#xA;&lt;li&gt;自动驾驶控制：状态可以是 &lt;code&gt;(位置 x, 位置 y, 速度 v, 航向角 θ, 角速度 ω)&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;下一个 Token 预测 (LLM本质)：状态可以是当前所有文本序列&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;为状态赋予问题：&lt;/strong&gt;&#xA;$$&#xA;\text{状态 (State)} \xrightarrow[\text{算法 (Algorithm)}]{\text{问题 (Problem)}} \text{解/值 (Solution/Value)}&#xA;$$&#xA;&lt;code&gt;V = f(State)&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;例如：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;最短路径&#xA;$\text{当前节点 } u \xrightarrow[\text{Dijkstra / BFS}]{\text{求到终点的最小累积权重}} \text{最短距离数值 } d[u]$&lt;/li&gt;&#xA;&lt;li&gt;自动驾驶控制&#xA;$\text{车辆状态 } (x, y, v, \theta) \xrightarrow[\text{MPC (模型预测控制)}]{\text{求未来 N 秒代价最小的轨迹}} \text{控制指令 (转角, 油门)}$&lt;/li&gt;&#xA;&lt;li&gt;下一个 Token 预测 (LLM本质)&#xA;$\text{上下文序列 } (t_1, \dots, t_k) \xrightarrow[\text{Transformer + Softmax}]{\text{求出现概率最大的下一个词}} \text{Token } t_{k+1} \text{ 的概率分布}$&lt;/li&gt;&#xA;&lt;li&gt;量化高频交易&#xA;$\text{订单快照 + 持仓} \xrightarrow[\text{统计套利 / 强化学习}]{\text{求预期收益最大化的操作}} \text{交易信号 (买/卖/停)}$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;状态的值通常是最优值、方案数、概率&#xA;例如：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;象棋：当前状态下红方最应该如何行动&lt;/li&gt;&#xA;&lt;li&gt;自动驾驶控制：当前状态下的撞车概率&lt;/li&gt;&#xA;&lt;li&gt;下一个 Token 预测 (LLM本质)：当前状态下下一个 Token 的预测&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;12--状态转移与路径&#34;&gt;1.2  状态转移与路径&lt;/h3&gt;&#xA;&lt;p&gt;状态在规则和约束下，可以转移到另一个状态，同时伴随着状态值的变化。&#xA;$$&#xA;\text{State A} (V_A) \xrightarrow[\text{规则 (Rules)，约束 (Constraints)}]{\text{行动 (Action)}} \text{State B} (V_B)&#xA;$$&#xA;例如：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;象棋&#xA;$\text{局面A} (红方优势+2子) \xrightarrow[\text{棋规}]{\text{移动炮}} \text{局面B} (红方优势+3子)$&lt;/li&gt;&#xA;&lt;li&gt;自动驾驶&#xA;$(x, y, v, \theta) (\text{到达时间 10 分钟}) \xrightarrow[\text{物理定律, 避障}]{\text{加速+转向}} (x&amp;rsquo;, y&amp;rsquo;, v&amp;rsquo;, \theta&amp;rsquo;) (\text{到达时间 5 分钟})$&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;路径是一条由连续的状态转移构成的状态序列&lt;/p&gt;&#xA;&lt;p&gt;例如：&#xA;初始状态 → 状态 A → 状态 B → &amp;hellip; → 目标状态&lt;/p&gt;&#xA;&lt;p&gt;子状态：路径上离目标状态更近的状态&#xA;子问题：子状态下的同一问题&lt;/p&gt;&#xA;&lt;h3 id=&#34;13--动态规划问题三要素&#34;&gt;1.3  动态规划（问题）三要素&lt;/h3&gt;&#xA;&lt;p&gt;符合以下要素的问题适合用动态规划求解：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;最优子结构&lt;/strong&gt;：原问题的最优解一定包含（依赖）子问题的最优解&#xA;“原问题的最优解可以直接从子问题的最优解构建得来”&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;无后效性&lt;/strong&gt;（马尔可夫性）：后续决策只依赖当前状态，而与达到该状态的具体路径无关&#xA;“论前面怎么走的，只要到达该状态，后面都一样处理”&#xA;“只需记住“当前局面”，不用关心怎么到达这里的过程”&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;重复子问题&lt;/strong&gt;：有大量相同子问题被多次重复求解&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Ask AI:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;举几个例子，符合最优子结构但不符合无后效性，以及反过来&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;14--动态规划&#34;&gt;1.4  动态规划&lt;/h3&gt;&#xA;&lt;p&gt;如果问题满足上述三要素，&#xA;可以将目标问题分解为子问题求解：&#xA;&lt;code&gt;f(S) -&amp;gt; f(s1), f(s2), ...&lt;/code&gt;&#xA;$$&#xA;V = f(S) \ \ &lt;br&gt;&#xA;\rightarrow \ \ &lt;br&gt;&#xA;V = g[f(s1), f(s2), &amp;hellip;, s1, s2, &amp;hellip;]&#xA;$$&lt;/p&gt;&#xA;&lt;p&gt;动态规划是一种策略：通过“记忆”子问题的解，来避免重复计算，从而高效解决原问题的算法。&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;找出合适的状态和问题（通常就是原问题）&lt;/li&gt;&#xA;&lt;li&gt;使用 &lt;code&gt;dp[state]&lt;/code&gt; 数组记录各状态下的值&lt;/li&gt;&#xA;&lt;li&gt;写状态转移方程 &lt;code&gt;dp[S] = f(dp[s1], dp[s2], ..., s1, s2, ...)&lt;/code&gt;记录当前状态的值如何从子状态的值转移得来，从初始状态一直记录到目标状态&lt;/li&gt;&#xA;&lt;li&gt;最后由各状态的值求出最终解（通常是目标状态的值）&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;</content:encoded>
+      <category>Algorithm</category>
+    </item>
+  </channel>
+</rss>

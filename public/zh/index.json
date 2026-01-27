@@ -1,25 +1,61 @@
 
 {
     "nodes": [{
+                "id": "642d2e0860deb18d5938750cb92f9dfa",
+                "title": "动态规划 (Dynamic Programming)",
+                "permalink": "http://localhost:1313/zh/algorithm/dp/",
+                "type": "post"
+            },{
                 "id": "4633e9ca41818fbc39460cb7500a534c",
                 "title": "Distributed System Blog 01 – Exactly-Once RPC",
-                "permalink": "https://mukimasta.github.io/zh/distributed_systems/blog1/",
+                "permalink": "http://localhost:1313/zh/distributed_systems/blog1/",
                 "type": "post"
             },
                         {
+                            "id": "categories-algorithm",
+                            "title": "Algorithm",
+                            "permalink": "http://localhost:1313/zh/categories/algorithm/",
+                            "type": "categories"
+                        },
+                        {
                             "id": "categories-distributed_systems",
                             "title": "Distributed_systems",
-                            "permalink": "https://mukimasta.github.io/zh/categories/distributed_systems/",
+                            "permalink": "http://localhost:1313/zh/categories/distributed_systems/",
                             "type": "categories"
+                        },
+                        {
+                            "id": "tags-algorithm",
+                            "title": "Algorithm",
+                            "permalink": "http://localhost:1313/zh/tags/algorithm/",
+                            "type": "tags"
                         },
                         {
                             "id": "tags-distributed_systems",
                             "title": "Distributed_systems",
-                            "permalink": "https://mukimasta.github.io/zh/tags/distributed_systems/",
+                            "permalink": "http://localhost:1313/zh/tags/distributed_systems/",
+                            "type": "tags"
+                        },
+                        {
+                            "id": "tags-dynamic_programming",
+                            "title": "Dynamic_programming",
+                            "permalink": "http://localhost:1313/zh/tags/dynamic_programming/",
                             "type": "tags"
                         },
     ],
     "links": [
+            
+                    {
+                        "source": "642d2e0860deb18d5938750cb92f9dfa",
+                        "target": "categories-algorithm",
+                    },
+                    {
+                        "source": "642d2e0860deb18d5938750cb92f9dfa",
+                        "target": "tags-algorithm",
+                    },
+                    {
+                        "source": "642d2e0860deb18d5938750cb92f9dfa",
+                        "target": "tags-dynamic_programming",
+                    },
             
                     {
                         "source": "4633e9ca41818fbc39460cb7500a534c",
