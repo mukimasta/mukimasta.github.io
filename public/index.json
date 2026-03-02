@@ -1,25 +1,65 @@
 
 {
     "nodes": [{
+                "id": "b9f85912269277ad2558703a278ce70e",
+                "title": "Distributed System Blogs",
+                "permalink": "https://mukimasta.github.io/distributed_systems/distributed_system_blogs/",
+                "type": "post"
+            },{
+                "id": "4633e9ca41818fbc39460cb7500a534c",
+                "title": "Distributed System Blog 01 – Exactly-Once RPC",
+                "permalink": "https://mukimasta.github.io/distributed_systems/blog1/",
+                "type": "post"
+            },{
                 "id": "a0f22c875411e8bef06d74c5e2d7ee1b",
                 "title": "Post Template",
-                "permalink": "http://localhost:1313/post/post_template/",
+                "permalink": "https://mukimasta.github.io/post/post_template/",
                 "type": "post"
             },
                         {
+                            "id": "categories-distributed_systems",
+                            "title": "Distributed_systems",
+                            "permalink": "https://mukimasta.github.io/categories/distributed_systems/",
+                            "type": "categories"
+                        },
+                        {
                             "id": "categories-test",
                             "title": "Test",
-                            "permalink": "http://localhost:1313/categories/test/",
+                            "permalink": "https://mukimasta.github.io/categories/test/",
                             "type": "categories"
+                        },
+                        {
+                            "id": "tags-distributed_systems",
+                            "title": "Distributed_systems",
+                            "permalink": "https://mukimasta.github.io/tags/distributed_systems/",
+                            "type": "tags"
                         },
                         {
                             "id": "tags-pin",
                             "title": "Pin",
-                            "permalink": "http://localhost:1313/tags/pin/",
+                            "permalink": "https://mukimasta.github.io/tags/pin/",
                             "type": "tags"
                         },
     ],
     "links": [
+            
+                    {
+                        "source": "b9f85912269277ad2558703a278ce70e",
+                        "target": "categories-test",
+                    },
+                    {
+                        "source": "b9f85912269277ad2558703a278ce70e",
+                        "target": "tags-pin",
+                    },
+            
+                    {
+                        "source": "4633e9ca41818fbc39460cb7500a534c",
+                        "target": "categories-distributed_systems",
+                    },
+                    {
+                        "source": "4633e9ca41818fbc39460cb7500a534c",
+                        "target": "tags-distributed_systems",
+                    },
             
                     {
                         "source": "a0f22c875411e8bef06d74c5e2d7ee1b",
