@@ -6,11 +6,11 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Post Template | MUKIMASTA</title>
-<meta name="author" content="[Author Name]">
-<meta name="description" content="This is a post template" >
-<meta name="keywords" content="pin">
-<link rel="canonical" href="https://mukimasta.github.io/post/post_template/">
+<title>Distributed System Blog – Dynamo | MUKIMASTA</title>
+<meta name="author" content="[Hanlin]">
+<meta name="description" content="Evaluation of Dynamo and Later Work" >
+<meta name="keywords" content="distributed_systems">
+<link rel="canonical" href="https://mukimasta.github.io/distributed_systems/blog3/">
 
 
 
@@ -18,15 +18,15 @@
     <!-- twitterCard -->
     
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Post Template | MUKIMASTA" />
-    <meta name="twitter:description" content="This is a post template" />
+    <meta name="twitter:title" content="Distributed System Blog – Dynamo | MUKIMASTA" />
+    <meta name="twitter:description" content="Evaluation of Dynamo and Later Work" />
         <meta name="twitter:image" content="https://repository-images.githubusercontent.com/923527728/46a32a19-69ac-45b3-91a4-c4d299fb234b" />
     
     <!-- openGraph -->
-    <meta property="og:title" content="Post Template | MUKIMASTA" />
-    <meta property="og:description" content="This is a post template" />
+    <meta property="og:title" content="Distributed System Blog – Dynamo | MUKIMASTA" />
+    <meta property="og:description" content="Evaluation of Dynamo and Later Work" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://mukimasta.github.io/post/post_template/" />
+    <meta property="og:url" content="https://mukimasta.github.io/distributed_systems/blog3/" />
         <meta property="og:image" content="https://repository-images.githubusercontent.com/923527728/46a32a19-69ac-45b3-91a4-c4d299fb234b" />
     <meta property="og:site_name" content="MUKIMASTA" />
     <!-- js.html -->
@@ -154,11 +154,11 @@
             <ul role="presentation" class="breadcrumb ">
                     <!-- breadcrumb.html -->
         <li>
-            <a href="https://mukimasta.github.io/post/" aria-current="true">Post
+            <a href="https://mukimasta.github.io/distributed_systems/" aria-current="true">Distributed_systems
             </a>
         </li>
     <li>
-        <a href="" aria-current="page" tabindex="-1">Post Template
+        <a href="" aria-current="page" tabindex="-1">Distributed System Blog – Dynamo
         </a>
     </li>
             </ul>
@@ -178,21 +178,20 @@
         <h1 id="title"
                 data-pagefind-meta="title"
             data-bionRead-safe
-            >Post Template</h1>
-            <div id="doc-author" class="textsw"><span>[Author Name]</span>
+            >Distributed System Blog – Dynamo</h1>
+            <div id="doc-author" class="textsw"><span>[Hanlin]</span>
             </div>
             <!-- timestamp.html-->
-        <div id="timestamp">
-            <span>Published on</span>
-            <time datetime="2025-01-10T00:00:00&#43;00:00">January 10, 2025</time>,
-            <span>modified on</span>
-            <time datetime="2026-01-10T00:00:00&#43;00:00">January 10, 2026</time>.
-        </div>
+        <time datetime="2026-03-05T00:00:00&#43;00:00">March 5, 2026</time>
         </header>
         <!-- audio.html -->
         <section id="content" class="content " aria-labelledby="title" data-bionRead-safe>
-                <h2 id="post-template">Post Template</h2>
-<p>This is a post template.</p>
+                <h1 id="distributed-system-blog--dynamo">Distributed System Blog – Dynamo</h1>
+<p><strong>Evaluation of Dynamo and Later Work</strong></p>
+<h2 id="part-1--evaluation-of-dynamo">Part 1  Evaluation of Dynamo</h2>
+<p>Amazon evaluated Dynamo directly in production scenarios. They chose 99.9th percentile latency as the core indicator because they believed user experience (like adding a cart item) was affected by the slowest requests. Compared to the average latency (~20ms), 99.9th percentile latency reached ~200ms. In terms of partitioning, they compared three strategies. First they used virtual node partitioning, but the performance was not good: the sizes were not balanced and every time a new node came, partitioning boundaries changed. They finally used strategy three that pre-divided the ring into a fixed number of partitions and distributed them evenly to each node. Experimental data shows that this strategy achieved the best efficiency and was clear to maintain. Dynamo designed a vector clock mechanism for concurrent conflict detection. However, in a 24-hour evaluation, 99.94% of requests saw exactly one version, which means that it was rarely triggered in actual scenarios. Overall, in two years of running on Amazon services, Dynamo achieved 99.9995% availability and zero data loss. Dynamo has proven to be a high-performance and robust distributed system in large-scale production environments.</p>
+<h2 id="part-2--later-work-of-dynamo">Part 2  Later Work of Dynamo</h2>
+<p>Dynamo is a watershed in distributed systems. Before Dynamo, strongly consistent systems dominated the field, such as those based on Paxos and Raft. Dynamo chose not to ensure consistency, but rather availability, which opened up another choice under the CAP theorem. Dynamo also started the trend of NoSQL. I am interested in two subsequent systems: Cassandra and DynamoDB. Cassandra inherited Dynamo&rsquo;s decentralized architecture and integrated the data model of Bigtable. DynamoDB changed a lot from the original Dynamo: it added a centralized &ldquo;AutoAdmin&rdquo; back, offered an optional strong consistency mode, and enriched the data model. Currently, Cassandra and DynamoDB are widely used in the NoSQL database market.</p>
 
         </section>
             
@@ -201,7 +200,7 @@
         
         <!-- terms.html -->
             <ul class="inline" role="presentation">
-                    <li><a href="/tags/pin/" >Pin</a></li>
+                    <li><a href="/tags/distributed_systems/" >Distributed_systems</a></li>
             </ul>
     </nav>
     </article>
@@ -212,33 +211,25 @@
         <hr />
         <div id="contentinfo" role="contentinfo" data-pagefind-ignore="all">
                     <!-- related.html -->
+    <nav id="related" aria-label="You might also like"><strong class="section-title">You might also like</strong>
+                <ol>
+                    <li><a href="/distributed_systems/blog2/">Distributed System Blog – Google File System</a></li>
+                    <li><a href="/distributed_systems/blog1/">Distributed System Blog 01 – Exactly-Once RPC</a></li>
+                </ol>
+    </nav>
                     <!-- colophon.html -->
     <div id="colophon" style="display: none;" aria-live="polite">
         <strong class="section-title">Colophon</strong>
         <div>
             <div id="qr" role="img" aria-label="QR code"></div>
             <div class="verbose">
-                <div class="has-aria-label-top" aria-label="Post Template"><span>https://mukimasta.github.io/post/post_template/</span></div>
+                <div class="has-aria-label-top" aria-label="Distributed System Blog – Dynamo"><span>https://mukimasta.github.io/distributed_systems/blog3/</span></div>
                 <div><span>This page is built on: </span><time datetime="2026-03-06T12:24:35-08:00">2026-03-06 12:24</time></div>
                 <div><span>This page is accessed on: </span><time id="time-stamp"></time></div><div><span>Powered by </span><a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <a href="https://github.com/gohugoio/hugo/releases/tag/v0.151.0" aria-label="Hugo 0.151.0" target="_blank" rel="noopener">v0.151.0</a> & <a href="https://github.com/foxihd/hugo-brewm" target="_blank" rel="noopener">hugo-brewm</a>.</div>
             </div>
         </div>
     </div>
                     <!-- history.html -->
-        <div id="has-timeline" >
-            <strong class="section-title">Redaction History</strong>
-            <ol aria-label="Redaction History">
-                <li>
-                    <time datetime="2025-01-10T00:00:00&#43;00:00">January 10, 2025</time>
-                    <span>(Published)</span>
-                </li>
-                <li>
-                    <time datetime="2026-01-10T00:00:00&#43;00:00">January 10, 2026</time>
-                    <span>(Modified)</span>
-                </li>
-            </ol>
-            <p>Some information might changes over time, we keep redaction up to date.</p>
-        </div>
                 
                 <!-- nav.html -->
 <details class="presentation" aria-expanded="true" id="has-share" open>
@@ -251,9 +242,9 @@
     <li id="has-mastodon">
         <!-- mastodon.html -->
     <form class="form" id="mastodon" action="//sharetomastodon.github.io/" target="_blank" rel="noopener noreferrer">
-        <input id="mastodonTitle" type="hidden" name="title" value="Post Template">
-        <input id="mastodonPermalink" type="hidden" name="url" value="https://mukimasta.github.io/post/post_template/">
-        <input id="mastodonText" type="hidden" name="text" value="Post Template https://mukimasta.github.io/post/post_template/" disabled>
+        <input id="mastodonTitle" type="hidden" name="title" value="Distributed System Blog – Dynamo">
+        <input id="mastodonPermalink" type="hidden" name="url" value="https://mukimasta.github.io/distributed_systems/blog3/">
+        <input id="mastodonText" type="hidden" name="text" value="Distributed System Blog – Dynamo https://mukimasta.github.io/distributed_systems/blog3/" disabled>
         <input id="mastodonInstance" type="url" class="ldots form__input" placeholder="Enter Mastodon instance (https://www.example.com)" aria-label="Mastodon instance URL">
         <button class="form__button" type="submit" aria-label="Share on Mastodon">
             <i class="icon mastodon sri" aria-hidden="true"></i>
@@ -262,89 +253,89 @@
     </form>
     </li>
     <li>
-        <a href="mailto:?subject=Post%20Template&body=https%3a%2f%2fmukimasta.github.io%2fpost%2fpost_template%2f" role="button" aria-label="Share on Email">
+        <a href="mailto:?subject=Distributed%20System%20Blog%20%e2%80%93%20Dynamo&body=https%3a%2f%2fmukimasta.github.io%2fdistributed_systems%2fblog3%2f" role="button" aria-label="Share on Email">
             <i class="email sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Email</span>
         </a>
     </li>
     <li>
-        <a href="whatsapp://send?text=Post%20Template%20https%3a%2f%2fmukimasta.github.io%2fpost%2fpost_template%2f" role="button" aria-label="Share on Whatsapp">
+        <a href="whatsapp://send?text=Distributed%20System%20Blog%20%e2%80%93%20Dynamo%20https%3a%2f%2fmukimasta.github.io%2fdistributed_systems%2fblog3%2f" role="button" aria-label="Share on Whatsapp">
             <i class="whatsapp sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Whatsapp</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://telegram.me/share/url?text=Post%20Template&amp;url=https://mukimasta.github.io/post/post_template/" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://telegram.me/share/url?text=Distributed%20System%20Blog%20%e2%80%93%20Dynamo&amp;url=https://mukimasta.github.io/distributed_systems/blog3/" role="button"
             aria-label="Share on Telegram in new tab">
             <i class="telegram sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Telegram</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://bsky.app/intent/compose?text=Post%20Template&amp;url=https://mukimasta.github.io/post/post_template/" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://bsky.app/intent/compose?text=Distributed%20System%20Blog%20%e2%80%93%20Dynamo&amp;url=https://mukimasta.github.io/distributed_systems/blog3/" role="button"
             aria-label="Share on Bluesky in new tab">
             <i class="bluesky sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Bluesky</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://facebook.com/sharer/sharer.php?u=https://mukimasta.github.io/post/post_template/" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://facebook.com/sharer/sharer.php?u=https://mukimasta.github.io/distributed_systems/blog3/" role="button"
             aria-label="Share on Facebook in new tab">
             <i class="facebook sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Facebook</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://news.ycombinator.com/submitlink?u=https://mukimasta.github.io/post/post_template/&amp;t=Post%20Template" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://news.ycombinator.com/submitlink?u=https://mukimasta.github.io/distributed_systems/blog3/&amp;t=Distributed%20System%20Blog%20%e2%80%93%20Dynamo" role="button"
             aria-label="Share on Hackernews in new tab">
             <i class="hackernews sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Hackernews</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://mukimasta.github.io/post/post_template/&amp;title=Post%20Template&amp;summary=Post%20Template&amp;source=https://mukimasta.github.io/post/post_template/" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://mukimasta.github.io/distributed_systems/blog3/&amp;title=Distributed%20System%20Blog%20%e2%80%93%20Dynamo&amp;summary=Distributed%20System%20Blog%20%e2%80%93%20Dynamo&amp;source=https://mukimasta.github.io/distributed_systems/blog3/" role="button"
             aria-label="Share on Linkedin in new tab">
             <i class="linkedin sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Linkedin</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://pinterest.com/pin/create/button/?url=https://mukimasta.github.io/post/post_template/&amp;media=https://mukimasta.github.io/post/post_template/&amp;description=Post%20Template" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://pinterest.com/pin/create/button/?url=https://mukimasta.github.io/distributed_systems/blog3/&amp;media=https://mukimasta.github.io/distributed_systems/blog3/&amp;description=Distributed%20System%20Blog%20%e2%80%93%20Dynamo" role="button"
             aria-label="Share on Pinterest in new tab">
             <i class="pinterest sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Pinterest</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://reddit.com/submit/?url=https://mukimasta.github.io/post/post_template/&amp;resubmit=true&amp;title=Post%20Template" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://reddit.com/submit/?url=https://mukimasta.github.io/distributed_systems/blog3/&amp;resubmit=true&amp;title=Distributed%20System%20Blog%20%e2%80%93%20Dynamo" role="button"
             aria-label="Share on Reddit in new tab">
             <i class="reddit sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Reddit</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Post%20Template&amp;caption=Post%20Template&amp;content=https://mukimasta.github.io/post/post_template/&amp;canonicalUrl=https://mukimasta.github.io/post/post_template/" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://www.tumblr.com/widgets/share/tool?posttype=link&amp;title=Distributed%20System%20Blog%20%e2%80%93%20Dynamo&amp;caption=Distributed%20System%20Blog%20%e2%80%93%20Dynamo&amp;content=https://mukimasta.github.io/distributed_systems/blog3/&amp;canonicalUrl=https://mukimasta.github.io/distributed_systems/blog3/" role="button"
             aria-label="Share on Tumblr in new tab">
             <i class="tumblr sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Tumblr</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://threads.net/intent/post?text=Post%20Template&amp;url=https://mukimasta.github.io/post/post_template/" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://threads.net/intent/post?text=Distributed%20System%20Blog%20%e2%80%93%20Dynamo&amp;url=https://mukimasta.github.io/distributed_systems/blog3/" role="button"
             aria-label="Share on Threads in new tab">
             <i class="threads sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Threads</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet/?text=Post%20Template&amp;url=https://mukimasta.github.io/post/post_template/" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://twitter.com/intent/tweet/?text=Distributed%20System%20Blog%20%e2%80%93%20Dynamo&amp;url=https://mukimasta.github.io/distributed_systems/blog3/" role="button"
             aria-label="Share on Twitter in new tab">
             <i class="twitter sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Twitter</span>
         </a>
     </li>
     <li>
-        <a rel="noopener noreferrer" target="_blank" href="https://www.xing.com/app/user?op=share;url=https://mukimasta.github.io/post/post_template/;title=Post%20Template" role="button"
+        <a rel="noopener noreferrer" target="_blank" href="https://www.xing.com/app/user?op=share;url=https://mukimasta.github.io/distributed_systems/blog3/;title=Distributed%20System%20Blog%20%e2%80%93%20Dynamo" role="button"
             aria-label="Share on Xing in new tab">
             <i class="xing sri" aria-hidden="true"></i>
             <span class="t srt" role="tooltip">Share on Xing</span>

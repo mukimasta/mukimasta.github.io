@@ -7,32 +7,48 @@
     </url>
   <url>
     <loc>https://mukimasta.github.io/categories/</loc>
-    <lastmod>2026-03-02T00:00:00+00:00</lastmod>
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/categories/" />
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/categories/" />
   </url>
+  <url>
+    <loc>https://mukimasta.github.io/distributed_systems/blog3/</loc>
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>https://mukimasta.github.io/categories/distributed_systems/</loc>
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/categories/distributed_systems/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/categories/distributed_systems/" />
+  </url>
+  <url>
+    <loc>https://mukimasta.github.io/distributed_systems/</loc>
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/distributed_systems/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/distributed_systems/" />
+  </url>
+  <url>
+    <loc>https://mukimasta.github.io/tags/distributed_systems/</loc>
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/tags/distributed_systems/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/tags/distributed_systems/" />
+  </url>
+  <url>
+    <loc>https://mukimasta.github.io/tags/</loc>
+    <lastmod>2026-03-05T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/tags/" />
+    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/tags/" />
+  </url>
+  <url>
+    <loc>https://mukimasta.github.io/distributed_systems/blog2/</loc>
+    <lastmod>2026-03-03T00:00:00+00:00</lastmod>
+    </url>
   <url>
     <loc>https://mukimasta.github.io/distributed_systems/distributed_system_blogs/</loc>
     <lastmod>2026-03-02T00:00:00+00:00</lastmod>
     </url>
   <url>
-    <loc>https://mukimasta.github.io/distributed_systems/</loc>
-    <lastmod>2026-03-02T00:00:00+00:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/distributed_systems/" />
-    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/distributed_systems/" />
-  </url>
-  <url>
     <loc>https://mukimasta.github.io/tags/pin/</loc>
-    <lastmod>2026-03-02T00:00:00+00:00</lastmod>
-    </url>
-  <url>
-    <loc>https://mukimasta.github.io/tags/</loc>
-    <lastmod>2026-03-02T00:00:00+00:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/tags/" />
-    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/tags/" />
-  </url>
-  <url>
-    <loc>https://mukimasta.github.io/categories/test/</loc>
     <lastmod>2026-03-02T00:00:00+00:00</lastmod>
     </url>
   <url>
@@ -42,19 +58,11 @@
     <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/distributed_systems/blog1/" />
   </url>
   <url>
-    <loc>https://mukimasta.github.io/categories/distributed_systems/</loc>
-    <lastmod>2026-01-20T00:00:00+00:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/categories/distributed_systems/" />
-    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/categories/distributed_systems/" />
-  </url>
-  <url>
-    <loc>https://mukimasta.github.io/tags/distributed_systems/</loc>
-    <lastmod>2026-01-20T00:00:00+00:00</lastmod>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://mukimasta.github.io/zh/tags/distributed_systems/" />
-    <xhtml:link rel="alternate" hreflang="en-GB" href="https://mukimasta.github.io/tags/distributed_systems/" />
-  </url>
-  <url>
     <loc>https://mukimasta.github.io/post/post_template/</loc>
+    <lastmod>2026-01-10T00:00:00+00:00</lastmod>
+    </url>
+  <url>
+    <loc>https://mukimasta.github.io/categories/test/</loc>
     <lastmod>2026-01-10T00:00:00+00:00</lastmod>
     </url>
   <url>

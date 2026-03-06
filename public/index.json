@@ -1,6 +1,16 @@
 
 {
     "nodes": [{
+                "id": "c91ac25deb04c2e7e4d28d950b38883c",
+                "title": "Distributed System Blog – Dynamo",
+                "permalink": "https://mukimasta.github.io/distributed_systems/blog3/",
+                "type": "post"
+            },{
+                "id": "9da85c6e4b77cdbfdc8bf4684808683b",
+                "title": "Distributed System Blog – Google File System",
+                "permalink": "https://mukimasta.github.io/distributed_systems/blog2/",
+                "type": "post"
+            },{
                 "id": "b9f85912269277ad2558703a278ce70e",
                 "title": "Distributed System Blogs",
                 "permalink": "https://mukimasta.github.io/distributed_systems/distributed_system_blogs/",
@@ -44,8 +54,26 @@
     "links": [
             
                     {
+                        "source": "c91ac25deb04c2e7e4d28d950b38883c",
+                        "target": "categories-distributed_systems",
+                    },
+                    {
+                        "source": "c91ac25deb04c2e7e4d28d950b38883c",
+                        "target": "tags-distributed_systems",
+                    },
+            
+                    {
+                        "source": "9da85c6e4b77cdbfdc8bf4684808683b",
+                        "target": "categories-distributed_systems",
+                    },
+                    {
+                        "source": "9da85c6e4b77cdbfdc8bf4684808683b",
+                        "target": "tags-distributed_systems",
+                    },
+            
+                    {
                         "source": "b9f85912269277ad2558703a278ce70e",
-                        "target": "categories-test",
+                        "target": "categories-distributed_systems",
                     },
                     {
                         "source": "b9f85912269277ad2558703a278ce70e",

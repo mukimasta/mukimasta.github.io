@@ -8,19 +8,8 @@
     <language>en-GB</language>
     <managingEditor>mukimasta@outlook.com (Hanlin Xue)</managingEditor>
     <webMaster>mukimasta@outlook.com (Hanlin Xue)</webMaster>
-    <lastBuildDate>Mon, 02 Mar 2026 13:53:19 -0800</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2026 12:24:35 -0800</lastBuildDate>
     <atom:link href="https://mukimasta.github.io/categories/test/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Distributed System Blogs</title>
-      <link>https://mukimasta.github.io/distributed_systems/distributed_system_blogs/</link>
-      <pubDate>Mon, 02 Mar 2026 00:00:00 +0000</pubDate>
-      <author>mukimasta@outlook.com (Hanlin Xue)</author>
-      <dc:creator>[Hanlin]</dc:creator>
-      <guid>https://mukimasta.github.io/distributed_systems/distributed_system_blogs/</guid>
-      <description>This is a post template</description>
-      <content:encoded>&lt;h2 id=&#34;distributed-system-blogs&#34;&gt;Distributed System Blogs&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;a href=&#34;../blog1/&#34;&gt;Distributed System Blog 01 – Exactly-Once RPC&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Google File System Paper Reading Blog: planned on March 4th, 2026&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;MapReduce Paper Reading Blog: planned on March 9th, 2026&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;TensorFlow Paper Reading Blog: planned on March 11th, 2026&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;</content:encoded>
-      <category>Test</category>
-    </item>
     <item>
       <title>Post Template</title>
       <link>https://mukimasta.github.io/post/post_template/</link>

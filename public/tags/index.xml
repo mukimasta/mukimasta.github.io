@@ -8,10 +8,20 @@
     <language>en-GB</language>
     <managingEditor>mukimasta@outlook.com (Hanlin Xue)</managingEditor>
     <webMaster>mukimasta@outlook.com (Hanlin Xue)</webMaster>
-    <lastBuildDate>Mon, 02 Mar 2026 13:53:19 -0800</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2026 12:24:35 -0800</lastBuildDate>
     <atom:link href="https://mukimasta.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
         <atom:link href="https://mukimasta.github.io/zh/tags/index.xml" hreflang="zh" rel="alternate" type="application/rss&#43;xml" />
         
+    <item>
+      <title>Distributed_systems</title>
+      <link>https://mukimasta.github.io/tags/distributed_systems/</link>
+      <pubDate>Thu, 05 Mar 2026 00:00:00 +0000</pubDate>
+      <author>mukimasta@outlook.com (Hanlin Xue)</author>
+      <dc:creator>Hanlin Xue</dc:creator>
+      <guid>https://mukimasta.github.io/tags/distributed_systems/</guid>
+      <description></description>
+      <content:encoded></content:encoded>
+    </item>
     <item>
       <title>Pin</title>
       <link>https://mukimasta.github.io/tags/pin/</link>
@@ -19,16 +29,6 @@
       <author>mukimasta@outlook.com (Hanlin Xue)</author>
       <dc:creator>Hanlin Xue</dc:creator>
       <guid>https://mukimasta.github.io/tags/pin/</guid>
-      <description></description>
-      <content:encoded></content:encoded>
-    </item>
-    <item>
-      <title>Distributed_systems</title>
-      <link>https://mukimasta.github.io/tags/distributed_systems/</link>
-      <pubDate>Tue, 20 Jan 2026 00:00:00 +0000</pubDate>
-      <author>mukimasta@outlook.com (Hanlin Xue)</author>
-      <dc:creator>Hanlin Xue</dc:creator>
-      <guid>https://mukimasta.github.io/tags/distributed_systems/</guid>
       <description></description>
       <content:encoded></content:encoded>
     </item>

@@ -8,10 +8,32 @@
     <language>en-GB</language>
     <managingEditor>mukimasta@outlook.com (Hanlin Xue)</managingEditor>
     <webMaster>mukimasta@outlook.com (Hanlin Xue)</webMaster>
-    <lastBuildDate>Mon, 02 Mar 2026 13:53:19 -0800</lastBuildDate>
+    <lastBuildDate>Fri, 06 Mar 2026 12:24:35 -0800</lastBuildDate>
     <atom:link href="https://mukimasta.github.io/tags/distributed_systems/index.xml" rel="self" type="application/rss+xml" />
         <atom:link href="https://mukimasta.github.io/zh/tags/distributed_systems/index.xml" hreflang="zh" rel="alternate" type="application/rss&#43;xml" />
         
+    <item>
+      <title>Distributed System Blog – Dynamo</title>
+      <link>https://mukimasta.github.io/distributed_systems/blog3/</link>
+      <pubDate>Thu, 05 Mar 2026 00:00:00 +0000</pubDate>
+      <author>mukimasta@outlook.com (Hanlin Xue)</author>
+      <dc:creator>[Hanlin]</dc:creator>
+      <guid>https://mukimasta.github.io/distributed_systems/blog3/</guid>
+      <description>Evaluation of Dynamo and Later Work</description>
+      <content:encoded>&lt;h1 id=&#34;distributed-system-blog--dynamo&#34;&gt;Distributed System Blog – Dynamo&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Evaluation of Dynamo and Later Work&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;part-1--evaluation-of-dynamo&#34;&gt;Part 1  Evaluation of Dynamo&lt;/h2&gt;&#xA;&lt;p&gt;Amazon evaluated Dynamo directly in production scenarios. They chose 99.9th percentile latency as the core indicator because they believed user experience (like adding a cart item) was affected by the slowest requests. Compared to the average latency (~20ms), 99.9th percentile latency reached ~200ms. In terms of partitioning, they compared three strategies. First they used virtual node partitioning, but the performance was not good: the sizes were not balanced and every time a new node came, partitioning boundaries changed. They finally used strategy three that pre-divided the ring into a fixed number of partitions and distributed them evenly to each node. Experimental data shows that this strategy achieved the best efficiency and was clear to maintain. Dynamo designed a vector clock mechanism for concurrent conflict detection. However, in a 24-hour evaluation, 99.94% of requests saw exactly one version, which means that it was rarely triggered in actual scenarios. Overall, in two years of running on Amazon services, Dynamo achieved 99.9995% availability and zero data loss. Dynamo has proven to be a high-performance and robust distributed system in large-scale production environments.&lt;/p&gt;&#xA;&lt;h2 id=&#34;part-2--later-work-of-dynamo&#34;&gt;Part 2  Later Work of Dynamo&lt;/h2&gt;&#xA;&lt;p&gt;Dynamo is a watershed in distributed systems. Before Dynamo, strongly consistent systems dominated the field, such as those based on Paxos and Raft. Dynamo chose not to ensure consistency, but rather availability, which opened up another choice under the CAP theorem. Dynamo also started the trend of NoSQL. I am interested in two subsequent systems: Cassandra and DynamoDB. Cassandra inherited Dynamo&amp;rsquo;s decentralized architecture and integrated the data model of Bigtable. DynamoDB changed a lot from the original Dynamo: it added a centralized &amp;ldquo;AutoAdmin&amp;rdquo; back, offered an optional strong consistency mode, and enriched the data model. Currently, Cassandra and DynamoDB are widely used in the NoSQL database market.&lt;/p&gt;&#xA;</content:encoded>
+      <category>Distributed_systems</category>
+    </item>
+    <item>
+      <title>Distributed System Blog – Google File System</title>
+      <link>https://mukimasta.github.io/distributed_systems/blog2/</link>
+      <pubDate>Tue, 03 Mar 2026 00:00:00 +0000</pubDate>
+      <author>mukimasta@outlook.com (Hanlin Xue)</author>
+      <dc:creator>[Hanlin]</dc:creator>
+      <guid>https://mukimasta.github.io/distributed_systems/blog2/</guid>
+      <description>Design of Writing Process and Context of GFS</description>
+      <content:encoded>&lt;h1 id=&#34;distributed-system-blog--google-file-system&#34;&gt;Distributed System Blog – Google File System&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Design of Writing Process and Context of GFS&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;part-1--design-of-writing-process&#34;&gt;Part 1  Design of Writing Process&lt;/h2&gt;&#xA;&lt;p&gt;Google File System is designed to store numerous data (crawled websites, logs, etc.) on thousands of cheap machines. There are three roles: Master, Chunkserver, and Client. Files are divided into 64MB chunks; every chunk has three copies on different Chunkservers. The writing process is: Master selects a Primary among the Chunkservers of a chunk and assigns a lease (60 seconds) to the Primary. Clients get chunk addresses from the Master and send data to the cache of Chunkservers. The Primary decides the writing sequence and sends a writing signal. Chunkservers then write data permanently in the same sequence.&lt;/p&gt;&#xA;&lt;h2 id=&#34;part-2--context-of-gfs&#34;&gt;Part 2  Context of GFS&lt;/h2&gt;&#xA;&lt;p&gt;In 2003, Google&amp;rsquo;s business focused on the search engine. The workload of the file system was mainly sequential append writing and sequential reading of large files (web crawling, logging, MapReduce input). Therefore, GFS solved problems with simple solutions rather than introducing all distributed features; for example, GFS did not ensure linearizability. I am inspired by the design philosophy: starting from the practical scenario, choose the techniques that are most adaptive but not most general; what we need and do not need; how to trade off between consistency and performance. In 2026, the business of Google has extended a lot. They store data not only for websites but also for various kinds of business (Google Docs, Google Calendar, etc.). In 2010, Google replaced GFS with Colossus, which supports almost all Google services nowadays.&lt;/p&gt;&#xA;</content:encoded>
+      <category>Distributed_systems</category>
+    </item>
     <item>
       <title>Distributed System Blog 01 – Exactly-Once RPC</title>
       <link>https://mukimasta.github.io/distributed_systems/blog1/</link>
